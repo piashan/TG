@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -38,10 +39,12 @@ public class BlankFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_blank, container, false);
         mRecyclerViewPlay = (RecyclerView)view.findViewById(R.id.recyclerViewPlay);
 
+         mStringList = new ArrayList<>();
         for (int i = 0; i <11 ; i++) {
-            mStringList.add("yo yo" + i);
+            mStringList.add("Testing Text" + i);
         }
         mLayoutManager = new GridLayoutManager(getActivity(), 1);
+        mRecyclerViewPlay.setLayoutManager(mLayoutManager);
         mAdapterPlay = new AdapterPlay( getActivity(),mStringList);
         mRecyclerViewPlay.setAdapter(mAdapterPlay);
         return view;

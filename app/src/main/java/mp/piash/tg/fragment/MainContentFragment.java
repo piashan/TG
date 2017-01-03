@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import mp.piash.tg.R;
 
@@ -19,6 +20,7 @@ import mp.piash.tg.R;
 public class MainContentFragment extends Fragment {
 
     private Button mButtonPlay;
+    private ImageView mImageViewSetting;
     public MainContentFragment() {
         // Required empty public constructor
     }
@@ -30,19 +32,10 @@ public class MainContentFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main_content, container, false);
         mButtonPlay = (Button)view.findViewById(R.id.buttonPlay);
+        mImageViewSetting = (ImageView)view.findViewById(R.id.imageViewSetting);
 
-        mButtonPlay.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        FragmentManager fm = getFragmentManager();
-                        FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.activity_main, new TabbedFragment());
-                        ft.commit();
-                    }
-                }
-        );
-
+        play();
+        setting();
       /*  android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.activity_main, new MainContentFragment());
@@ -50,6 +43,36 @@ public class MainContentFragment extends Fragment {
 
 
         return view;
+    }
+
+    private void play(){
+        mButtonPlay.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.activity_main, new TabbedFragment());
+                        ft.addToBackStack(null);
+                        ft.commit();
+                    }
+                }
+        );
+
+    }
+    private void setting(){
+        mImageViewSetting.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.activity_main, new SettingFragment());
+                        ft.addToBackStack(null);
+                        ft.commit();
+                    }
+                }
+        );
     }
 
 }

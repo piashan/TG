@@ -7,6 +7,7 @@ import android.app.FragmentManager;
 import android.support.v13.app.FragmentStatePagerAdapter;
 
 import mp.piash.tg.fragment.BlankFragment;
+import mp.piash.tg.fragment.SettingFragment;
 
 
 /**
@@ -23,7 +24,12 @@ public class TabFragmentPageAdapter extends android.support.v4.app.FragmentState
 
     @Override
     public android.support.v4.app.Fragment getItem(int position) {
-        return new BlankFragment();
+        if (position == 4){
+            return new SettingFragment();
+        }else {
+            return new BlankFragment();
+        }
+
     }
 
     @Override
