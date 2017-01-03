@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_gravity="center_horizontal"
         style="@style/AppTabLayout"
-        android:background="#009583"
+
+        android:background="#ffffff"
         android:layout_height="35dp" />
 </LinearLayout>

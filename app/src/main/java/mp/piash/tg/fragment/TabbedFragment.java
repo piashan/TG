@@ -41,7 +41,18 @@ public class TabbedFragment extends Fragment {
         mViewPager.setAdapter(mAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
       for (int i = 0; i < mTabLayout.getTabCount(); i++){
-          mTabLayout.getTabAt(i).setIcon(R.mipmap.ic_settings_black_24dp);
+
+          if (i == 0){
+              mTabLayout.getTabAt(i).setIcon(R.drawable.index1);
+          }else if (i == 1){
+              mTabLayout.getTabAt(i).setIcon(R.drawable.index2);
+          }else if (i == 2){
+              mTabLayout.getTabAt(i).setIcon(R.drawable.index3);
+          }else if (i == 3){
+              mTabLayout.getTabAt(i).setIcon(R.drawable.index4);
+          }else if (i == 4){
+              mTabLayout.getTabAt(i).setIcon(R.mipmap.ic_settings_black_24dp);
+          }
       }
         return view;
     }
