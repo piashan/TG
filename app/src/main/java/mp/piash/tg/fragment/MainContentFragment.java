@@ -3,6 +3,7 @@ package mp.piash.tg.fragment;
 
 
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import mp.piash.tg.R;
 
@@ -21,6 +23,7 @@ public class MainContentFragment extends Fragment {
 
     private Button mButtonPlay;
     private ImageView mImageViewSetting;
+    private TextView mTextViewAcievement;
     public MainContentFragment() {
         // Required empty public constructor
     }
@@ -33,9 +36,11 @@ public class MainContentFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_main_content, container, false);
         mButtonPlay = (Button)view.findViewById(R.id.buttonPlay);
         mImageViewSetting = (ImageView)view.findViewById(R.id.imageViewSetting);
+        mTextViewAcievement = (TextView)view.findViewById(R.id.textViewAchievement);
 
         play();
         setting();
+        achievement();
       /*  android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.activity_main, new MainContentFragment());
@@ -70,6 +75,25 @@ public class MainContentFragment extends Fragment {
                         ft.replace(R.id.activity_main, new SettingFragment());
                         ft.addToBackStack(null);
                         ft.commit();
+                    }
+                }
+        );
+    }
+
+    private void achievement(){
+
+        mTextViewAcievement.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.activity_main, new AchievementFragment());
+                        ft.addToBackStack(null);
+                        ft.commit();
+                       /* FragmentManager fm = getChildFragmentManager();
+                        DialogFragment newFragment = new AchievementFragment();
+                        newFragment.show(fm, "dialog");*/
                     }
                 }
         );

@@ -43,13 +43,13 @@ public class TabbedFragment extends Fragment {
       for (int i = 0; i < mTabLayout.getTabCount(); i++){
 
           if (i == 0){
-              mTabLayout.getTabAt(i).setIcon(R.drawable.index1);
+              mTabLayout.getTabAt(i).setIcon(R.drawable.index11);
           }else if (i == 1){
-              mTabLayout.getTabAt(i).setIcon(R.drawable.index2);
+              mTabLayout.getTabAt(i).setIcon(R.drawable.index22);
           }else if (i == 2){
-              mTabLayout.getTabAt(i).setIcon(R.drawable.index3);
+              mTabLayout.getTabAt(i).setIcon(R.drawable.index33);
           }else if (i == 3){
-              mTabLayout.getTabAt(i).setIcon(R.drawable.index4);
+              mTabLayout.getTabAt(i).setIcon(R.drawable.index44);
           }else if (i == 4){
               mTabLayout.getTabAt(i).setIcon(R.mipmap.ic_settings_black_24dp);
           }
