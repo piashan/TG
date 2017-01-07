@@ -1,6 +1,28 @@
 <resources>
-    <string name="app_name">TG</string>
+    <string name="app_name">TechGaint</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="second">
+        <item>Central Bank</item>
+        <item>Education</item>
+        <item>Skills</item>
+        <item>Lodging</item>
+        <item>Health &amp; Leisure</item>
+    </string-array>
+    <string-array name="third">
+        <item>Part Time Jobs</item>
+        <item>Internship Jobs</item>
+        <item>Full Time Jobs</item>
+        <item>Excutive Jobs</item>
+    </string-array>
+    <string-array name="fouth">
+        <item>Build your Idea</item>
+        <item>Develop your company</item>
+        <item>Office Furniture &amp; Equipment</item>
+        <item>Choose an office</item>
+        <item>Build a Customer Base</item>
+        <item>Funding Rounds</item>
+    </string-array>
 </resources>

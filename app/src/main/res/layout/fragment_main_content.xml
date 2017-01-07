@@ -9,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#DCDCDC"
     tools:context="mp.piash.tg.MainActivity">
 
     <ImageView
@@ -27,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonPlay"
+            android:layout_marginBottom="8dp"
             android:text="Play"
             android:drawableLeft="@mipmap/ic_play_arrow_black_24dp"
             android:layout_gravity="center"/>
@@ -34,12 +36,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Leaderboard"
+            android:layout_marginBottom="8dp"
             android:textSize="16sp"
             android:layout_gravity="center"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textViewAchievement"
+            android:layout_marginBottom="8dp"
             android:text="Achivements"
             android:textSize="16sp"
             android:layout_gravity="center"/>
@@ -47,11 +51,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Load Game"
+            android:layout_marginBottom="8dp"
             android:textSize="16sp"
             android:layout_gravity="center"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_gravity="center"
             android:orientation="horizontal">
             <ImageView
@@ -63,6 +69,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/imagViewhelp"
                 android:layout_marginLeft="8dp"
                 android:src="@mipmap/ic_help_black_24dp"/>
         </LinearLayout>

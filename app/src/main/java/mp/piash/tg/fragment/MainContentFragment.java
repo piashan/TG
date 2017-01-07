@@ -2,6 +2,7 @@ package mp.piash.tg.fragment;
 
 
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -24,6 +25,7 @@ public class MainContentFragment extends Fragment {
     private Button mButtonPlay;
     private ImageView mImageViewSetting;
     private TextView mTextViewAcievement;
+    private ImageView mImageViewHelp;
     public MainContentFragment() {
         // Required empty public constructor
     }
@@ -37,10 +39,12 @@ public class MainContentFragment extends Fragment {
         mButtonPlay = (Button)view.findViewById(R.id.buttonPlay);
         mImageViewSetting = (ImageView)view.findViewById(R.id.imageViewSetting);
         mTextViewAcievement = (TextView)view.findViewById(R.id.textViewAchievement);
+        mImageViewHelp = (ImageView)view.findViewById(R.id.imagViewhelp);
 
         play();
         setting();
         achievement();
+        help();
       /*  android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.activity_main, new MainContentFragment());
@@ -99,4 +103,18 @@ public class MainContentFragment extends Fragment {
         );
     }
 
+    private void help(){
+        mImageViewHelp.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.activity_main, new BankAccountFragment());
+                        ft.addToBackStack(null);
+                        ft.commit();
+                    }
+                }
+        );
+    }
 }

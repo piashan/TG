@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import mp.piash.tg.R;
 import mp.piash.tg.adapter.TabFragmentPageAdapter;
 
@@ -37,11 +40,13 @@ public class TabbedFragment extends Fragment {
         ((MainActivity)getActivity()).setSupportActionBar(toolbar);*/
 
        // mAdapter = new TabFragmentPageAdapter(getChildFragmentManager());
+
+        Integer[] myImageList = new Integer[]{R.drawable.bank, R.drawable.education, R.drawable.index22, R.drawable.lodging};
+        String[] albums = getResources().getStringArray(R.array.third);
         mAdapter = new TabFragmentPageAdapter(getChildFragmentManager());
         mViewPager.setAdapter(mAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
       for (int i = 0; i < mTabLayout.getTabCount(); i++){
-
           if (i == 0){
               mTabLayout.getTabAt(i).setIcon(R.drawable.index11);
           }else if (i == 1){

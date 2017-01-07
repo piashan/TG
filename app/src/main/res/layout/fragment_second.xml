@@ -1,12 +1,13 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mp.piash.tg.fragment.BlankFragment">
+    tools:context="mp.piash.tg.fragment.SecondFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerViewPlay"/>
+        android:id="@+id/recyclerViewSecond"/>
 
-</RelativeLayout>
+</FrameLayout>

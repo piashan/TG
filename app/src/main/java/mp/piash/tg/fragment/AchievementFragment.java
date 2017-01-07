@@ -41,10 +41,10 @@ public class AchievementFragment extends DialogFragment {
         for (int i = 0; i <11 ; i++) {
             mStringList.add("Testing Text" + i);
         }
-        mLayoutManager = new GridLayoutManager(getActivity(), 1);
+        /*mLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerViewPlay.setLayoutManager(mLayoutManager);
-        mAdapterPlay = new AdapterPlay( getActivity(),mStringList);
-        mRecyclerViewPlay.setAdapter(mAdapterPlay);
+        mAdapterPlay = new AdapterPlay( getActivity(),mStringList, );
+        mRecyclerViewPlay.setAdapter(mAdapterPlay);*/
         return view;
     }
 

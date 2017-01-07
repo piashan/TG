@@ -2,12 +2,11 @@ package mp.piash.tg.adapter;
 
 
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.support.v13.app.FragmentStatePagerAdapter;
-
-import mp.piash.tg.fragment.BlankFragment;
+import mp.piash.tg.fragment.FirstFragment;
+import mp.piash.tg.fragment.FouthFragment;
+import mp.piash.tg.fragment.SecondFragment;
 import mp.piash.tg.fragment.SettingFragment;
+import mp.piash.tg.fragment.ThirdFragment;
 
 
 /**
@@ -17,7 +16,6 @@ import mp.piash.tg.fragment.SettingFragment;
 public class TabFragmentPageAdapter extends android.support.v4.app.FragmentStatePagerAdapter{
 
     private String tabTitles[] = new String[] { "age", "Salary" ,"Net worth", "Education", "job"};
-
     public TabFragmentPageAdapter(android.support.v4.app.FragmentManager fm) {
         super(fm);
     }
@@ -26,8 +24,15 @@ public class TabFragmentPageAdapter extends android.support.v4.app.FragmentState
     public android.support.v4.app.Fragment getItem(int position) {
         if (position == 4){
             return new SettingFragment();
+        }else if (position == 1){
+            return new SecondFragment();
+        }else if (position == 2){
+            return new ThirdFragment();
+        }else if (position == 3){
+            return new FouthFragment();
         }else {
-            return new BlankFragment();
+            return new FirstFragment();
+
         }
 
     }
