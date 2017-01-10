@@ -47,6 +47,54 @@
         <item>$15.000</item>
         <item>$25.000</item>
     </string-array>
+    <string-array name="SecondLodgingString">
+        <item>Stay at parent basement</item>
+        <item>Computer sills</item>
+        <item>Ask your parent a bicycle</item>
+        <item>Ask your paren for a car</item>
+        <item>Buy a bicycle</item>
+        <item>Rent basement</item>
+        <item>Buy second hand car</item>
+        <item>Rent a room</item>
+        <item>Buy a bike</item>
+        <item>Rent an apartment</item>
+        <item>Buy a condo</item>
+        <item>Rent a car A</item>
+        <item>Buy A Truck</item>
+        <item>Buy an electric car</item>
+        <item>Buy a SUV</item>
+        <item>Buy sport car A</item>
+        <item>Buy House A</item>
+        <item>Buy Condo</item>
+        <item>Buy Helicopter</item>
+        <item>Buy Villa</item>
+        <item>Buy Private jet</item>
+        <item>Buy an Estate</item>
+    </string-array>
+    <string-array name="SecondLodgingValue">
+        <item>Free</item>
+        <item>Free</item>
+        <item>Free</item>
+        <item>$100</item>
+        <item>$250/m</item>
+        <item>1000</item>
+        <item>$500/month </item>
+        <item>$1000</item>
+        <item>$2500/month</item>
+        <item>$10.000/m</item>
+        <item>$20.000/m</item>
+        <item>$15.000</item>
+        <item>$20.000</item>
+        <item>$35.000</item>
+        <item>$75.000</item>
+        <item>$250.000</item>
+        <item>$500.000</item>
+        <item>$1.500.000</item>
+        <item>$2.000.000</item>
+        <item>$3.500.000</item>
+        <item>$18.000.000</item>
+        <item>$25.000.000</item>
+    </string-array>
     <string-array name="third">
         <item>Part Time Jobs</item>
         <item>Internship Jobs</item>

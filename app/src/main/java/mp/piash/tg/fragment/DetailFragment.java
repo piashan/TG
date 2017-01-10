@@ -63,6 +63,13 @@ public class DetailFragment extends Fragment {
         }else if (getArguments().getInt("position") == 1){
             mString = getResources().getStringArray(R.array.SecondSkillsString);
             mStringValues = getResources().getStringArray(R.array.SecondSkillsValue);
+        }else if (getArguments().getInt("position") == 2){
+            mString = getResources().getStringArray(R.array.SecondLodgingString);
+            mStringValues = getResources().getStringArray(R.array.SecondLodgingValue);
+        }
+        else {
+            mString = getResources().getStringArray(R.array.SecondEducationString);
+            mStringValues = getResources().getStringArray(R.array.SecondEducationValue);
         }
 
     }
