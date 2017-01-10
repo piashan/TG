@@ -12,10 +12,10 @@ import mp.piash.tg.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BankAccountFragment extends Fragment {
+public class DetailFragment extends Fragment {
 
 
-    public BankAccountFragment() {
+    public DetailFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,9 @@ public class BankAccountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bank_account, container, false);
+        View view =  inflater.inflate(R.layout.fragment_detail, container, false);
+
+        return view;
     }
 
 }

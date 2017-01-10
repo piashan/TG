@@ -2,10 +2,10 @@ package mp.piash.tg.fragment;
 
 
 
+import android.app.Fragment;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -59,8 +59,8 @@ public class MainContentFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        FragmentManager fm = getFragmentManager();
-                        FragmentTransaction ft = fm.beginTransaction();
+                        android.app.FragmentManager fm = getActivity().getFragmentManager();
+                        android.app.FragmentTransaction ft = fm.beginTransaction();
                         ft.replace(R.id.activity_main, new TabbedFragment());
                         ft.addToBackStack(null);
                         ft.commit();
@@ -74,8 +74,8 @@ public class MainContentFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        FragmentManager fm = getFragmentManager();
-                        FragmentTransaction ft = fm.beginTransaction();
+                        android.app.FragmentManager fm = getActivity().getFragmentManager();
+                        android.app.FragmentTransaction ft = fm.beginTransaction();
                         ft.replace(R.id.activity_main, new SettingFragment());
                         ft.addToBackStack(null);
                         ft.commit();
@@ -90,8 +90,8 @@ public class MainContentFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        FragmentManager fm = getFragmentManager();
-                        FragmentTransaction ft = fm.beginTransaction();
+                        android.app.FragmentManager fm = getActivity().getFragmentManager();
+                        android.app.FragmentTransaction ft = fm.beginTransaction();
                         ft.replace(R.id.activity_main, new AchievementFragment());
                         ft.addToBackStack(null);
                         ft.commit();
@@ -108,8 +108,8 @@ public class MainContentFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        FragmentManager fm = getFragmentManager();
-                        FragmentTransaction ft = fm.beginTransaction();
+                        android.app.FragmentManager fm = getActivity().getFragmentManager();
+                        android.app.FragmentTransaction ft = fm.beginTransaction();
                         ft.replace(R.id.activity_main, new BankAccountFragment());
                         ft.addToBackStack(null);
                         ft.commit();

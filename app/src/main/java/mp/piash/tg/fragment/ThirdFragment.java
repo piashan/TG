@@ -1,8 +1,8 @@
 package mp.piash.tg.fragment;
 
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -52,6 +52,11 @@ public class ThirdFragment extends Fragment {
                     @Override
                     public void onItemClicked(View view, int position) {
                         Toast.makeText(getActivity(), "Click is woking", Toast.LENGTH_SHORT).show();
+                        android.app.FragmentManager fm = getActivity().getFragmentManager();
+                        android.app.FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.activity_main, new DetailFragment());
+                        ft.addToBackStack(null);
+                        ft.commit();
                     }
                 }
         );
