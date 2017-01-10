@@ -24,6 +24,8 @@ public class DetailFragment extends Fragment {
     private AdapterDetail mAdapterDetail;
     private RecyclerView mRecyclerViewDetail;
     private RecyclerView.LayoutManager mLayoutManager;
+    private String[] mString;
+    private String[] mStringValues;
 
     public DetailFragment() {
         // Required empty public constructor
@@ -36,8 +38,8 @@ public class DetailFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_detail, container, false);
         mRecyclerViewDetail = (RecyclerView)view.findViewById(R.id.recyclerviewDetail);
-        String[] mString = getResources().getStringArray(R.array.SecondEducationString);
-        String[] mStringValues = getResources().getStringArray(R.array.SecondEducationValue);
+
+        setTitleAndValues();
         mLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerViewDetail.setLayoutManager(mLayoutManager);
         mAdapterDetail = new AdapterDetail( getActivity(), Arrays.asList(mString), Arrays.asList(mStringValues));
@@ -53,4 +55,15 @@ public class DetailFragment extends Fragment {
         return view;
     }
 
+    private void setTitleAndValues(){
+
+        if (getArguments().getInt("position") == 0){
+            mString = getResources().getStringArray(R.array.SecondEducationString);
+            mStringValues = getResources().getStringArray(R.array.SecondEducationValue);
+        }else if (getArguments().getInt("position") == 1){
+            mString = getResources().getStringArray(R.array.SecondSkillsString);
+            mStringValues = getResources().getStringArray(R.array.SecondSkillsValue);
+        }
+
+    }
 }

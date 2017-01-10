@@ -23,6 +23,30 @@
         <item>$100.000</item>
         <item>$150.000</item>
     </string-array>
+    <string-array name="SecondSkillsString">
+        <item>Driving skills + license</item>
+        <item>Computer sills</item>
+        <item>Communication Skills</item>
+        <item>Risk Management sikls</item>
+        <item>Networkingi skills</item>
+        <item>Business skills</item>
+        <item>Product development skills</item>
+        <item>Law skills</item>
+        <item>ManageMent skills</item>
+        <item>Programming skills</item>
+    </string-array>
+    <string-array name="SecondSkillsValue">
+        <item>$500</item>
+        <item>$1.000</item>
+        <item>$2.500</item>
+        <item>$3.000</item>
+        <item>$5.000</item>
+        <item>$7000</item>
+        <item>$8.000</item>
+        <item>$12.000</item>
+        <item>$15.000</item>
+        <item>$25.000</item>
+    </string-array>
     <string-array name="third">
         <item>Part Time Jobs</item>
         <item>Internship Jobs</item>
