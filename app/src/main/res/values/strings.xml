@@ -11,6 +11,18 @@
         <item>Lodging</item>
         <item>Health &amp; Leisure</item>
     </string-array>
+    <string-array name="SecondEducationString">
+        <item>Finishing high school</item>
+        <item>Study at college</item>
+        <item>Study at university</item>
+        <item>Get MBA</item>
+    </string-array>
+    <string-array name="SecondEducationValue">
+        <item>$5000</item>
+        <item>$30.000</item>
+        <item>$100.000</item>
+        <item>$150.000</item>
+    </string-array>
     <string-array name="third">
         <item>Part Time Jobs</item>
         <item>Internship Jobs</item>
