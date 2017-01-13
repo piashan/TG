@@ -54,6 +54,7 @@ public class ThirdFragment extends Fragment {
                         Toast.makeText(getActivity(), "Click is woking", Toast.LENGTH_SHORT).show();
                         Bundle bundle = new Bundle();
                         bundle.putInt("position",position);
+                        bundle.putInt("viewpager",1);
                         Fragment fragment = new DetailFragment();
                         fragment.setArguments(bundle);
                         android.app.FragmentManager fm = getActivity().getFragmentManager();

@@ -52,16 +52,27 @@ public class SecondFragment extends Fragment {
                 new RVClickListener() {
                     @Override
                     public void onItemClicked(View view, int position) {
-                        Toast.makeText(getActivity(), "Click is woking", Toast.LENGTH_SHORT).show();
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("position",position);
-                        Fragment fragment = new DetailFragment();
-                        fragment.setArguments(bundle);
-                        android.app.FragmentManager fm = getActivity().getFragmentManager();
-                        android.app.FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.activity_main,fragment);
-                        ft.addToBackStack(null);
-                        ft.commit();
+
+                        if (position == 0){
+                            android.app.FragmentManager fm = getActivity().getFragmentManager();
+                            android.app.FragmentTransaction ft = fm.beginTransaction();
+                            ft.replace(R.id.activity_main,new BankAccountFragment());
+                            ft.addToBackStack(null);
+                            ft.commit();
+                        }else {
+                            Toast.makeText(getActivity(), "Click is woking", Toast.LENGTH_SHORT).show();
+                            Bundle bundle = new Bundle();
+                            bundle.putInt("position",position);
+                            bundle.putInt("viewpager",1);
+                            Fragment fragment = new DetailFragment();
+                            fragment.setArguments(bundle);
+                            android.app.FragmentManager fm = getActivity().getFragmentManager();
+                            android.app.FragmentTransaction ft = fm.beginTransaction();
+                            ft.replace(R.id.activity_main,fragment);
+                            ft.addToBackStack(null);
+                            ft.commit();
+                        }
+
                     }
                 }
         );

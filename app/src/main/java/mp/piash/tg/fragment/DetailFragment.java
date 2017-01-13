@@ -63,14 +63,13 @@ public class DetailFragment extends Fragment {
     }
 
     private void setTitleAndValues(){
-
-        if (getArguments().getInt("position") == 0){
+         if (getArguments().getInt("position") == 1 && getArguments().getInt("viewpager") == 1){
             mString = getResources().getStringArray(R.array.SecondEducationString);
             mStringValues = getResources().getStringArray(R.array.SecondEducationValue);
-        }else if (getArguments().getInt("position") == 1){
+        }else if (getArguments().getInt("position") == 2 && getArguments().getInt("viewpager") == 1){
             mString = getResources().getStringArray(R.array.SecondSkillsString);
             mStringValues = getResources().getStringArray(R.array.SecondSkillsValue);
-        }else if (getArguments().getInt("position") == 2){
+        }else if (getArguments().getInt("position") == 3 && getArguments().getInt("viewpager") == 1){
             mString = getResources().getStringArray(R.array.SecondLodgingString);
             mStringValues = getResources().getStringArray(R.array.SecondLodgingValue);
         }
@@ -79,5 +78,12 @@ public class DetailFragment extends Fragment {
             mStringValues = getResources().getStringArray(R.array.SecondEducationValue);
         }
 
+    }
+    public void SecondFragment(int position){
+        if (position == 0){
+
+        }else if (position == 1){
+
+        }
     }
 }
