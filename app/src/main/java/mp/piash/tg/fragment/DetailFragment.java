@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class DetailFragment extends Fragment {
     private AdapterDetail mAdapterDetail;
     private RecyclerView mRecyclerViewDetail;
     private RecyclerView.LayoutManager mLayoutManager;
+    private Button mButtonBack;
     private List<String> mString;
     private List<String> mStringValues;
     TechGaintHandler mTechGaintHandler;
@@ -44,10 +46,12 @@ public class DetailFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_detail, container, false);
         mRecyclerViewDetail = (RecyclerView)view.findViewById(R.id.recyclerviewDetail);
+        mButtonBack = (Button)view.findViewById(R.id.buttonBackButton);
         mString = new ArrayList<>();
         mStringValues = new ArrayList<>();
         mTechGaintHandler = new TechGaintHandler(getActivity());
         setTitleAndValues();
+        backButton();
         mLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerViewDetail.setLayoutManager(mLayoutManager);
         mAdapterDetail = new AdapterDetail( getActivity(),mString, mStringValues);
@@ -74,17 +78,49 @@ public class DetailFragment extends Fragment {
     }
 
     private void setTitleAndValues(){
-         if (getArguments().getInt("position") == 1 && getArguments().getInt("viewpager") == 1){
+         if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1){
             mString = Arrays.asList(getResources().getStringArray(R.array.SecondEducationString));
             mStringValues = Arrays.asList(getResources().getStringArray(R.array.SecondEducationValue));
-        }else if (getArguments().getInt("position") == 2 && getArguments().getInt("viewpager") == 1){
+        }else if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2){
             mString = Arrays.asList(getResources().getStringArray(R.array.SecondSkillsString));
             mStringValues = Arrays.asList(getResources().getStringArray(R.array.SecondSkillsValue));
-        }else if (getArguments().getInt("position") == 3 && getArguments().getInt("viewpager") == 1){
+        }else if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3){
             mString = Arrays.asList(getResources().getStringArray(R.array.SecondLodgingString));
             mStringValues = Arrays.asList(getResources().getStringArray(R.array.SecondLodgingValue));
-        }
-        else {
+        }else if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4){
+             mString = Arrays.asList(getResources().getStringArray(R.array.SecondHealtLeisureString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.SecondHealtLeisureValue));
+         } else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0){
+             mString = Arrays.asList(getResources().getStringArray(R.array.thirdPartTimeJobString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.thirdPartTimeJobValue));
+         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1){
+             mString = Arrays.asList(getResources().getStringArray(R.array.thirdInternshipJobString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.thirdInternshipJobValue));
+         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 2){
+             mString = Arrays.asList(getResources().getStringArray(R.array.thirdFullTimeJobString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.thirdFullTimeJobValue));
+         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 3){
+             mString = Arrays.asList(getResources().getStringArray(R.array.thirdExecutiveJobString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.thirdExecutiveJobValue));
+         } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0){
+             mString = Arrays.asList(getResources().getStringArray(R.array.fouthBuildYourIdeaString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthBuildYourIdeaValue));
+         }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 1){
+             mString = Arrays.asList(getResources().getStringArray(R.array.fouthDevelopYourCompanyString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthDevelopYourCompanyValue));
+         } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 2){
+             mString = Arrays.asList(getResources().getStringArray(R.array.fouthOfficeFurnitureString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthOfficeFurnitureValue));
+         } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 3){
+             mString = Arrays.asList(getResources().getStringArray(R.array.fouthChooseOfficeString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthChooseOfficeValue));
+         }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 4){
+             mString = Arrays.asList(getResources().getStringArray(R.array.fouthCustomerBaseString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthCustomerBaseValue));
+         }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 5){
+             mString = Arrays.asList(getResources().getStringArray(R.array.fouthFundingRoundString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthFundingRoundValue));
+         }else {
             mString = Arrays.asList(getResources().getStringArray(R.array.SecondEducationString));
             mStringValues = Arrays.asList(getResources().getStringArray(R.array.SecondEducationValue));
         }
@@ -95,7 +131,8 @@ public class DetailFragment extends Fragment {
         if (getInterger(mStringValues.get(position)) > mTechGaintHandler.getAllWishlistData().get(0)){
             showDialog(mStringValues.get(position), getInterger(mStringValues.get(position)) );
         }else {
-            Toast.makeText(getActivity(), getInterger(mStringValues.get(position))+ " is  not sufficient Balance", Toast.LENGTH_SHORT).show();
+            showDialog(mStringValues.get(position), getInterger(mStringValues.get(position)) );
+            //Toast.makeText(getActivity(), getInterger(mStringValues.get(position))+ " is  not sufficient Balance", Toast.LENGTH_SHORT).show();
         }
         /*if (position == 0){
             *//*int recentbalance  = getInterger(mStringValues.get(position));
@@ -124,7 +161,8 @@ public class DetailFragment extends Fragment {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
-                mTechGaintHandler.updataData(balance);
+                int total = balance + mTechGaintHandler.getAllWishlistData().get(0);
+                mTechGaintHandler.updataData(total);
                 Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllWishlistData().get(0), Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
@@ -150,4 +188,16 @@ public class DetailFragment extends Fragment {
 
         return intergerValue;
     }
+
+    public void backButton(){
+        mButtonBack.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        getFragmentManager().popBackStack();
+                    }
+                }
+        );
+    }
+
 }

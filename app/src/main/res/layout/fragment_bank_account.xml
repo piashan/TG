@@ -20,6 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/tvBankAccount"
             android:text="Bank Account - $0"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
@@ -34,6 +35,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/tvCash"
             android:text="Cash - $0"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
@@ -48,6 +50,8 @@
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:id="@+id/etWithdrawAmount"
+        android:inputType="number"
         android:hint="Enter the amount"
         android:layout_gravity="center_horizontal"/>
     <LinearLayout
@@ -58,6 +62,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/tvWithdrawAmount"
         android:textColor="@android:color/white"
         android:backgroundTint="@color/coloryellow"
         android:textAllCaps="false"
@@ -65,79 +70,19 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/tvDepositAmount"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:backgroundTint="@color/coloryellow"
         android:text="Deposit"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/bank"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Bank Account - $0"
-            android:layout_gravity="center_vertical" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/dollarb"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cash - $0"
-            android:layout_gravity="center_vertical" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:gravity="center"
-        android:background="#EDEDED"
-        android:layout_marginBottom="8dp"
-        android:text="Minimum amount to open an account is $100"/>
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter the amount"
-        android:layout_gravity="center_horizontal"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="70dp"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/coloryellow"
-            android:textAllCaps="false"
-            android:text="Withdraw"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/coloryellow"
-            android:text="Deposit"/>
-    </LinearLayout>
-
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/BackButton"
+        android:layout_marginTop="280dp"
         android:textColor="@android:color/white"
         android:backgroundTint="@color/coloryellow"
         android:text="Back"/>

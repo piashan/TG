@@ -95,11 +95,257 @@
         <item>$18.000.000</item>
         <item>$25.000.000</item>
     </string-array>
+    <string-array name="SecondHealtLeisureString">
+        <item>Sleep</item>
+        <item>Eat</item>
+        <item>Self improvement</item>
+        <item>Buy clothes A</item>
+        <item>Buy clothes B</item>
+        <item>Buy clothes C</item>
+        <item>Go to Gym</item>
+        <item>Yoga &amp; Reflection</item>
+        <item>Go Hiking</item>
+        <item>Take a weekend away</item>
+        <item>Go on Holiday</item>
+    </string-array>
+    <string-array name="SecondHealtLeisureValue">
+        <item>Free</item>
+        <item>$5</item>
+        <item>$30</item>
+        <item>$20</item>
+        <item>$250</item>
+        <item>$3000</item>
+        <item>$10</item>
+        <item>$20</item>
+        <item>$25</item>
+        <item>$150</item>
+        <item>$500</item>
+    </string-array>
     <string-array name="third">
         <item>Part Time Jobs</item>
         <item>Internship Jobs</item>
         <item>Full Time Jobs</item>
         <item>Excutive Jobs</item>
+    </string-array>
+    <string-array name="thirdPartTimeJobString">
+        <item>Clean your room</item>
+        <item>Deliver newspapers</item>
+        <item>Work at abarbershop</item>
+        <item>Cleaner</item>
+        <item>Waiter</item>
+        <item>PetCare</item>
+        <item>DeliveryMan</item>
+        <item>Construction worker</item>
+        <item>Telephone Interviewer</item>
+        <item>Customer Service</item>
+        <item>Sales</item>
+        <item>Uber Driver</item>
+        <item>Model</item>
+        <item>Freelancer</item>
+        <item>Programmer</item>
+    </string-array>
+
+    <string-array name="thirdPartTimeJobValue">
+    <item>$1</item>
+    <item>$25</item>
+    <item>$50</item>
+    <item>$100</item>
+    <item>$150</item>
+    <item>$350</item>
+    <item>$500</item>
+    <item>$000</item>
+    <item>$1500</item>
+    <item>$1500</item>
+    <item>$1800</item>
+    <item>$2000</item>
+    <item>$2500</item>
+    <item>$5000</item>
+    <item>$10</item>
+    </string-array>
+    <string-array name="thirdInternshipJobString">
+        <item>Internship in PR Advertising</item>
+        <item>Intership in Sales</item>
+        <item>internship in Accounting</item>
+        <item>Internship in Biochemistry</item>
+        <item>InternShip in Banking</item>
+        <item>InternShip in Chemistry</item>
+        <item>InternShip in Fashion</item>
+        <item>InternShip in IT</item>
+        <item>InternShip in Computer Game Design</item>
+        <item>InternShip in Aeronautic</item>
+        <item>InternShip in Finance</item>
+        <item>InternShip in Engineering</item>
+        <item>InternShip in Physics</item>
+        <item>InternShip in Tech Staff</item>
+        <item>InternShip in Tech Software Dev</item>
+    </string-array>
+    <string-array name="thirdInternshipJobValue">
+        <item>$1.500</item>
+        <item>$2.300</item>
+        <item>$2.500</item>
+        <item>$2.850</item>
+        <item>$3.000</item>
+        <item>$3.300</item>
+        <item>$3.900</item>
+        <item>$4000</item>
+        <item>$4.000</item>
+        <item>$4.500</item>
+        <item>$5.000</item>
+        <item>$5.500</item>
+        <item>$6.600</item>
+        <item>$7.800</item>
+        <item>$8.500</item>
+    </string-array>
+    <string-array name="thirdFullTimeJobString">
+        <item>Information System Manager</item>
+        <item>Product Manger</item>
+        <item>Data Architect</item>
+        <item>Data Scientist</item>
+        <item>System Architect</item>
+        <item>Application Dev. Manager</item>
+        <item>Solution Architect</item>
+        <item>IT Manager</item>
+        <item>Software Architect</item>
+        <item>Software Development Manager</item>
+        <item>Group Product Manager</item>
+        <item>Engineering Manager</item>
+    </string-array>
+    <string-array name="thirdFullTimeJobValue">
+        <item>$120,000</item>
+        <item>$125,000</item>
+        <item>$130,000</item>
+        <item>$150,000</item>
+        <item>$170,000</item>
+        <item>$185,000</item>
+        <item>$220,000</item>
+        <item>$225,000</item>
+        <item>$230,000</item>
+        <item>$225,000</item>
+        <item>$300,000</item>
+        <item>$350,000</item>
+    </string-array>
+    <string-array name="thirdExecutiveJobString">
+        <item>VP Engineering</item>
+        <item>VP IT</item>
+        <item>VP Infrastructure</item>
+        <item>CFO</item>
+        <item>CTO</item>
+        <item>CIO</item>
+        <item>COO</item>
+        <item>CEO</item>
+        <item>Chairman &amp; CEO</item>
+    </string-array>
+    <string-array name="thirdExecutiveJobValue">
+        <item>$1,750,000</item>
+        <item>$1,850,000</item>
+        <item>$2,000,000</item>
+        <item>$2,500,000</item>
+        <item>$3,000,000</item>
+        <item>$3,500,000</item>
+        <item>$5,000,000</item>
+        <item>$10,000,000</item>
+        <item>$100,000,000</item>
+    </string-array>
+    <string-array name="fouthBuildYourIdeaString">
+        <item>Write down your idea</item>
+        <item>Develop your Idea</item>
+        <item>Find co-Founders</item>
+        <item>Write codes</item>
+        <item>Write a Business Plan</item>
+        <item>Find seed investors</item>
+        <item>Get License &amp; Permit</item>
+        <item>Develop a corporate Identity</item>
+        <item>Get a Trademark and a Patent</item>
+    </string-array>
+    <string-array name="fouthBuildYourIdeaValue">
+        <item>$5000</item>
+        <item>$10,000</item>
+        <item>$25,000</item>
+        <item>$30,000</item>
+        <item>$40,000</item>
+        <item>$50,000</item>
+        <item>$5,000</item>
+        <item>$5,000</item>
+        <item>$10,000</item>
+    </string-array>
+    <string-array name="fouthDevelopYourCompanyString">
+        <item>Understant Trend and Market</item>
+        <item>Develop your 1st Prototype</item>
+        <item>Join Company Accelerator</item>
+        <item>Build a Beta version of yoru product</item>
+        <item>Pitch to Investors(Demo Day)</item>
+    </string-array>
+    <string-array name="fouthDevelopYourCompanyValue">
+        <item>$75,000</item>
+        <item>$85,000</item>
+        <item>$100,000</item>
+        <item>$200,000</item>
+        <item>$500,000</item>
+    </string-array>
+    <string-array name="fouthOfficeFurnitureString">
+        <item>Get Equipment 1</item>
+        <item>Get Equipment 2</item>
+        <item>Get Equipment 3</item>
+        <item>Get Equipment 4</item>
+        <item>Get Equipment 5</item>
+
+    </string-array>
+    <string-array name="fouthOfficeFurnitureValue">
+        <item>$100,00</item>
+        <item>$5000,000</item>
+        <item>$1,500,000</item>
+        <item>$5,000,000</item>
+        <item>$30,000,000</item>
+
+    </string-array>
+    <string-array name="fouthChooseOfficeString">
+        <item>Lease Office 1</item>
+        <item>Lease Office 2</item>
+        <item>Lease Office 3</item>
+        <item>Lease Office 4</item>
+        <item>Lease a complex of building</item>
+
+    </string-array>
+    <string-array name="fouthChooseOfficeValue">
+        <item>$50,000/year</item>
+        <item>$150,000/year</item>
+        <item>$550,000/year</item>
+        <item>$1,500,000/year</item>
+        <item>$15,500,000/year</item>
+
+    </string-array>
+    <string-array name="fouthCustomerBaseString">
+        <item>Improve Online Presence</item>
+        <item>Local Marketing Operations</item>
+        <item>International Marketing Operations</item>
+        <item>Local Expansion Plan</item>
+        <item>International Expansion Plan</item>
+
+    </string-array>
+    <string-array name="fouthCustomerBaseValue">
+        <item>$250,000/month</item>
+        <item>$1,000,000</item>
+        <item>$75,000,000</item>
+        <item>$10,000,000</item>
+        <item>$50,000,000</item>
+
+    </string-array>
+    <string-array name="fouthFundingRoundString">
+        <item>Serie A</item>
+        <item>Serie B</item>
+        <item>Serie C</item>
+        <item>Serie D</item>
+        <item>Serie E</item>
+        <item>IPO</item>
+    </string-array>
+    <string-array name="fouthFundingRoundValue">
+        <item>$10,000,000</item>
+        <item>$40,000,000</item>
+        <item>$250,000,000</item>
+        <item>$1,250,000,000</item>
+        <item>$1,800,000,000</item>
+        <item>$2,000,000,000</item>
+
     </string-array>
     <string-array name="fouth">
         <item>Build your Idea</item>
