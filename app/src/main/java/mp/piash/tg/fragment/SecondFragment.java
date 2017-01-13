@@ -60,7 +60,6 @@ public class SecondFragment extends Fragment {
                             ft.addToBackStack(null);
                             ft.commit();
                         }else {
-                            Toast.makeText(getActivity(), "Click is woking", Toast.LENGTH_SHORT).show();
                             Bundle bundle = new Bundle();
                             bundle.putInt("position",position);
                             bundle.putInt("viewpager",1);

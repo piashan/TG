@@ -26,17 +26,18 @@ public class TabFragmentPageAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 4){
-            return new SettingFragment();
-        }else if (position == 1){
+        if (position == 0){
+            return new FirstFragment();
+        } else if (position == 1){
             return new SecondFragment();
         }else if (position == 2){
             return new ThirdFragment();
         }else if (position == 3){
             return new FouthFragment();
+        }else if (position == 4){
+            return new SettingFragment();
         }else {
             return new FirstFragment();
-
         }
 
     }

@@ -79,7 +79,21 @@ public class TechGaintHandler {
         else
             return  false;
     }
+    public int getSingleData(int id) {
+        this.open();
 
+        Cursor cursor = mDatabase.query(TechGaintContract.WishlistTableColumns.TABLE_NAME,
+                new String[]{TechGaintContract.WishlistTableColumns._ID, TechGaintContract.WishlistTableColumns.BALANCE},
+                TechGaintContract.WishlistTableColumns._ID + "=" + 0, null, null, null, null);
+
+        cursor.moveToFirst();
+
+        int balance = cursor.getInt(cursor.getColumnIndex(TechGaintContract.WishlistTableColumns._ID));
+
+        cursor.close();
+        this.close();
+        return balance;
+    }
 
     public int isFavourite(int dealId){
 

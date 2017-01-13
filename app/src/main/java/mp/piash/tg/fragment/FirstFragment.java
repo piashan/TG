@@ -54,8 +54,6 @@ public class FirstFragment extends Fragment {
         mRecyclerViewPlay.setLayoutManager(mLayoutManager);
         mAdapterPlay = new AdapterPlay( getActivity(), mStringList, mIntegerList);
         mRecyclerViewPlay.setAdapter(mAdapterPlay);*/
-
-
         return view;
     }
 
