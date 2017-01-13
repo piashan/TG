@@ -23,6 +23,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_weight="2"
+           android:layout_marginLeft="110dp"
            android:textColor="#484848"
            android:text="17 years 20 days" />
    </LinearLayout>
@@ -43,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:layout_marginLeft="35dp"
             android:textColor="#484848"
             android:text="$50" />
     </LinearLayout>
@@ -80,9 +82,53 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:layout_weight="2"
             android:textColor="#484848"
             android:text="100%" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/heart"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="center_vertical"
+            android:text="Health"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="#ce2f2fff"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/experience"
+            android:layout_marginRight="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="center_vertical"
+            android:text="Experience" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="#ce2f2fff"/>
     </LinearLayout>
 
 </LinearLayout>

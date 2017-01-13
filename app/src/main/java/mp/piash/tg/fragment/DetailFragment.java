@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,7 @@ import java.util.Arrays;
 
 import mp.piash.tg.R;
 import mp.piash.tg.adapter.AdapterDetail;
-import mp.piash.tg.adapter.AdapterPlay;
+import mp.piash.tg.database.TechGaintHandler;
 import mp.piash.tg.interfaces.RVClickListener;
 
 /**
@@ -26,6 +27,8 @@ public class DetailFragment extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private String[] mString;
     private String[] mStringValues;
+    TechGaintHandler mTechGaintHandler;
+
 
     public DetailFragment() {
         // Required empty public constructor
@@ -38,7 +41,7 @@ public class DetailFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_detail, container, false);
         mRecyclerViewDetail = (RecyclerView)view.findViewById(R.id.recyclerviewDetail);
-
+        mTechGaintHandler = new TechGaintHandler(getActivity());
         setTitleAndValues();
         mLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerViewDetail.setLayoutManager(mLayoutManager);
@@ -49,6 +52,10 @@ public class DetailFragment extends Fragment {
                     @Override
                     public void onItemClicked(View view, int position) {
                         Toast.makeText(getActivity(), "Detail aslo working", Toast.LENGTH_SHORT).show();
+                        mTechGaintHandler.getAllWishlistData();
+                        mTechGaintHandler.updataData(50);
+                        Log.e("Test", "onItemClicked: "+ mTechGaintHandler.getAllWishlistData());
+
                     }
                 }
         );

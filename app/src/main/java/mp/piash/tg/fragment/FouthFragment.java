@@ -53,9 +53,13 @@ public class FouthFragment extends Fragment {
                     @Override
                     public void onItemClicked(View view, int position) {
                         Toast.makeText(getActivity(), "Click is woking", Toast.LENGTH_SHORT).show();
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("position",position);
+                        Fragment fragment = new DetailFragment();
+                        fragment.setArguments(bundle);
                         android.app.FragmentManager fm = getActivity().getFragmentManager();
                         android.app.FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.activity_main, new DetailFragment());
+                        ft.replace(R.id.activity_main,fragment);
                         ft.addToBackStack(null);
                         ft.commit();
                     }
