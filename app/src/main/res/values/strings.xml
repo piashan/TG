@@ -282,6 +282,22 @@
         <item>$200,000</item>
         <item>$500,000</item>
     </string-array>
+    <string-array name="fouthChooseOfficeString">
+        <item>Lease Office 1</item>
+        <item>Lease Office 2</item>
+        <item>Lease Office 3</item>
+        <item>Lease Office 4</item>
+        <item>Lease a complex of building</item>
+
+    </string-array>
+    <string-array name="fouthChooseOfficeValue">
+        <item>$50,000/year</item>
+        <item>$150,000/year</item>
+        <item>$550,000/year</item>
+        <item>$1,500,000/year</item>
+        <item>$15,500,000/year</item>
+
+    </string-array>
     <string-array name="fouthOfficeFurnitureString">
         <item>Get Equipment 1</item>
         <item>Get Equipment 2</item>
@@ -298,20 +314,19 @@
         <item>$30,000,000</item>
 
     </string-array>
-    <string-array name="fouthChooseOfficeString">
-        <item>Lease Office 1</item>
-        <item>Lease Office 2</item>
-        <item>Lease Office 3</item>
-        <item>Lease Office 4</item>
-        <item>Lease a complex of building</item>
-
+    <string-array name="fouthHireTalentString">
+    <item>15 Talents</item>
+    <item>50 Talents</item>
+    <item>100 Talents</item>
+    <item>1000 Talents</item>
+    <item>5000 Talents</item>
     </string-array>
-    <string-array name="fouthChooseOfficeValue">
-        <item>$50,000/year</item>
-        <item>$150,000/year</item>
-        <item>$550,000/year</item>
-        <item>$1,500,000/year</item>
-        <item>$15,500,000/year</item>
+    <string-array name="fouthHireTalentValue">
+    <item>$640,0000/year</item>
+    <item>$2,5000,000/year</item>
+    <item>$5,0000,000/year</item>
+    <item>$50,000,000/year</item>
+    <item>$200,000,000/year</item>
 
     </string-array>
     <string-array name="fouthCustomerBaseString">
@@ -350,8 +365,9 @@
     <string-array name="fouth">
         <item>Build your Idea</item>
         <item>Develop your company</item>
+        <item>Get an office</item>
         <item>Office Furniture &amp; Equipment</item>
-        <item>Choose an office</item>
+        <item>Hire Talents</item>
         <item>Build a Customer Base</item>
         <item>Funding Rounds</item>
     </string-array>

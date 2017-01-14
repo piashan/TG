@@ -43,6 +43,7 @@ public class FouthFragment extends Fragment {
         array_image.add( R.drawable.equipment);
         array_image.add( R.drawable.customer);
         array_image.add( R.drawable.funding);
+        array_image.add(R.drawable.customer);
         String[] mString = getResources().getStringArray(R.array.fouth);
         mLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerViewPlay.setLayoutManager(mLayoutManager);

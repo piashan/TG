@@ -109,15 +109,18 @@ public class DetailFragment extends Fragment {
              mString = Arrays.asList(getResources().getStringArray(R.array.fouthDevelopYourCompanyString));
              mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthDevelopYourCompanyValue));
          } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 2){
-             mString = Arrays.asList(getResources().getStringArray(R.array.fouthOfficeFurnitureString));
-             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthOfficeFurnitureValue));
-         } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 3){
              mString = Arrays.asList(getResources().getStringArray(R.array.fouthChooseOfficeString));
              mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthChooseOfficeValue));
+         }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 3){
+             mString = Arrays.asList(getResources().getStringArray(R.array.fouthOfficeFurnitureString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthOfficeFurnitureValue));
          }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 4){
+             mString = Arrays.asList(getResources().getStringArray(R.array.fouthHireTalentString));
+             mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthHireTalentValue));
+         } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 5){
              mString = Arrays.asList(getResources().getStringArray(R.array.fouthCustomerBaseString));
              mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthCustomerBaseValue));
-         }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 5){
+         }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 6){
              mString = Arrays.asList(getResources().getStringArray(R.array.fouthFundingRoundString));
              mStringValues = Arrays.asList(getResources().getStringArray(R.array.fouthFundingRoundValue));
          }else {
