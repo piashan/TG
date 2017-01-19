@@ -69,7 +69,6 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
         mDialogFragmentLogIn.setContentView(R.layout.google_log_dialog_layout);
         mButtonSignIn = (Button)mDialogFragmentLogIn.findViewById(R.id.textViewGoogleLogIn);
         mButtonCancel = (Button)mDialogFragmentLogIn.findViewById(R.id.textViewCancel);
-        mDialogFragmentLogIn.show();
         dialogDismiss();
         mAuth = FirebaseAuth.getInstance();
         googleAuth();
@@ -113,11 +112,12 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null ){
                     Log.e(TAG, "user logged in : "+user.getEmail() );
-                    Toast.makeText(getActivity(),"you are Connected to google Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"you are Connected to google", Toast.LENGTH_SHORT).show();
 
                 } else{
                     Log.e(TAG, "user logged out" );
-                    Toast.makeText(getActivity(),"you are logged out from google Successfully", Toast.LENGTH_SHORT).show();
+                    mDialogFragmentLogIn.show();
+
 
                 }
 
@@ -141,6 +141,7 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
     }
     private void signOut(){
         FirebaseAuth.getInstance().signOut();
+        Toast.makeText(getActivity(),"you are logged out from google", Toast.LENGTH_SHORT).show();
     }
     private void play(){
         mButtonPlay.setOnClickListener(

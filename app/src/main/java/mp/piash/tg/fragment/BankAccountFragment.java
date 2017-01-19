@@ -5,10 +5,10 @@ import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,7 +44,7 @@ public class BankAccountFragment extends Fragment {
         mEditTextWithdrawAmount = (EditText)view.findViewById(R.id.etWithdrawAmount);
 
         mTechGaintHandler = new TechGaintHandler(getActivity());
-        mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllWishlistData().get(0)));
+        mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
         clickEvent();
         return view;
     }
@@ -56,8 +56,8 @@ public class BankAccountFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
 
-                        if (!mEditTextWithdrawAmount.getText().toString().isEmpty()){
-                            showDialog( "withdraw",Integer.valueOf(mEditTextWithdrawAmount.getText().toString()));
+                        if (!mEditTextWithdrawAmount.getText().toString().isEmpty() && mTechGaintHandler.getAllBalanceData().get(0) > Integer.valueOf(mEditTextWithdrawAmount.getText().toString()) ){
+                            showDialogWithDraw( "withdraw",Integer.valueOf(mEditTextWithdrawAmount.getText().toString()));
                         }else {
                             Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
                         }
@@ -90,9 +90,45 @@ public class BankAccountFragment extends Fragment {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
-                int total = balance + mTechGaintHandler.getAllWishlistData().get(0);
-                mTechGaintHandler.updataData(total);
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllWishlistData().get(0), Toast.LENGTH_SHORT).show();
+                int total =  mTechGaintHandler.getAllBalanceData().get(0) + balance ;
+                mTechGaintHandler.updateBalance(total);
+                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
+                mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+                mTechGaintHandler.updateHealth(10);
+                Log.e(TAG, "onClick: Health"+mTechGaintHandler.getAllBalanceData().get(0) );
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // Do nothing
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    public void showDialogWithDraw(String mString, final int balance){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        builder.setTitle("Confirm");
+        builder.setMessage("Do you want to "+mString+" " + balance);
+
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+                // Do nothing but close the dialog
+                int total = mTechGaintHandler.getAllBalanceData().get(0) - balance;
+                mTechGaintHandler.updateBalance(total);
+                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
+                mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+
                 dialog.dismiss();
             }
         });

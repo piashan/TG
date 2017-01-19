@@ -12,7 +12,7 @@ public class TechGaintContract extends DatabaseHelper {
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + WishlistTableColumns.TABLE_NAME + " ( " +
                     WishlistTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
-                    + WishlistTableColumns.BALANCE +  " INTEGER" + " );";
+                    + WishlistTableColumns.BALANCE +  " INTEGER," +WishlistTableColumns.HEALTH +  " INTEGER," +WishlistTableColumns.EXPERIENCE +  " INTEGER," + WishlistTableColumns.COMPANY_EXPERIENCE +  " INTEGER" +" );";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + WishlistTableColumns.TABLE_NAME;
@@ -25,7 +25,8 @@ public class TechGaintContract extends DatabaseHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
         db.execSQL("insert into " + WishlistTableColumns.TABLE_NAME + "(" + WishlistTableColumns._ID   + ","
-                + WishlistTableColumns.BALANCE + ") values(0,2)");
+                + WishlistTableColumns.BALANCE + "," + WishlistTableColumns.HEALTH + "," + WishlistTableColumns.EXPERIENCE + "," + WishlistTableColumns.COMPANY_EXPERIENCE + ") values(0,0,0,0,0)");
+
     }
 
     @Override
@@ -43,5 +44,8 @@ public class TechGaintContract extends DatabaseHelper {
         public static final String TABLE_NAME = "Wishlist";
         public static final String _ID = "Id";
         public static final String BALANCE = "balance";
+        public static final String HEALTH = "health";
+        public static final String EXPERIENCE = "experience";
+        public static final String COMPANY_EXPERIENCE = "companyexperience";
     }
 }

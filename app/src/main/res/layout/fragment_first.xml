@@ -13,17 +13,14 @@
        android:layout_marginTop="8dp"
        android:orientation="horizontal">
        <TextView
-           android:layout_width="wrap_content"
+           android:layout_width="150dp"
            android:layout_height="wrap_content"
-           android:layout_weight="1"
            android:textColor="#484848"
            android:text="Age"/>
 
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:layout_weight="2"
-           android:layout_marginLeft="110dp"
            android:textColor="#484848"
            android:text="17 years 20 days" />
    </LinearLayout>
@@ -34,17 +31,14 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:textColor="#484848"
             android:text="Net worth"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_marginLeft="35dp"
             android:textColor="#484848"
             android:text="$50" />
     </LinearLayout>
@@ -54,16 +48,14 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:textColor="#484848"
             android:text="Company Value"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
             android:textColor="#484848"
             android:text="$0" />
     </LinearLayout>
@@ -73,17 +65,14 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:textColor="#484848"
             android:text="Equity in Compnay"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_weight="2"
             android:textColor="#484848"
             android:text="100%" />
     </LinearLayout>
@@ -91,44 +80,175 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginRight="8dp"
             android:src="@drawable/heart"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:layout_gravity="center_vertical"
             android:text="Health"/>
-        <View
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_gravity="center_vertical"
-            android:background="#ce2f2fff"/>
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="25dip"
+                android:progress="50"
+                android:progressDrawable="@drawable/customprogessbar" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="30"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="/"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="100"/>
+            </LinearLayout>
+
+        </RelativeLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/experience"
             android:layout_marginRight="8dp"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:layout_gravity="center_vertical"
             android:text="Experience" />
-        <View
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_gravity="center_vertical"
-            android:background="#ce2f2fff"/>
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="25dip"
+                android:progress="30"
+                android:progressDrawable="@drawable/customprogessbar" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="30"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="/"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="100"/>
+            </LinearLayout>
+
+        </RelativeLayout>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/experience"
+            android:layout_marginRight="8dp"/>
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="center_vertical"
+            android:text="Compnany Experience" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="25dip"
+                android:progress="10"
+                android:progressDrawable="@drawable/customprogessbar" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="30"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="/"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="100"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
 
 </LinearLayout>

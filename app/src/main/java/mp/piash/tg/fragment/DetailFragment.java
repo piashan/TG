@@ -61,9 +61,9 @@ public class DetailFragment extends Fragment {
                     @Override
                     public void onItemClicked(View view, int position) {
                         /*Toast.makeText(getActivity(), "Detail aslo working", Toast.LENGTH_SHORT).show();
-                        mTechGaintHandler.getAllWishlistData();
-                        mTechGaintHandler.updataData(50);
-                        Log.e("Test", "onItemClicked: "+ mTechGaintHandler.getAllWishlistData().get(0));*/
+                        mTechGaintHandler.getAllBalanceData();
+                        mTechGaintHandler.updateBalance(50);
+                        Log.e("Test", "onItemClicked: "+ mTechGaintHandler.getAllBalanceData().get(0));*/
                         secondFragmentEducation(position);
                         /*if ( getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1){
                             secondFragmentEducation(position);
@@ -131,7 +131,7 @@ public class DetailFragment extends Fragment {
     }
     public void secondFragmentEducation(int position){
 
-        if (getInterger(mStringValues.get(position)) > mTechGaintHandler.getAllWishlistData().get(0)){
+        if (getInterger(mStringValues.get(position)) > mTechGaintHandler.getAllBalanceData().get(0)){
             showDialog(mStringValues.get(position), getInterger(mStringValues.get(position)) );
         }else {
             showDialog(mStringValues.get(position), getInterger(mStringValues.get(position)) );
@@ -139,8 +139,8 @@ public class DetailFragment extends Fragment {
         }
         /*if (position == 0){
             *//*int recentbalance  = getInterger(mStringValues.get(position));
-            int currentbalance = mTechGaintHandler.getAllWishlistData().get(0);*//*
-            if (getInterger(mStringValues.get(position)) > mTechGaintHandler.getAllWishlistData().get(0)){
+            int currentbalance = mTechGaintHandler.getAllBalanceData().get(0);*//*
+            if (getInterger(mStringValues.get(position)) > mTechGaintHandler.getAllBalanceData().get(0)){
                 showDialog(mStringValues.get(position), getInterger(mStringValues.get(position)) );
             }else {
                 Toast.makeText(getActivity(), getInterger(mStringValues.get(position))+ " is  not sufficient Balance", Toast.LENGTH_SHORT).show();
@@ -164,9 +164,9 @@ public class DetailFragment extends Fragment {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
-                int total = balance + mTechGaintHandler.getAllWishlistData().get(0);
-                mTechGaintHandler.updataData(total);
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllWishlistData().get(0), Toast.LENGTH_SHORT).show();
+                int total = balance + mTechGaintHandler.getAllBalanceData().get(0);
+                mTechGaintHandler.updateBalance(total);
+                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
