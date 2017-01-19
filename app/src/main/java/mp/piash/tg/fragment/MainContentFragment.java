@@ -51,6 +51,7 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     private Dialog mDialogFragmentLogIn;
+    Bundle bundle;
     public MainContentFragment() {
         // Required empty public constructor
     }
@@ -69,8 +70,9 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
         mDialogFragmentLogIn.setContentView(R.layout.google_log_dialog_layout);
         mButtonSignIn = (Button)mDialogFragmentLogIn.findViewById(R.id.textViewGoogleLogIn);
         mButtonCancel = (Button)mDialogFragmentLogIn.findViewById(R.id.textViewCancel);
-        dialogDismiss();
+        bundle = new Bundle();
         mAuth = FirebaseAuth.getInstance();
+        dialogDismiss();
         googleAuth();
 
         play();
@@ -113,9 +115,11 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
                 if (user != null ){
                     Log.e(TAG, "user logged in : "+user.getEmail() );
                     Toast.makeText(getActivity(),"you are Connected to google", Toast.LENGTH_SHORT).show();
-
+                    bundle.putString("photoUrl",""+mAuth.getInstance().getCurrentUser().getPhotoUrl());
+                    bundle.putInt("trace",1);
                 } else{
                     Log.e(TAG, "user logged out" );
+                    bundle.putInt("trace",0);
                     mDialogFragmentLogIn.show();
 
 
@@ -135,7 +139,7 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
 
     }
 
-    private void singIn(){
+    public void singIn(){
         Intent singInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(singInIntent, RC_SIGN_IN);
     }
@@ -148,9 +152,13 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
+
+                        TabbedFragment tabbedFragment = new TabbedFragment();
+                        tabbedFragment.setArguments(bundle);
                         android.app.FragmentManager fm = getActivity().getFragmentManager();
                         android.app.FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.activity_main, new TabbedFragment());
+                        ft.replace(R.id.activity_main, tabbedFragment);
                         ft.addToBackStack(null);
                         ft.commit();
                     }

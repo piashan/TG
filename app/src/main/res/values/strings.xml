@@ -19,9 +19,9 @@
     </string-array>
     <string-array name="SecondEducationValue">
         <item>$5000</item>
-        <item>$30.000</item>
-        <item>$100.000</item>
-        <item>$150.000</item>
+        <item>$30,000</item>
+        <item>$100,000</item>
+        <item>$150,000</item>
     </string-array>
     <string-array name="SecondSkillsString">
         <item>Driving skills + license</item>
@@ -37,15 +37,15 @@
     </string-array>
     <string-array name="SecondSkillsValue">
         <item>$500</item>
-        <item>$1.000</item>
-        <item>$2.500</item>
-        <item>$3.000</item>
-        <item>$5.000</item>
-        <item>$7000</item>
-        <item>$8.000</item>
-        <item>$12.000</item>
-        <item>$15.000</item>
-        <item>$25.000</item>
+        <item>$1,000</item>
+        <item>$2,500</item>
+        <item>$3,000</item>
+        <item>$5,000</item>
+        <item>$7,000</item>
+        <item>$8,000</item>
+        <item>$12,000</item>
+        <item>$15,000</item>
+        <item>$25,000</item>
     </string-array>
     <string-array name="SecondLodgingString">
         <item>Stay at parent basement</item>
@@ -72,28 +72,28 @@
         <item>Buy an Estate</item>
     </string-array>
     <string-array name="SecondLodgingValue">
-        <item>Free</item>
-        <item>Free</item>
-        <item>Free</item>
+        <item>FREE($0)</item>
+        <item>FREE($0)</item>
+        <item>FREE($0)</item>
         <item>$100</item>
         <item>$250/m</item>
         <item>1000</item>
         <item>$500/month </item>
         <item>$1000</item>
         <item>$2500/month</item>
-        <item>$10.000/m</item>
-        <item>$20.000/m</item>
-        <item>$15.000</item>
-        <item>$20.000</item>
-        <item>$35.000</item>
-        <item>$75.000</item>
-        <item>$250.000</item>
-        <item>$500.000</item>
-        <item>$1.500.000</item>
-        <item>$2.000.000</item>
-        <item>$3.500.000</item>
-        <item>$18.000.000</item>
-        <item>$25.000.000</item>
+        <item>$10,000/m</item>
+        <item>$20,000/m</item>
+        <item>$15,000</item>
+        <item>$20,000</item>
+        <item>$35,000</item>
+        <item>$75,000</item>
+        <item>$250,000</item>
+        <item>$500,000</item>
+        <item>$1,500,000</item>
+        <item>$2,000,000</item>
+        <item>$3,500,000</item>
+        <item>$18,000,000</item>
+        <item>$25,000,000</item>
     </string-array>
     <string-array name="SecondHealtLeisureString">
         <item>Sleep</item>
@@ -109,7 +109,7 @@
         <item>Go on Holiday</item>
     </string-array>
     <string-array name="SecondHealtLeisureValue">
-        <item>Free</item>
+        <item>Free($0)</item>
         <item>$5</item>
         <item>$30</item>
         <item>$20</item>
@@ -180,21 +180,21 @@
         <item>InternShip in Tech Software Dev</item>
     </string-array>
     <string-array name="thirdInternshipJobValue">
-        <item>$1.500</item>
-        <item>$2.300</item>
-        <item>$2.500</item>
-        <item>$2.850</item>
-        <item>$3.000</item>
-        <item>$3.300</item>
-        <item>$3.900</item>
-        <item>$4000</item>
-        <item>$4.000</item>
-        <item>$4.500</item>
-        <item>$5.000</item>
-        <item>$5.500</item>
-        <item>$6.600</item>
-        <item>$7.800</item>
-        <item>$8.500</item>
+        <item>$1,500</item>
+        <item>$2,300</item>
+        <item>$2,500</item>
+        <item>$2,850</item>
+        <item>$3,000</item>
+        <item>$3,300</item>
+        <item>$3,900</item>
+        <item>$4,000</item>
+        <item>$4,000</item>
+        <item>$4,500</item>
+        <item>$5,000</item>
+        <item>$5,500</item>
+        <item>$6,600</item>
+        <item>$7,800</item>
+        <item>$8,500</item>
     </string-array>
     <string-array name="thirdFullTimeJobString">
         <item>Information System Manager</item>

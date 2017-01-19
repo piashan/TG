@@ -9,12 +9,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import mp.piash.tg.R;
 import mp.piash.tg.adapter.AdapterPlay;
+import mp.piash.tg.database.TechGaintHandler;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +28,13 @@ public class FirstFragment extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private List<String> mStringList = new ArrayList<>();
     private List<Integer> mIntegerList = new ArrayList<>();
+    private TechGaintHandler mTechGaintHandler;
+    private ProgressBar mProgesBarHealth;
+    private ProgressBar mProgressBarExperience;
+    private ProgressBar mProgressBarComapnyExperience;
+    private TextView mTextViewHealth;
+    private TextView mTextViewExperience;
+    private TextView mTextViewCompanyExperience;
 
     public FirstFragment(){
 
@@ -44,6 +54,14 @@ public class FirstFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_first, container, false);
+        mProgesBarHealth = (ProgressBar)view.findViewById(R.id.progressBarHealth);
+        mProgressBarExperience = (ProgressBar)view.findViewById(R.id.progressBarExperience);
+        mProgressBarComapnyExperience = (ProgressBar)view.findViewById(R.id.progressBarComapnyExperience);
+        mTextViewHealth = (TextView)view.findViewById(R.id.txtHealthValue);
+        mTextViewExperience = (TextView)view.findViewById(R.id.txtExperienceValue);
+        mTextViewCompanyExperience = (TextView)view.findViewById(R.id.txtCompanyExperienceValue);
+        mTechGaintHandler = new TechGaintHandler(getActivity());
+        updateProgressBar();
        /* mRecyclerViewPlay = (RecyclerView)view.findViewById(R.id.recyclerViewPlay);
         for (int i = 0; i <11 ; i++) {
             mStringList.add("Testing Text" + i);
@@ -56,5 +74,12 @@ public class FirstFragment extends Fragment {
         mRecyclerViewPlay.setAdapter(mAdapterPlay);*/
         return view;
     }
-
+    private void updateProgressBar(){
+        mProgesBarHealth.setProgress(mTechGaintHandler.getAllHealthData().get(0).intValue());
+        mProgressBarExperience.setProgress(mTechGaintHandler.getAllExperienceData().get(0).intValue());
+        mProgressBarComapnyExperience.setProgress(mTechGaintHandler.getAllCompanyExperienceData().get(0).intValue());
+        mTextViewHealth.setText(mTechGaintHandler.getAllHealthData().get(0).toString());
+        mTextViewExperience.setText(mTechGaintHandler.getAllExperienceData().get(0).toString());
+        mTextViewCompanyExperience.setText(mTechGaintHandler.getAllCompanyExperienceData().get(0).toString());
+    }
 }

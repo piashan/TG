@@ -94,8 +94,8 @@ public class BankAccountFragment extends Fragment {
                 mTechGaintHandler.updateBalance(total);
                 Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
                 mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
-                mTechGaintHandler.updateHealth(10);
-                Log.e(TAG, "onClick: Health"+mTechGaintHandler.getAllBalanceData().get(0) );
+                mTechGaintHandler.insertForTrace(111);
+                Log.e(TAG, "onClick: "+mTechGaintHandler.isExists(111) );
                 dialog.dismiss();
             }
         });

@@ -7,10 +7,13 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -32,7 +35,15 @@ public class DetailFragment extends Fragment {
     private Button mButtonBack;
     private List<String> mString;
     private List<String> mStringValues;
-    TechGaintHandler mTechGaintHandler;
+    private TechGaintHandler mTechGaintHandler;
+    private ProgressBar mProgesBarHealth;
+    private ProgressBar mProgressBarExperience;
+    private ProgressBar mProgressBarComapnyExperience;
+    private TextView mTextViewHealth;
+    private TextView mTextViewExperience;
+    private TextView mTextViewCompanyExperience;
+    private TextView mTextViewAccount;
+
 
 
     public DetailFragment() {
@@ -47,6 +58,13 @@ public class DetailFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_detail, container, false);
         mRecyclerViewDetail = (RecyclerView)view.findViewById(R.id.recyclerviewDetail);
         mButtonBack = (Button)view.findViewById(R.id.buttonBackButton);
+        mProgesBarHealth = (ProgressBar)view.findViewById(R.id.progressBarHealth);
+        mProgressBarExperience = (ProgressBar)view.findViewById(R.id.progressBarExperience);
+        mProgressBarComapnyExperience = (ProgressBar)view.findViewById(R.id.progressBarComapnyExperience);
+        mTextViewHealth = (TextView)view.findViewById(R.id.txtHealthValue);
+        mTextViewExperience = (TextView)view.findViewById(R.id.txtExperienceValue);
+        mTextViewCompanyExperience = (TextView)view.findViewById(R.id.txtCompanyExperienceValue);
+        mTextViewAccount = (TextView)view.findViewById(R.id.tvBankAccount);
         mString = new ArrayList<>();
         mStringValues = new ArrayList<>();
         mTechGaintHandler = new TechGaintHandler(getActivity());
@@ -64,9 +82,9 @@ public class DetailFragment extends Fragment {
                         mTechGaintHandler.getAllBalanceData();
                         mTechGaintHandler.updateBalance(50);
                         Log.e("Test", "onItemClicked: "+ mTechGaintHandler.getAllBalanceData().get(0));*/
-                        secondFragmentEducation(position);
+                        UpdateDatabaseByLogic(position);
                         /*if ( getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1){
-                            secondFragmentEducation(position);
+                            UpdateDatabaseByLogic(position);
                         }else if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1){
                             secondFragmentSkill();
                         }*/
@@ -74,6 +92,8 @@ public class DetailFragment extends Fragment {
                     }
                 }
         );
+        mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+        updateProgressBar();
         return view;
     }
 
@@ -129,32 +149,206 @@ public class DetailFragment extends Fragment {
         }
 
     }
-    public void secondFragmentEducation(int position){
+    public void UpdateDatabaseByLogic(int position){
 
-        if (getInterger(mStringValues.get(position)) > mTechGaintHandler.getAllBalanceData().get(0)){
-            showDialog(mStringValues.get(position), getInterger(mStringValues.get(position)) );
-        }else {
-            showDialog(mStringValues.get(position), getInterger(mStringValues.get(position)) );
-            //Toast.makeText(getActivity(), getInterger(mStringValues.get(position))+ " is  not sufficient Balance", Toast.LENGTH_SHORT).show();
+        if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 0){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)),0, 5 ,0 , 110);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 1){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 0);
         }
-        /*if (position == 0){
-            *//*int recentbalance  = getInterger(mStringValues.get(position));
-            int currentbalance = mTechGaintHandler.getAllBalanceData().get(0);*//*
-            if (getInterger(mStringValues.get(position)) > mTechGaintHandler.getAllBalanceData().get(0)){
-                showDialog(mStringValues.get(position), getInterger(mStringValues.get(position)) );
+        else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 2){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 112);
+        }
+        else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 3){
+
+            if (mTechGaintHandler.isExists(110) <= 0 || mTechGaintHandler.isExists(112) <= 0){
+              if (mTechGaintHandler.isExists(110) <= 0){
+                  Toast.makeText(getActivity(), "please complete High School", Toast.LENGTH_SHORT).show();
+              }else if (mTechGaintHandler.isExists(112) <= 0){
+                  Toast.makeText(getActivity(), "Please Complete University", Toast.LENGTH_SHORT).show();
+              }
             }else {
-                Toast.makeText(getActivity(), getInterger(mStringValues.get(position))+ " is  not sufficient Balance", Toast.LENGTH_SHORT).show();
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 15, 0, 0);
 
             }
 
-        }*/
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 0){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 120);
+        }
+        else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 1){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 2){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 122);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 3){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 4){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 124);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 5){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 4, 0, 125);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 6){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 4, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 7){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 8){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 6, 0, 128);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 9){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 7, 0, 0);
+        }
+        else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 0){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -2, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 1){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -1, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 2){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 3){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -1, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 4){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 134);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 5){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 6){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 7){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 8){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 9){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 10){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 11){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 1311);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 12){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 13){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 14){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 15){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 16){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 7, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 17){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 8, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 18){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 8, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 19){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 20){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 20, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 21){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 0, 0);
+        }
+        else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 0){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, -0.5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 1){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, -0.5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 2){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 0.5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 3){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, 0.5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 4){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 3, 0.5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 5){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 6){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 2, 0, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 7){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 0, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 8){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, -1, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 9){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 10, -2.5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 10){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, -5, 0, 0);
+        }
+        else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 0){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -1, 0, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 1){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -3, 0.5, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 2){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -3, 1, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 3){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 4){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 5){
+            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 0);
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 6){
+            if (mTechGaintHandler.isExists(134) <= 0 ){
+                if (mTechGaintHandler.isExists(134) <= 0){
+                    Toast.makeText(getActivity(), "please Buy a Bicycle", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 0);
+            }
+
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 7){
+            if (mTechGaintHandler.isExists(110) <= 0 ){
+                if (mTechGaintHandler.isExists(110) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 0, 0, 0);
+            }
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 8){
+            if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(122) <= 0){
+                if (mTechGaintHandler.isExists(110) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(122) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Communication Skills", Toast.LENGTH_SHORT).show();
+
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 1, 0, 0);
+            }
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 9){
+            if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(125) <= 0){
+                if (mTechGaintHandler.isExists(110) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(125) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Business Skills", Toast.LENGTH_SHORT).show();
+
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 0);
+            }
+        }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 10){
+            if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(124) <= 0 ||mTechGaintHandler.isExists(125) <= 0){
+                if (mTechGaintHandler.isExists(110) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(122) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Communication Skills", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(124) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Newtworking Skills", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(125) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Busines Skills", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 0);
+            }
+        }
+        else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 11){
+            if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(120) <= 0 ||mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(1311) <= 0 ||mTechGaintHandler.isExists(128) <= 0){
+                if (mTechGaintHandler.isExists(110) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(120) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Driving Skills and license", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(122) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Communication Skills", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(1311) <= 0){
+                    Toast.makeText(getActivity(), "please Buy Car", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(128) <= 0){
+                    Toast.makeText(getActivity(), "please Finish Management Skills", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 4, 0, 0);
+            }
+        }
     }
 
-    public void secondFragmentSkill(){
-        Toast.makeText(getActivity(),"skill", Toast.LENGTH_SHORT).show();
-    }
 
-    public void showDialog(String mString, final int balance){
+    public void showDialogBeforUpdate(String mString, final int balance, final double health, final double experience, final double companyExperience, final int trace){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         builder.setTitle("Confirm");
@@ -164,8 +358,20 @@ public class DetailFragment extends Fragment {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
-                int total = balance + mTechGaintHandler.getAllBalanceData().get(0);
-                mTechGaintHandler.updateBalance(total);
+                int totalBalance = balance + mTechGaintHandler.getAllBalanceData().get(0);
+                double totalHealth = health + mTechGaintHandler.getAllHealthData().get(0);
+                double totalExperience = experience +mTechGaintHandler.getAllExperienceData().get(0);
+                double totalCompanyExperience = companyExperience + mTechGaintHandler.getAllCompanyExperienceData().get(0);
+                mTechGaintHandler.updateBalance(totalBalance);
+                mTechGaintHandler.updateHealth(totalHealth);
+                mTechGaintHandler.updateExperience(totalExperience);
+                mTechGaintHandler.updateCompanyExperience(totalCompanyExperience);
+                if (trace > 0){
+                    mTechGaintHandler.insertForTrace(trace);
+                }
+                Log.e("Trace", "onClick: "+trace );
+                updateProgressBar();
+                mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
                 Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
@@ -189,6 +395,7 @@ public class DetailFragment extends Fragment {
 
         int intergerValue =(int) Double.parseDouble(string.replaceAll("[^\\d.]", ""));
 
+        Log.e("balance", "getInterger: "+intergerValue);
         return intergerValue;
     }
 
@@ -203,4 +410,12 @@ public class DetailFragment extends Fragment {
         );
     }
 
+    private void updateProgressBar(){
+        mProgesBarHealth.setProgress(mTechGaintHandler.getAllHealthData().get(0).intValue());
+        mProgressBarExperience.setProgress(mTechGaintHandler.getAllExperienceData().get(0).intValue());
+        mProgressBarComapnyExperience.setProgress(mTechGaintHandler.getAllCompanyExperienceData().get(0).intValue());
+        mTextViewHealth.setText(mTechGaintHandler.getAllHealthData().get(0).toString());
+        mTextViewExperience.setText(mTechGaintHandler.getAllExperienceData().get(0).toString());
+        mTextViewCompanyExperience.setText(mTechGaintHandler.getAllCompanyExperienceData().get(0).toString());
+    }
 }

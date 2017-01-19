@@ -98,11 +98,11 @@
             android:gravity="right"
             android:layout_height="wrap_content">
             <ProgressBar
-                android:id="@+id/progressBar1"
+                android:id="@+id/progressBarHealth"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="250dp"
                 android:layout_height="25dip"
-                android:progress="50"
+                android:max="1000"
                 android:progressDrawable="@drawable/customprogessbar" />
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -112,10 +112,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/txtHealthValue"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:layout_centerInParent="true"
-                    android:text="30"/>
+                    android:text="0"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -129,7 +130,7 @@
                     android:gravity="center"
                     android:textSize="18sp"
                     android:layout_centerInParent="true"
-                    android:text="100"/>
+                    android:text="1000"/>
             </LinearLayout>
 
         </RelativeLayout>
@@ -155,12 +156,12 @@
             android:layout_height="wrap_content"
             android:gravity="right">
             <ProgressBar
-                android:id="@+id/progressBar2"
+                android:id="@+id/progressBarExperience"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="250dp"
                 android:layout_height="25dip"
-                android:progress="30"
-                android:progressDrawable="@drawable/customprogessbar" />
+                android:max="1000"
+                android:progressDrawable="@drawable/progessbarexperience" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -169,10 +170,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/txtExperienceValue"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:layout_centerInParent="true"
-                    android:text="30"/>
+                    android:text="0"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -186,7 +188,7 @@
                     android:gravity="center"
                     android:textSize="18sp"
                     android:layout_centerInParent="true"
-                    android:text="100"/>
+                    android:text="1000"/>
             </LinearLayout>
 
         </RelativeLayout>
@@ -199,7 +201,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/experience"
+            android:src="@drawable/companyexperice"
             android:layout_marginRight="8dp"/>
         <TextView
             android:layout_width="70dp"
@@ -212,12 +214,12 @@
             android:layout_height="wrap_content"
             android:gravity="right">
             <ProgressBar
-                android:id="@+id/progressBar3"
+                android:id="@+id/progressBarComapnyExperience"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="250dp"
                 android:layout_height="25dip"
-                android:progress="10"
-                android:progressDrawable="@drawable/customprogessbar" />
+                android:max="1000"
+                android:progressDrawable="@drawable/progessbaryellow" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -226,10 +228,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/txtCompanyExperienceValue"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:layout_centerInParent="true"
-                    android:text="30"/>
+                    android:text="0"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -243,7 +246,7 @@
                     android:gravity="center"
                     android:textSize="18sp"
                     android:layout_centerInParent="true"
-                    android:text="100"/>
+                    android:text="1000"/>
             </LinearLayout>
 
         </RelativeLayout>

@@ -34,15 +34,24 @@ public class TechGaintHandler {
         long rowAdded = 1L;
 
         ContentValues cv = new ContentValues();
-        cv.put(TechGaintContract.WishlistTableColumns._ID, dealId);
-        rowAdded += mDatabase.insert(TechGaintContract.WishlistTableColumns.TABLE_NAME, null, cv);
+        cv.put(TechGaintContract.TechGaintTableColumns._ID, dealId);
+        rowAdded += mDatabase.insert(TechGaintContract.TechGaintTableColumns.TABLE_NAME, null, cv);
+        return rowAdded;
+    }
+    public long insertForTrace(double id){
+        this.open();
+        long rowAdded = 1L;
+
+        ContentValues cv = new ContentValues();
+        cv.put(TechGaintContract.TechGaintTableColumns.TRACE, id);
+        rowAdded += mDatabase.insert(TechGaintContract.TechGaintTableColumns.TABLE_NAME_TWO, null, cv);
         return rowAdded;
     }
 
 
     public boolean delete(int dealId){
         this.open();
-        mDatabase.delete(TechGaintContract.WishlistTableColumns.TABLE_NAME, TechGaintContract.WishlistTableColumns._ID + " = "+ dealId, null);
+        mDatabase.delete(TechGaintContract.TechGaintTableColumns.TABLE_NAME, TechGaintContract.TechGaintTableColumns._ID + " = "+ dealId, null);
         return true;
     }
 
@@ -53,9 +62,9 @@ public class TechGaintHandler {
         ArrayList<Integer> contactList = new ArrayList<>();
 
         String[] projection = {
-                TechGaintContract.WishlistTableColumns.BALANCE
+                TechGaintContract.TechGaintTableColumns.BALANCE
         };
-        Cursor cursor = mDatabase.query(TechGaintContract.WishlistTableColumns.TABLE_NAME, projection, null, null, null, null, null);
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, projection, null, null, null, null, null);
 
         while (cursor.moveToNext()){
 
@@ -63,51 +72,51 @@ public class TechGaintHandler {
         }
         return contactList;
     }
-    public ArrayList<Integer> getAllHealthData(){
+    public ArrayList<Double> getAllHealthData(){
 
         this.open();
-        ArrayList<Integer> contactList = new ArrayList<>();
+        ArrayList<Double> contactList = new ArrayList<>();
 
         String[] projection = {
-                TechGaintContract.WishlistTableColumns.HEALTH
+                TechGaintContract.TechGaintTableColumns.HEALTH
         };
-        Cursor cursor = mDatabase.query(TechGaintContract.WishlistTableColumns.TABLE_NAME, projection, null, null, null, null, null);
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, projection, null, null, null, null, null);
 
         while (cursor.moveToNext()){
 
-            contactList.add(cursor.getInt(0));
+            contactList.add(cursor.getDouble(0));
         }
         return contactList;
     }
-    public ArrayList<Integer> getAllExperienceData(){
+    public ArrayList<Double> getAllExperienceData(){
 
         this.open();
-        ArrayList<Integer> contactList = new ArrayList<>();
+        ArrayList<Double> contactList = new ArrayList<>();
 
         String[] projection = {
-                TechGaintContract.WishlistTableColumns.EXPERIENCE
+                TechGaintContract.TechGaintTableColumns.EXPERIENCE
         };
-        Cursor cursor = mDatabase.query(TechGaintContract.WishlistTableColumns.TABLE_NAME, projection, null, null, null, null, null);
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, projection, null, null, null, null, null);
 
         while (cursor.moveToNext()){
 
-            contactList.add(cursor.getInt(0));
+            contactList.add(cursor.getDouble(0));
         }
         return contactList;
     }
-    public ArrayList<Integer> getAllCompanyExperienceData(){
+    public ArrayList<Double> getAllCompanyExperienceData(){
 
         this.open();
-        ArrayList<Integer> contactList = new ArrayList<>();
+        ArrayList<Double> contactList = new ArrayList<>();
 
         String[] projection = {
-                TechGaintContract.WishlistTableColumns.COMPANY_EXPERIENCE
+                TechGaintContract.TechGaintTableColumns.COMPANY_EXPERIENCE
         };
-        Cursor cursor = mDatabase.query(TechGaintContract.WishlistTableColumns.TABLE_NAME, projection, null, null, null, null, null);
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, projection, null, null, null, null, null);
 
         while (cursor.moveToNext()){
 
-            contactList.add(cursor.getInt(0));
+            contactList.add(cursor.getDouble(0));
         }
         return contactList;
     }
@@ -116,52 +125,52 @@ public class TechGaintHandler {
 
         this.open();
         ContentValues cv=new ContentValues();
-        cv.put(TechGaintContract.WishlistTableColumns.BALANCE,balance);
+        cv.put(TechGaintContract.TechGaintTableColumns.BALANCE,balance);
 
 
-        long check =mDatabase.update(TechGaintContract.WishlistTableColumns.TABLE_NAME, cv, TechGaintContract.WishlistTableColumns._ID + " = " + 0, null);
+        long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
         if (check>0){
             return  true;
         }
         else
             return  false;
     }
-    public  boolean updateHealth(int balance){
+    public  boolean updateHealth(double balance){
 
         this.open();
         ContentValues cv=new ContentValues();
-        cv.put(TechGaintContract.WishlistTableColumns.BALANCE,balance);
+        cv.put(TechGaintContract.TechGaintTableColumns.HEALTH,balance);
 
 
-        long check =mDatabase.update(TechGaintContract.WishlistTableColumns.TABLE_NAME, cv, TechGaintContract.WishlistTableColumns._ID + " = " + 0, null);
+        long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
         if (check>0){
             return  true;
         }
         else
             return  false;
     }
-    public  boolean updateExperience(int balance){
+    public  boolean updateExperience(double balance){
 
         this.open();
         ContentValues cv=new ContentValues();
-        cv.put(TechGaintContract.WishlistTableColumns.BALANCE,balance);
+        cv.put(TechGaintContract.TechGaintTableColumns.EXPERIENCE,balance);
 
 
-        long check =mDatabase.update(TechGaintContract.WishlistTableColumns.TABLE_NAME, cv, TechGaintContract.WishlistTableColumns._ID + " = " + 0, null);
+        long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
         if (check>0){
             return  true;
         }
         else
             return  false;
     }
-    public  boolean updateCompanyExperience(int balance){
+    public  boolean updateCompanyExperience(double balance){
 
         this.open();
         ContentValues cv=new ContentValues();
-        cv.put(TechGaintContract.WishlistTableColumns.BALANCE,balance);
+        cv.put(TechGaintContract.TechGaintTableColumns.COMPANY_EXPERIENCE,balance);
 
 
-        long check =mDatabase.update(TechGaintContract.WishlistTableColumns.TABLE_NAME, cv, TechGaintContract.WishlistTableColumns._ID + " = " + 0, null);
+        long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
         if (check>0){
             return  true;
         }
@@ -171,28 +180,28 @@ public class TechGaintHandler {
     public int getSingleData(int id) {
         this.open();
 
-        Cursor cursor = mDatabase.query(TechGaintContract.WishlistTableColumns.TABLE_NAME,
-                new String[]{TechGaintContract.WishlistTableColumns._ID, TechGaintContract.WishlistTableColumns.BALANCE},
-                TechGaintContract.WishlistTableColumns._ID + "=" + 0, null, null, null, null);
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME,
+                new String[]{TechGaintContract.TechGaintTableColumns._ID, TechGaintContract.TechGaintTableColumns.BALANCE},
+                TechGaintContract.TechGaintTableColumns._ID + "=" + 0, null, null, null, null);
 
         cursor.moveToFirst();
 
-        int balance = cursor.getInt(cursor.getColumnIndex(TechGaintContract.WishlistTableColumns._ID));
+        int balance = cursor.getInt(cursor.getColumnIndex(TechGaintContract.TechGaintTableColumns._ID));
 
         cursor.close();
         this.close();
         return balance;
     }
 
-    public int isFavourite(int dealId){
+    public int isExists(int id){
 
         this.open();
         int a  = -1;
         String[] projection = {
-                TechGaintContract.WishlistTableColumns._ID };
+                TechGaintContract.TechGaintTableColumns.TRACE };
         String[] whereValues = {
-                String.valueOf(dealId)};
-        Cursor cursor = mDatabase.query(TechGaintContract.WishlistTableColumns.TABLE_NAME, projection, TechGaintContract.WishlistTableColumns._ID +" = ?", whereValues, null, null, null);
+                String.valueOf(id)};
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME_TWO, projection, TechGaintContract.TechGaintTableColumns.TRACE +" = ?", whereValues, null, null, null);
 
         if(cursor == null){
             return 0;
@@ -211,7 +220,7 @@ public class TechGaintHandler {
 
 
         ArrayList<Integer> contactList = new ArrayList<>();
-        Cursor cursor = mDatabase.query(TechGaintContract.WishlistTableColumns.TABLE_NAME, null, null, null, null, null, null);
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, null, null, null, null, null, null);
 
         while (cursor.moveToNext()){
             contactList.add(cursor.getInt(0));
@@ -222,7 +231,7 @@ public class TechGaintHandler {
     public void databaseClear(){
 
         this.open();
-        mDatabase.delete(TechGaintContract.WishlistTableColumns.TABLE_NAME, null, null);
+        mDatabase.delete(TechGaintContract.TechGaintTableColumns.TABLE_NAME, null, null);
     }
 
 
