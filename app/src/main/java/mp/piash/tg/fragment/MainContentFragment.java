@@ -23,6 +23,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.drive.Drive;
+import com.google.android.gms.games.Games;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -45,6 +47,7 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
     private ImageView mImageViewSetting;
     private TextView mTextViewAcievement;
     private ImageView mImageViewHelp;
+    private TextView mTextViewLeaderBoard;
     private Button mButtonSignIn;
     private Button mButtonCancel;
     private GoogleApiClient mGoogleApiClient;
@@ -66,6 +69,7 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
         mImageViewSetting = (ImageView)view.findViewById(R.id.imageViewSetting);
         mTextViewAcievement = (TextView)view.findViewById(R.id.textViewAchievement);
         mImageViewHelp = (ImageView)view.findViewById(R.id.imagViewhelp);
+        mTextViewLeaderBoard = (TextView)view.findViewById(R.id.textViewLeaderBoard);
         mDialogFragmentLogIn = new Dialog(getActivity(), R.style.AppCompatAlertDialogStyle);
         mDialogFragmentLogIn.setContentView(R.layout.google_log_dialog_layout);
         mButtonSignIn = (Button)mDialogFragmentLogIn.findViewById(R.id.textViewGoogleLogIn);
@@ -79,10 +83,12 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
         setting();
         achievement();
         help();
+        leaderBoard();
       /*  android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.activity_main, new MainContentFragment());
         ft.commit();*/
+
 
 
         return view;
@@ -136,6 +142,27 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
                 .enableAutoManage((MainActivity)getActivity(), this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+
+    }
+    private void leaderBoard(){
+        mTextViewLeaderBoard.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
+                                .addApi(Games.API).addScope(Games.SCOPE_GAMES)
+                                .addApi(Drive.API).addScope(Drive.SCOPE_APPFOLDER)
+                                .build();
+                        if(mGoogleApiClient.isConnected()){
+                            Games.Leaderboards.submitScore(mGoogleApiClient, "21", 1337);
+                            startActivityForResult(Games.Leaderboards.getLeaderboardIntent(mGoogleApiClient,
+                                    "21"), 100);
+                        }
+
+                    }
+                }
+        );
+
 
     }
 

@@ -82,6 +82,7 @@ public class DetailFragment extends Fragment {
                         mTechGaintHandler.getAllBalanceData();
                         mTechGaintHandler.updateBalance(50);
                         Log.e("Test", "onItemClicked: "+ mTechGaintHandler.getAllBalanceData().get(0));*/
+                        Toast.makeText(getActivity(), ""+getArguments().getInt("viewpager")+getArguments().getInt("position")+position, Toast.LENGTH_SHORT).show();
                         UpdateDatabaseByLogic(position);
                         /*if ( getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1){
                             UpdateDatabaseByLogic(position);
@@ -1109,6 +1110,207 @@ public class DetailFragment extends Fragment {
             }
 
         }
+        // Build your idea
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 0){
+
+            if (mTechGaintHandler.isExists(111) <= 0  ||mTechGaintHandler.isExists(125) <= 0
+                    ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  25){
+
+                 if (mTechGaintHandler.isExists(111) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish High School", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(125) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Business Skill", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllExperienceData().get(0) < 25){
+                     Toast.makeText(getActivity(), "You need 25 Experience", Toast.LENGTH_SHORT).show();
+                 }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 5, 5, 300);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 1){
+
+            if (mTechGaintHandler.isExists(111) <= 0  ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0
+                    ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  30){
+
+                if (mTechGaintHandler.isExists(112) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish College", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(125) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Business Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(121) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Computer Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(122) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Comunication Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(124) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Networking Skill", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllExperienceData().get(0) < 30){
+                    Toast.makeText(getActivity(), "You need 30 Experience", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 10,10, 301);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 2){
+
+            if (mTechGaintHandler.isExists(112) <= 0  ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(124) <= 0 || mTechGaintHandler.isExists(125) <= 0|| mTechGaintHandler.isExists(139) <= 0
+                    ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  35){
+
+                if (mTechGaintHandler.isExists(112) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish College", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(125) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Business Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(121) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Computer Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(122) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Comunication Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(124) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish networking Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(139) <= 0 ){
+                    Toast.makeText(getActivity(), "you need to rent an apartment", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllExperienceData().get(0) < 35){
+                    Toast.makeText(getActivity(), "You need 35 Experience", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 10,15, 302);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 3){
+
+            if (mTechGaintHandler.isExists(113) <= 0  ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(124) <= 0 || mTechGaintHandler.isExists(125) <= 0 || mTechGaintHandler.isExists(129) <= 0|| mTechGaintHandler.isExists(139) <= 0
+                    ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  40){
+
+                if (mTechGaintHandler.isExists(112) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish University", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(125) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Business Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(121) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Computer Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(122) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish Comunication Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(124) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish networking Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(129) <= 0 ){
+                    Toast.makeText(getActivity(), "please Finish programming Skill", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(139) <= 0 ){
+                    Toast.makeText(getActivity(), "you need to rent an apartment", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllExperienceData().get(0) < 40){
+                    Toast.makeText(getActivity(), "You need 40 Experience", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -20, 20,20, 303);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 4){
+
+            if (mTechGaintHandler.isExists(120) <= 0 ||mTechGaintHandler.isExists(121) <= 0 || mTechGaintHandler.isExists(122) <= 0
+                    || mTechGaintHandler.isExists(123) <= 0|| mTechGaintHandler.isExists(124) <= 0|| mTechGaintHandler.isExists(125) <= 0
+                    || mTechGaintHandler.isExists(126) <= 0|| mTechGaintHandler.isExists(127) <= 0|| mTechGaintHandler.isExists(128) <= 0|| mTechGaintHandler.isExists(129) <= 0
+                    ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  45){
+
+                if (mTechGaintHandler.isExists(120) <= 0 ||mTechGaintHandler.isExists(121) <= 0 || mTechGaintHandler.isExists(122) <= 0
+                        || mTechGaintHandler.isExists(123) <= 0|| mTechGaintHandler.isExists(124) <= 0|| mTechGaintHandler.isExists(125) <= 0
+                        || mTechGaintHandler.isExists(126) <= 0|| mTechGaintHandler.isExists(127) <= 0|| mTechGaintHandler.isExists(128) <= 0|| mTechGaintHandler.isExists(129) <= 0){
+                    Toast.makeText(getActivity(), "please Finish All Skills", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllExperienceData().get(0) < 45){
+                    Toast.makeText(getActivity(), "You need 45 Experience", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 25,20, 304);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 5){
+
+            if (mTechGaintHandler.isExists(301) <= 0 || mTechGaintHandler.isExists(302) <= 0 || mTechGaintHandler.isExists(303) <= 0 || mTechGaintHandler.isExists(304) <= 0){
+
+                if (mTechGaintHandler.isExists(301) <= 0){
+                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(302) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(303) <= 0){
+                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(304) <= 0){
+                    Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 25,25, 305);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 6){
+
+            if (mTechGaintHandler.isExists(301) <= 0 || mTechGaintHandler.isExists(302) <= 0 || mTechGaintHandler.isExists(303) <= 0 || mTechGaintHandler.isExists(304) <= 0
+                    ||mTechGaintHandler.getAllCompanyExperienceData().get(0) < 25 ||mTechGaintHandler.getAllExperienceData().get(0) < 15){
+
+                if (mTechGaintHandler.isExists(301) <= 0){
+                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(302) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(303) <= 0){
+                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(304) <= 0){
+                    Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllCompanyExperienceData().get(0) < 25){
+                    Toast.makeText(getActivity(), "You need 55 Company Experience", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllExperienceData().get(0) < 15){
+                    Toast.makeText(getActivity(), "You need 15 Experience", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 306);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 7){
+
+            if (mTechGaintHandler.isExists(301) <= 0 || mTechGaintHandler.isExists(302) <= 0 || mTechGaintHandler.isExists(303) <= 0 || mTechGaintHandler.isExists(304) <= 0
+                    ||mTechGaintHandler.getAllCompanyExperienceData().get(0) < 30 ||mTechGaintHandler.getAllExperienceData().get(0) < 20){
+
+                if (mTechGaintHandler.isExists(301) <= 0){
+                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(302) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(303) <= 0){
+                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(304) <= 0){
+                    Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllCompanyExperienceData().get(0) < 30){
+                    Toast.makeText(getActivity(), "You need 30 Company Experience", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllExperienceData().get(0) < 20){
+                    Toast.makeText(getActivity(), "You need 20 Experience", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 307);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 7){
+
+            if (mTechGaintHandler.isExists(301) <= 0 || mTechGaintHandler.isExists(302) <= 0 || mTechGaintHandler.isExists(303) <= 0 || mTechGaintHandler.isExists(304) <= 0
+                    ||mTechGaintHandler.getAllCompanyExperienceData().get(0) < 35 ||mTechGaintHandler.getAllExperienceData().get(0) < 25){
+
+                if (mTechGaintHandler.isExists(301) <= 0){
+                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(302) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(303) <= 0){
+                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(304) <= 0){
+                    Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllCompanyExperienceData().get(0) < 35){
+                    Toast.makeText(getActivity(), "You need 30 Company Experience", Toast.LENGTH_SHORT).show();
+                }else if(mTechGaintHandler.getAllExperienceData().get(0) < 25){
+                    Toast.makeText(getActivity(), "You need 20 Experience", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 308);
+
+            }
+
+        }
+
 
 
 
@@ -1145,7 +1347,6 @@ public class DetailFragment extends Fragment {
         });
 
         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
