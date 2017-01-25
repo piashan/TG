@@ -5,6 +5,7 @@ import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +14,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mp.piash.tg.R;
+import mp.piash.tg.adapter.AdapterAchievement;
 import mp.piash.tg.adapter.AdapterPlay;
+import mp.piash.tg.database.TechGaintHandler;
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link} subclass.
  */
 public class AchievementFragment extends DialogFragment {
-    private AdapterPlay mAdapterPlay;
+    public static final String TAG = "AcheivementFragment";
+    private AdapterAchievement mAdapterAchievement;
     private RecyclerView mRecyclerViewPlay;
     private RecyclerView.LayoutManager mLayoutManager;
-    private List<String> mStringList;
+    private List<Integer> mStringList;
+    private TechGaintHandler mTechGaintHandler;
 
     public AchievementFragment() {
         // Required empty public constructor
@@ -35,15 +40,13 @@ public class AchievementFragment extends DialogFragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_achievement, container, false);
         mRecyclerViewPlay = (RecyclerView)view.findViewById(R.id.recyclerViewAchievement);
+        mTechGaintHandler = new TechGaintHandler(getActivity());
 
-        mStringList = new ArrayList<>();
-        for (int i = 0; i <11 ; i++) {
-            mStringList.add("Testing Text" + i);
-        }
-        /*mLayoutManager = new GridLayoutManager(getActivity(), 1);
+
+        mLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerViewPlay.setLayoutManager(mLayoutManager);
-        mAdapterPlay = new AdapterPlay( getActivity(),mStringList, );
-        mRecyclerViewPlay.setAdapter(mAdapterPlay);*/
+        mAdapterAchievement = new AdapterAchievement(getActivity(), mTechGaintHandler.getAllAchievement());
+        mRecyclerViewPlay.setAdapter(mAdapterAchievement);
         return view;
     }
 

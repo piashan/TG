@@ -1327,21 +1327,33 @@ public class DetailFragment extends Fragment {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
-                int totalBalance = balance + mTechGaintHandler.getAllBalanceData().get(0);
-                double totalHealth = health + mTechGaintHandler.getAllHealthData().get(0);
-                double totalExperience = experience +mTechGaintHandler.getAllExperienceData().get(0);
+
                 double totalCompanyExperience = companyExperience + mTechGaintHandler.getAllCompanyExperienceData().get(0);
-                mTechGaintHandler.updateBalance(totalBalance);
-                mTechGaintHandler.updateHealth(totalHealth);
-                mTechGaintHandler.updateExperience(totalExperience);
-                mTechGaintHandler.updateCompanyExperience(totalCompanyExperience);
-                if (trace > 0){
-                    mTechGaintHandler.insertForTrace(trace);
+
+                if (totalCompanyExperience < 0){
+                    int totalBalance = balance + mTechGaintHandler.getAllBalanceData().get(0);
+                    double totalHealth = health + mTechGaintHandler.getAllHealthData().get(0);
+                    double totalExperience = experience +mTechGaintHandler.getAllExperienceData().get(0);
+                    mTechGaintHandler.updateBalance(totalBalance);
+                    mTechGaintHandler.updateHealth(totalHealth);
+                    mTechGaintHandler.updateExperience(totalExperience);
+                    mTechGaintHandler.updateCompanyExperience(totalCompanyExperience);
+                    if (trace > 0){
+                        mTechGaintHandler.insertForTrace(trace);
+                    }
+                    Log.e("Trace", "onClick: "+trace );
+                    updateProgressBar();
+                    mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+                    Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(getActivity(), "Game is over", Toast.LENGTH_SHORT).show();
+                    mTechGaintHandler.updateBalance(0);
+                    mTechGaintHandler.updateHealth(0);
+                    mTechGaintHandler.updateExperience(0);
+                    mTechGaintHandler.updateCompanyExperience(0);
+
                 }
-                Log.e("Trace", "onClick: "+trace );
-                updateProgressBar();
-                mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
+
                 dialog.dismiss();
             }
         });

@@ -120,6 +120,23 @@ public class TechGaintHandler {
         }
         return contactList;
     }
+    public ArrayList<Double> getAllAchievement(){
+
+        this.open();
+        ArrayList<Double> contactList = new ArrayList<>();
+
+        String[] projection = {
+                TechGaintContract.TechGaintTableColumns.TRACE
+        };
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME_TWO, projection, null, null, null, null, null);
+
+        while (cursor.moveToNext()){
+
+            contactList.add(cursor.getDouble(0));
+        }
+        return contactList;
+    }
+
 
     public  boolean updateBalance(int balance){
 

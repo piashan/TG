@@ -8,6 +8,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +28,7 @@ import com.google.android.gms.drive.Drive;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -39,7 +41,7 @@ import mp.piash.tg.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainContentFragment extends Fragment implements GoogleApiClient.OnConnectionFailedListener{
+public class MainContentFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
     private static  int RC_SIGN_IN = 0;
     private static String TAG = "Main_Fragment";
@@ -51,10 +53,15 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
     private Button mButtonSignIn;
     private Button mButtonCancel;
     private GoogleApiClient mGoogleApiClient;
+    private GoogleApiClient mApiClient;
+    private FirebaseAnalytics mFirebaseAnalytics;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     private Dialog mDialogFragmentLogIn;
     Bundle bundle;
+
+    boolean mExplicitSignOut = false;
+    boolean mInSignInFlow = false;
     public MainContentFragment() {
         // Required empty public constructor
     }
@@ -78,6 +85,7 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
         mAuth = FirebaseAuth.getInstance();
         dialogDismiss();
         googleAuth();
+        Bundle bundle = new Bundle();
 
         play();
         setting();
@@ -143,22 +151,20 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
+
     }
     private void leaderBoard(){
+
         mTextViewLeaderBoard.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
-                                .addApi(Games.API).addScope(Games.SCOPE_GAMES)
-                                .addApi(Drive.API).addScope(Drive.SCOPE_APPFOLDER)
-                                .build();
-                        if(mGoogleApiClient.isConnected()){
-                            Games.Leaderboards.submitScore(mGoogleApiClient, "21", 1337);
-                            startActivityForResult(Games.Leaderboards.getLeaderboardIntent(mGoogleApiClient,
-                                    "21"), 100);
-                        }
 
+                       leader();
+                /*        Bundle bundle = new Bundle();
+                        bundle.putLong(FirebaseAnalytics.Param.SCORE, 110);
+                        bundle.putString("leaderboard_id", "343400934477");
+                        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.POST_SCORE, bundle);*/
                     }
                 }
         );
@@ -166,6 +172,30 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
 
     }
 
+    public void leader(){
+
+        mExplicitSignOut = false;
+       /* if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+            Games.signOut(mGoogleApiClient);
+            mGoogleApiClient.disconnect();
+        }*/
+
+        mGoogleApiClient.connect();
+        /*GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mApiClient =  new GoogleApiClient.Builder(getActivity())
+                .addApi(Games.API)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .addConnectionCallbacks(this)
+                .build();
+        if(mGoogleApiClient.isConnected()){
+            Games.Leaderboards.submitScore(mGoogleApiClient, "21", 1337);
+            startActivityForResult(Games.Leaderboards.getLeaderboardIntent(mGoogleApiClient,
+                    "21"), 100);
+        }*/
+    }
     public void singIn(){
         Intent singInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(singInIntent, RC_SIGN_IN);
@@ -286,5 +316,15 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.OnC
                         Log.e(TAG, "SingInwithCredential : Complete"+task.isSuccessful());
                     }
                 });
+    }
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
     }
 }
