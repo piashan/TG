@@ -153,12 +153,12 @@ public class DetailFragment extends Fragment {
     public void UpdateDatabaseByLogic(int position){
 
         if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 0){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)),0, 5 ,0 , 110);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)),0, 5 ,0 , 110);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 1){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 111);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 111);
         }
         else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 2){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 112);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 112);
         }
         else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 3){
 
@@ -169,119 +169,119 @@ public class DetailFragment extends Fragment {
                   Toast.makeText(getActivity(), "Please Complete University", Toast.LENGTH_SHORT).show();
               }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 15, 0, 113);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 15, 0, 113);
 
             }
 
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 0){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 120);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 120);
         }
         else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 1){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 121);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 121);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 2){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 122);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 122);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 3){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 123);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 123);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 4){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 124);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 124);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 5){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 4, 0, 125);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 4, 0, 125);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 6){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 4, 0, 126);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 4, 0, 126);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 7){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 127);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 127);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 8){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 6, 0, 128);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 6, 0, 128);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 9){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 7, 0, 129);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 7, 0, 129);
         }
         else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 0){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -2, 0, 130);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -2, 0, 130);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 1){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -1, 0, 131);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -1, 0, 131);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 2){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -5, 0, 132);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -5, 0, 132);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 3){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -1, 0, 0);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, -1, 0, 0);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 4){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 134);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 134);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 5){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 135);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 1, 0, 135);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 6){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 136);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 136);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 7){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 137);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 137);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 8){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 138);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 138);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 9){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 139);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 139);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 10){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 1310);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 1310);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 11){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 1311);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 1311);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 12){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 1312);
+            showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 2, 0, 1312);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 13){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 1313);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 1313);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 14){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 1314);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 3, 0, 1314);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 15){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 1315);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 0, 1315);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 16){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 7, 0, 1316);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 7, 0, 1316);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 17){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 8, 0, 1317);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 8, 0, 1317);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 18){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 8, 0, 1318);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 8, 0, 1318);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 19){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 1319);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 10, 0, 1319);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 20){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 20, 0, 1320);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 20, 0, 1320);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 21){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 0, 1321);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 0, 1321);
         }
         else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 0){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, -0.5, 0, 140);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, -0.5, 0, 140);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 1){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, -0.5, 0, 141);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, -0.5, 0, 141);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 2){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 0.5, 0, 142);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 0.5, 0, 142);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 3){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, 0.5, 0, 143);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 1, 0.5, 0, 143);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 4){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 3, 0.5, 0, 144);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 3, 0.5, 0, 144);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 5){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 5, 0, 145);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 5, 0, 145);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 6){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 2, 0, 0, 146);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 2, 0, 0, 146);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 7){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 0, 0, 147);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, 0, 0, 147);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 8){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, -1, 0, 148);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, -1, 0, 148);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 9){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 10, -2.5, 0, 149);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 10, -2.5, 0, 149);
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 10){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, -5, 0, 1410);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 5, -5, 0, 1410);
         }
         else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 0){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -1, 0, 0, 200);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -1, 0, 0, 200);
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 1){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -3, 0.5, 0, 201);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -3, 0.5, 0, 201);
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 2){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -3, 1, 0, 202);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -3, 1, 0, 202);
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 3){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 203);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 203);
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 4){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 204);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 204);
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 5){
-            showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 205);
+            showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 205);
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 6){
             if (mTechGaintHandler.isExists(134) <= 0 ){
                 if (mTechGaintHandler.isExists(134) <= 0){
                     Toast.makeText(getActivity(), "please Buy a Bicycle", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 206);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 206);
             }
 
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 7){
@@ -290,7 +290,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 0, 0, 207);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 0, 0, 207);
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 8){
             if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(122) <= 0){
@@ -301,7 +301,7 @@ public class DetailFragment extends Fragment {
 
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 1, 0, 208);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 1, 0, 208);
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 9){
             if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(125) <= 0){
@@ -312,7 +312,7 @@ public class DetailFragment extends Fragment {
 
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 209);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 209);
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 10){
             if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(124) <= 0 ||mTechGaintHandler.isExists(125) <= 0){
@@ -326,7 +326,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please Finish Busines Skills", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 2010);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 2010);
             }
         } else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 11){
             if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(120) <= 0 ||mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(1311) <= 0 ||mTechGaintHandler.isExists(128) <= 0){
@@ -342,7 +342,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please Finish Management Skills", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 4, 0, 2011);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 4, 0, 2011);
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 12){
             if (mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(144) <= 0 ||mTechGaintHandler.isExists(146) <= 0 ){
@@ -354,7 +354,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please go to Gym", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 2012);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 2012);
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 13){
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(124) <= 0 ||mTechGaintHandler.isExists(125) <= 0 || mTechGaintHandler.getAllExperienceData().get(0).intValue() <= 4){
@@ -370,7 +370,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "you need +4 experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 4, 0, 2013);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 4, 0, 2013);
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 14){
             if (mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(125) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ){
@@ -382,7 +382,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "Please finish programming skill", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 6, 0, 2014);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 6, 0, 2014);
             }
         }
         // Internship Menu
@@ -403,7 +403,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please Buy Coths B", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 7, 0, 210);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 7, 0, 210);
 
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 1){
@@ -423,7 +423,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please Buy Coths B", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 8, 0, 211);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 8, 0, 211);
 
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 2){
@@ -439,7 +439,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "you need driving skills", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 9, 0, 212);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 9, 0, 212);
 
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 3){
@@ -459,7 +459,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "you need to rent a basement", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 10, 0, 213);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 10, 0, 213);
 
             }
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 4){
@@ -479,7 +479,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "you need to rent a basement", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 11, 0, 214);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 11, 0, 214);
 
             }
         }
@@ -500,7 +500,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "you need to rent a basement", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 12, 0, 215);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 12, 0, 215);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 6){
@@ -520,7 +520,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "you need to go gym", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 13, 0, 216);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 13, 0, 216);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 7){
@@ -538,7 +538,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "you need to buy Secondhand Car", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -6, 14, 0, 217);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -6, 14, 0, 217);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 8){
@@ -558,7 +558,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -7, 15, 0, 218);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -7, 15, 0, 218);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 9){
@@ -578,7 +578,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 18, 0, 219);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 18, 0, 219);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 10){
@@ -604,7 +604,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -15, 20, 0, 2110);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -15, 20, 0, 2110);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 11){
@@ -628,7 +628,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please finish Programming skill", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -20, 20, 0, 2111);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -20, 20, 0, 2111);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 12){
@@ -652,7 +652,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please finish Programming skill", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 20, 0, 2112);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 20, 0, 2112);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 1 && position == 13){
@@ -676,7 +676,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "please finish Programming skill", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 22, 0, 2113);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 22, 0, 2113);
 
             }
 
@@ -696,7 +696,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 70 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -30, 30, 0, 220);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -30, 30, 0, 220);
 
             }
 
@@ -715,7 +715,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 75 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -35, 35, 0, 221);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -35, 35, 0, 221);
 
             }
 
@@ -734,7 +734,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 80 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -40, 40, 0, 222);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -40, 40, 0, 222);
 
             }
 
@@ -753,7 +753,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 85 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -45, 45, 0, 223);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -45, 45, 0, 223);
 
             }
 
@@ -772,7 +772,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 90 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -45, 50, 0, 224);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -45, 50, 0, 224);
 
             }
 
@@ -791,7 +791,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 95 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -50, 55, 0, 225);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -50, 55, 0, 225);
 
             }
 
@@ -810,7 +810,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 100 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -55, 60, 0, 226);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -55, 60, 0, 226);
 
             }
 
@@ -829,7 +829,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 105 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -60, 65, 0, 227);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -60, 65, 0, 227);
 
             }
 
@@ -848,7 +848,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 110 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -65, 70, 0, 228);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -65, 70, 0, 228);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 2 && position == 9){
@@ -866,7 +866,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 115 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -70, 75, 0, 229);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -70, 75, 0, 229);
 
             }
 
@@ -885,7 +885,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 120 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -70, 75, 0, 2210);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -70, 75, 0, 2210);
 
             }
 
@@ -904,7 +904,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 125 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -75, 80, 0, 2211);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -75, 80, 0, 2211);
 
             }
 
@@ -928,7 +928,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 200 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -100, 90, 0, 230);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -100, 90, 0, 230);
 
             }
         }else if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 3 && position == 1){
@@ -948,7 +948,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 250 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -115, 95, 0, 231);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -115, 95, 0, 231);
 
             }
 
@@ -969,7 +969,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 300 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -120, 100, 0, 232);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -120, 100, 0, 232);
 
             }
 
@@ -990,7 +990,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 350 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -115, 105, 0, 233);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -115, 105, 0, 233);
 
             }
 
@@ -1011,7 +1011,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 400 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -120, 115, 0, 234);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -120, 115, 0, 234);
 
             }
 
@@ -1032,7 +1032,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 450 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -125, 120, 0, 235);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -125, 120, 0, 235);
 
             }
 
@@ -1053,7 +1053,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 500 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -125, 120, 0, 236);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -125, 120, 0, 236);
 
             }
 
@@ -1076,7 +1076,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 600 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -130, 125, 0, 237);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -130, 125, 0, 237);
 
             }
 
@@ -1105,7 +1105,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 875 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -200, 125, 0, 238);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -200, 125, 0, 238);
 
             }
 
@@ -1124,7 +1124,7 @@ public class DetailFragment extends Fragment {
                      Toast.makeText(getActivity(), "You need 25 Experience", Toast.LENGTH_SHORT).show();
                  }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 5, 5, 300);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 5, 5, 300);
 
             }
 
@@ -1147,7 +1147,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 30 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 10,10, 301);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 10,10, 301);
 
             }
 
@@ -1172,7 +1172,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 35 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 10,15, 302);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 10,15, 302);
 
             }
 
@@ -1199,7 +1199,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 40 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -20, 20,20, 303);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -20, 20,20, 303);
 
             }
 
@@ -1218,7 +1218,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 45 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 25,20, 304);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 25,20, 304);
 
             }
 
@@ -1236,7 +1236,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 25,25, 305);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 25,25, 305);
 
             }
 
@@ -1259,7 +1259,7 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 15 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 306);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 15, 25, 306);
 
             }
 
@@ -1282,11 +1282,11 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 20 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 307);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 20, 35, 307);
 
             }
 
-        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 7){
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 0 && position == 8){
 
             if (mTechGaintHandler.isExists(301) <= 0 || mTechGaintHandler.isExists(302) <= 0 || mTechGaintHandler.isExists(303) <= 0 || mTechGaintHandler.isExists(304) <= 0
                     ||mTechGaintHandler.getAllCompanyExperienceData().get(0) < 35 ||mTechGaintHandler.getAllExperienceData().get(0) < 25){
@@ -1305,43 +1305,138 @@ public class DetailFragment extends Fragment {
                     Toast.makeText(getActivity(), "You need 20 Experience", Toast.LENGTH_SHORT).show();
                 }
             }else {
-                showDialogBeforUpdate(mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 0, 0, 308);
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 35, 308);
 
             }
 
         }
+     // Devlop yor Company
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 1 && position == 0){
 
+            if (mTechGaintHandler.isExists(301) <= 0 || mTechGaintHandler.isExists(302) <= 0 || mTechGaintHandler.isExists(303) <= 0 || mTechGaintHandler.isExists(304) <= 0
+                    || mTechGaintHandler.isExists(305) <= 0|| mTechGaintHandler.isExists(306) <= 0|| mTechGaintHandler.isExists(307) <= 0
+                    || mTechGaintHandler.isExists(308) <= 0 ){
 
+                if (mTechGaintHandler.isExists(300) <= 0){
+                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(301) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(302) <= 0){
+                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(303) <= 0){
+                    Toast.makeText(getActivity(), "Complete write codes", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(304) <= 0){
+                    Toast.makeText(getActivity(), "Write a Business Plan", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(305) <= 0){
+                    Toast.makeText(getActivity(), "Complete Find seed investors", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(306) <= 0){
+                    Toast.makeText(getActivity(), "Complete get License and Permit", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(307) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop a corporate Identity", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(308) <= 0){
+                    Toast.makeText(getActivity(), "Complete Get a Trademark and a Patent", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -30, 35, 35, 310);
 
+            }
 
+        }
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 1 && position == 1){
+
+            if ( mTechGaintHandler.isExists(310) <= 0 ){
+
+                if (mTechGaintHandler.isExists(310) <= 0){
+                    Toast.makeText(getActivity(), "Complete understand Trend and market", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -35, 25, 40, 311);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 1 && position == 2){
+
+            if ( mTechGaintHandler.isExists(310) <= 0 || mTechGaintHandler.isExists(311) <= 0 ){
+
+                if (mTechGaintHandler.isExists(310) <= 0){
+                    Toast.makeText(getActivity(), "Complete understand Trend and market", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(301) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop your 1st Prototype", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -35, 25, 40, 312);
+
+            }
+
+        }
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 1 && position == 3){
+
+            if ( mTechGaintHandler.isExists(310) <= 0 || mTechGaintHandler.isExists(311) <= 0 || mTechGaintHandler.isExists(312) <= 0 ){
+
+                if (mTechGaintHandler.isExists(310) <= 0){
+                    Toast.makeText(getActivity(), "Complete understand Trend and market", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(301) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop your 1st Prototype", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(302) <= 0){
+                    Toast.makeText(getActivity(), "Complete Join Company Accelerator", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , -50, 40, 60, 313);
+
+            }
+
+        }
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 1 && position == 4){
+
+            if ( mTechGaintHandler.isExists(310) <= 0 || mTechGaintHandler.isExists(311) <= 0 || mTechGaintHandler.isExists(312) <= 0 || mTechGaintHandler.isExists(313) <= 0 ){
+
+                if (mTechGaintHandler.isExists(310) <= 0){
+                    Toast.makeText(getActivity(), "Complete understand Trend and market", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(301) <= 0){
+                    Toast.makeText(getActivity(), "Complete Develop your 1st Prototype", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(302) <= 0){
+                    Toast.makeText(getActivity(), "Complete Join Company Accelerator", Toast.LENGTH_SHORT).show();
+                }
+                else if (mTechGaintHandler.isExists(303) <= 0){
+                    Toast.makeText(getActivity(), "Complete Build a Beta version of your product", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , -100, 80, 100, 314);
+
+            }
+
+        }
+        // Get a Office
     }
 
-
-    public void showDialogBeforUpdate(String mString, final int balance, final double health, final double experience, final double companyExperience, final int trace){
+    public void showDialogBeforUpdate(final String mStringTitle, final String mStringValue, final int balance, final double health, final double experience, final double companyExperience, final int trace){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
         builder.setTitle("Confirm");
-        builder.setMessage("Are you sure "+ mString);
+        builder.setMessage("Are you sure "+  mStringValue);
 
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
 
-                double totalCompanyExperience = companyExperience + mTechGaintHandler.getAllCompanyExperienceData().get(0);
+                double totalHealthTrace = health + mTechGaintHandler.getAllHealthData().get(0);
 
-                if (totalCompanyExperience < 0){
+                if (totalHealthTrace >= 0){
                     int totalBalance = balance + mTechGaintHandler.getAllBalanceData().get(0);
-                    double totalHealth = health + mTechGaintHandler.getAllHealthData().get(0);
                     double totalExperience = experience +mTechGaintHandler.getAllExperienceData().get(0);
+                    double totalCompanyExperience = companyExperience + mTechGaintHandler.getAllCompanyExperienceData().get(0);
                     mTechGaintHandler.updateBalance(totalBalance);
-                    mTechGaintHandler.updateHealth(totalHealth);
+                    mTechGaintHandler.updateHealth(totalHealthTrace);
                     mTechGaintHandler.updateExperience(totalExperience);
                     mTechGaintHandler.updateCompanyExperience(totalCompanyExperience);
-                    if (trace > 0){
-                        mTechGaintHandler.insertForTrace(trace);
+                    if (mTechGaintHandler.isExists(trace) <= 0){
+                        mTechGaintHandler.insertForTrace(trace,  mStringTitle);
+                        Log.e("Detail", "onClick: "+ mStringValue );
                     }
-                    Log.e("Trace", "onClick: "+trace );
                     updateProgressBar();
                     mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
                     Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();

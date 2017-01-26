@@ -18,9 +18,9 @@ import mp.piash.tg.R;
 public class AdapterAchievement  extends RecyclerView.Adapter<AdapterAchievement.ViewHolderAchievement>{
 
     private Context mContext;
-    private List<Double> mDataset;
+    private List<String> mDataset;
 
-    public AdapterAchievement(Context mContext, List<Double> mDataset) {
+    public AdapterAchievement(Context mContext, List<String> mDataset) {
         this.mContext = mContext;
         this.mDataset = mDataset;
     }
@@ -35,7 +35,7 @@ public class AdapterAchievement  extends RecyclerView.Adapter<AdapterAchievement
     public void onBindViewHolder(ViewHolderAchievement holder, int position) {
 
 
-        if (mDataset.get(position ) == 110){
+       /* if (mDataset.get(position ) == 110){
             holder.mTextViewTitle.setText("Complete High School");
         }else if (mDataset.get(position ) == 111){
             holder.mTextViewTitle.setText("Complete Study at college");
@@ -45,8 +45,8 @@ public class AdapterAchievement  extends RecyclerView.Adapter<AdapterAchievement
             holder.mTextViewTitle.setText("Complete MBA");
         }else {
             holder.mTextViewTitle.setText(mDataset.get(position).toString());
-        }
-
+        }*/
+        holder.mTextViewTitle.setText(mDataset.get(position).toString());
 
     }
 

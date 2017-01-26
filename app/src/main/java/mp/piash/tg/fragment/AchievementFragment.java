@@ -43,6 +43,7 @@ public class AchievementFragment extends DialogFragment {
         mTechGaintHandler = new TechGaintHandler(getActivity());
 
 
+        Log.e(TAG, "onCreateView: "+ mTechGaintHandler.getAllAchievement().get(0));
         mLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerViewPlay.setLayoutManager(mLayoutManager);
         mAdapterAchievement = new AdapterAchievement(getActivity(), mTechGaintHandler.getAllAchievement());

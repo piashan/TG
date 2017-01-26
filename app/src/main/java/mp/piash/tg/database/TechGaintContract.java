@@ -16,7 +16,7 @@ public class TechGaintContract extends DatabaseHelper {
     private static final String SQL_CREATE_ENTRIES_TWO =
             "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME_TWO+ " ( " +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
-                    + TechGaintTableColumns.TRACE +  " INTEGER"  +" );";
+                    + TechGaintTableColumns.TRACE +  " INTEGER," + TechGaintTableColumns.TITLE +  " TEXT" +" );";
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + TechGaintTableColumns.TABLE_NAME;
     private static final String SQL_DELETE_ENTRIES_TWO =
@@ -57,5 +57,6 @@ public class TechGaintContract extends DatabaseHelper {
         public static final String EXPERIENCE = "experience";
         public static final String COMPANY_EXPERIENCE = "companyexperience";
         public static final String TRACE = "trace";
+        public static final String TITLE = "title";
     }
 }

@@ -38,12 +38,13 @@ public class TechGaintHandler {
         rowAdded += mDatabase.insert(TechGaintContract.TechGaintTableColumns.TABLE_NAME, null, cv);
         return rowAdded;
     }
-    public long insertForTrace(double id){
+    public long insertForTrace(double id, String title){
         this.open();
         long rowAdded = 1L;
 
         ContentValues cv = new ContentValues();
         cv.put(TechGaintContract.TechGaintTableColumns.TRACE, id);
+        cv.put(TechGaintContract.TechGaintTableColumns.TITLE, title);
         rowAdded += mDatabase.insert(TechGaintContract.TechGaintTableColumns.TABLE_NAME_TWO, null, cv);
         return rowAdded;
     }
@@ -120,19 +121,19 @@ public class TechGaintHandler {
         }
         return contactList;
     }
-    public ArrayList<Double> getAllAchievement(){
+    public ArrayList<String> getAllAchievement(){
 
         this.open();
-        ArrayList<Double> contactList = new ArrayList<>();
+        ArrayList<String> contactList = new ArrayList<>();
 
         String[] projection = {
-                TechGaintContract.TechGaintTableColumns.TRACE
+                TechGaintContract.TechGaintTableColumns.TITLE
         };
         Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME_TWO, projection, null, null, null, null, null);
 
         while (cursor.moveToNext()){
 
-            contactList.add(cursor.getDouble(0));
+            contactList.add(cursor.getString(0));
         }
         return contactList;
     }
