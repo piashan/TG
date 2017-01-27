@@ -19,6 +19,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="70dp"
+                android:id="@+id/imageViewShateApp"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/shareapp"/>
             <TextView

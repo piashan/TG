@@ -78,17 +78,9 @@ public class DetailFragment extends Fragment {
                 new RVClickListener() {
                     @Override
                     public void onItemClicked(View view, int position) {
-                        /*Toast.makeText(getActivity(), "Detail aslo working", Toast.LENGTH_SHORT).show();
-                        mTechGaintHandler.getAllBalanceData();
-                        mTechGaintHandler.updateBalance(50);
-                        Log.e("Test", "onItemClicked: "+ mTechGaintHandler.getAllBalanceData().get(0));*/
-                        Toast.makeText(getActivity(), ""+getArguments().getInt("viewpager")+getArguments().getInt("position")+position, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getActivity(), ""+getArguments().getInt("viewpager")+getArguments().getInt("position")+position, Toast.LENGTH_SHORT).show();
                         UpdateDatabaseByLogic(position);
-                        /*if ( getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1){
-                            UpdateDatabaseByLogic(position);
-                        }else if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1){
-                            secondFragmentSkill();
-                        }*/
+
 
                     }
                 }
@@ -1411,6 +1403,397 @@ public class DetailFragment extends Fragment {
 
         }
         // Get a Office
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 2 && position == 0){
+
+            if ( mTechGaintHandler.isExists(314) <= 0 ){
+
+                if (mTechGaintHandler.isExists(314) <= 0){
+                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 5, 320);
+
+            }
+
+        } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 2 && position == 1){
+
+            if ( mTechGaintHandler.isExists(320) <= 0 ){
+
+                if (mTechGaintHandler.isExists(320) <= 0){
+                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 25, 321);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 2 && position == 2){
+
+            if ( mTechGaintHandler.isExists(321) <= 0 ){
+
+                if (mTechGaintHandler.isExists(321) <= 0){
+                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 50, 50, 322);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 2 && position == 3){
+
+            if ( mTechGaintHandler.isExists(322) <= 0 ){
+
+                if (mTechGaintHandler.isExists(322) <= 0){
+                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 50, 50, 323);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 2 && position == 4){
+
+            if ( mTechGaintHandler.isExists(323) <= 0 ){
+
+                if (mTechGaintHandler.isExists(323) <= 0){
+                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 75, 75, 324);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 2 && position == 5){
+
+            if ( mTechGaintHandler.isExists(323) <= 0 ){
+
+                if (mTechGaintHandler.isExists(323) <= 0){
+                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 100, 100, 325);
+
+            }
+
+        }
+       // office Furniture and Equipment
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 3 && position == 0){
+
+            if ( mTechGaintHandler.isExists(320) <= 0 ){
+
+                if (mTechGaintHandler.isExists(320) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 1", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 5, 330);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 3 && position == 1){
+
+            if ( mTechGaintHandler.isExists(321) <= 0 ){
+
+                if (mTechGaintHandler.isExists(321) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 2", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 25, 331);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 3 && position == 2){
+
+            if ( mTechGaintHandler.isExists(322) <= 0 ){
+
+                if (mTechGaintHandler.isExists(322) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 3", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 50, 50, 332);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 3 && position == 3){
+
+            if ( mTechGaintHandler.isExists(323) <= 0 ){
+
+                if (mTechGaintHandler.isExists(323) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 4", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 75, 75, 333);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 3 && position == 4){
+
+            if ( mTechGaintHandler.isExists(324) <= 0 ){
+
+                if (mTechGaintHandler.isExists(324) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 5", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 100, 100, 334);
+
+            }
+
+        }
+        // Hire Talents
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 4 && position == 0){
+
+            if ( mTechGaintHandler.isExists(320) <= 0|| mTechGaintHandler.isExists(330) <= 0){
+
+                if (mTechGaintHandler.isExists(320) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 1", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(330) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 1", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 5, 340);
+
+            }
+
+        } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 4 && position == 1){
+
+            if ( mTechGaintHandler.isExists(321) <= 0|| mTechGaintHandler.isExists(331) <= 0){
+
+                if (mTechGaintHandler.isExists(321) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 2", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(331) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 2", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 25, 341);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 4 && position == 2){
+
+            if ( mTechGaintHandler.isExists(322) <= 0|| mTechGaintHandler.isExists(332) <= 0){
+
+                if (mTechGaintHandler.isExists(322) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 3", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(332) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 3", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 50, 50, 342);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 4 && position == 3){
+
+            if ( mTechGaintHandler.isExists(323) <= 0|| mTechGaintHandler.isExists(333) <= 0){
+
+                if (mTechGaintHandler.isExists(323) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 4", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(333) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 4", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 75, 75, 343);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 4 && position == 4){
+
+            if ( mTechGaintHandler.isExists(324) <= 0|| mTechGaintHandler.isExists(334) <= 0){
+
+                if (mTechGaintHandler.isExists(324) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 5", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(334) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 5", Toast.LENGTH_SHORT).show();
+                }
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 100, 100, 344);
+
+            }
+
+        }
+        // Build a customer Base
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 5 && position == 0){
+
+            if ( mTechGaintHandler.isExists(320) <= 0|| mTechGaintHandler.isExists(330) <= 0 || mTechGaintHandler.isExists(340) <= 0){
+
+                if (mTechGaintHandler.isExists(320) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 1", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(330) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 1", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(340) <= 0){
+                    Toast.makeText(getActivity(), "Finish Hire 15 talents", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 5, 5, 350);
+
+            }
+
+        } else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 5 && position == 1){
+
+            if ( mTechGaintHandler.isExists(321) <= 0|| mTechGaintHandler.isExists(331) <= 0 || mTechGaintHandler.isExists(341) <= 0){
+
+                if (mTechGaintHandler.isExists(321) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 2", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(331) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 2", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(331) <= 0){
+                    Toast.makeText(getActivity(), "Finish Hire 50 talents", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 25, 351);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 5 && position == 2){
+
+            if ( mTechGaintHandler.isExists(322) <= 0|| mTechGaintHandler.isExists(332) <= 0 || mTechGaintHandler.isExists(342) <= 0){
+
+                if (mTechGaintHandler.isExists(322) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 3", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(332) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 3", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(332) <= 0){
+                    Toast.makeText(getActivity(), "Finish Hire 100 talents", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 50, 50, 352);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 5 && position == 3){
+
+            if ( mTechGaintHandler.isExists(323) <= 0|| mTechGaintHandler.isExists(333) <= 0 || mTechGaintHandler.isExists(343) <= 0){
+
+                if (mTechGaintHandler.isExists(323) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 4", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(333) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 4", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(333) <= 0){
+                    Toast.makeText(getActivity(), "Finish Hire 1000 talents", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 75, 75, 353);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 5 && position == 4){
+
+            if ( mTechGaintHandler.isExists(324) <= 0|| mTechGaintHandler.isExists(334) <= 0 || mTechGaintHandler.isExists(344) <= 0){
+
+                if (mTechGaintHandler.isExists(324) <= 0){
+                    Toast.makeText(getActivity(), "Finish Lease office 5", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(334) <= 0){
+                    Toast.makeText(getActivity(), "Finish Get Equipment 5", Toast.LENGTH_SHORT).show();
+                }else if (mTechGaintHandler.isExists(334) <= 0){
+                    Toast.makeText(getActivity(), "Finish Hire 5000 talents", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 100, 100, 354);
+
+            }
+
+        }
+        // Funding Rounds
+        else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 6 && position == 0){
+
+            if ( mTechGaintHandler.getAllExperienceData().get(0) < 200){
+
+                Toast.makeText(getActivity(), "Company Must Have 200+ Experience", Toast.LENGTH_SHORT).show();
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 30, 0, 360);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 6 && position == 1){
+
+            if ( mTechGaintHandler.getAllExperienceData().get(0) < 300){
+
+                Toast.makeText(getActivity(), "Company Must Have 300+ Experience", Toast.LENGTH_SHORT).show();
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 40, 0, 361);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 6 && position == 2){
+
+            if ( mTechGaintHandler.getAllExperienceData().get(0) < 400){
+
+                Toast.makeText(getActivity(), "Company Must Have 400+ Experience", Toast.LENGTH_SHORT).show();
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 50, 0, 362);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 6 && position == 3){
+
+            if ( mTechGaintHandler.getAllExperienceData().get(0) < 500){
+
+                Toast.makeText(getActivity(), "Company Must Have 500+ Experience", Toast.LENGTH_SHORT).show();
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 60, 0, 363);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 6 && position == 4){
+
+            if ( mTechGaintHandler.getAllExperienceData().get(0) < 600){
+
+                Toast.makeText(getActivity(), "Company Must Have 500+ Experience", Toast.LENGTH_SHORT).show();
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 70, 0, 364);
+
+            }
+
+        }else if (getArguments().getInt("viewpager") == 3 &&  getArguments().getInt("position") == 6 && position == 5){
+
+            if ( mTechGaintHandler.getAllExperienceData().get(0) < 1000){
+
+                Toast.makeText(getActivity(), "Company Must Have 1000+ Experience", Toast.LENGTH_SHORT).show();
+
+
+            }else {
+                showDialogBeforUpdate(mString.get(position), mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 600, 0, 365);
+
+            }
+
+        }
+
+
     }
 
     public void showDialogBeforUpdate(final String mStringTitle, final String mStringValue, final int balance, final double health, final double experience, final double companyExperience, final int trace){

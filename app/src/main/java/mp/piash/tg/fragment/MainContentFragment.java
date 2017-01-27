@@ -160,11 +160,11 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.Con
                     @Override
                     public void onClick(View view) {
 
-                       leader();
-                /*        Bundle bundle = new Bundle();
-                        bundle.putLong(FirebaseAnalytics.Param.SCORE, 110);
-                        bundle.putString("leaderboard_id", "343400934477");
-                        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.POST_SCORE, bundle);*/
+                        android.app.FragmentManager fm = getActivity().getFragmentManager();
+                        android.app.FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.activity_main, new LeaderBoardFragment());
+                        ft.addToBackStack(null);
+                        ft.commit();
                     }
                 }
         );
@@ -172,30 +172,6 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.Con
 
     }
 
-    public void leader(){
-
-        mExplicitSignOut = false;
-       /* if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
-            Games.signOut(mGoogleApiClient);
-            mGoogleApiClient.disconnect();
-        }*/
-
-        mGoogleApiClient.connect();
-        /*GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-        mApiClient =  new GoogleApiClient.Builder(getActivity())
-                .addApi(Games.API)
-                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-                .addConnectionCallbacks(this)
-                .build();
-        if(mGoogleApiClient.isConnected()){
-            Games.Leaderboards.submitScore(mGoogleApiClient, "21", 1337);
-            startActivityForResult(Games.Leaderboards.getLeaderboardIntent(mGoogleApiClient,
-                    "21"), 100);
-        }*/
-    }
     public void singIn(){
         Intent singInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(singInIntent, RC_SIGN_IN);
@@ -210,7 +186,7 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.Con
                     @Override
                     public void onClick(View view) {
 
-
+                        Toast.makeText(getActivity(), "PlayButton ok?", Toast.LENGTH_SHORT).show();
                         TabbedFragment tabbedFragment = new TabbedFragment();
                         tabbedFragment.setArguments(bundle);
                         android.app.FragmentManager fm = getActivity().getFragmentManager();
@@ -286,7 +262,7 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.Con
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
             }else {
-                Log.e(TAG, "Google Login Faile" );
+                Log.e(TAG, "Google Login Failed" );
             }
         }
     }

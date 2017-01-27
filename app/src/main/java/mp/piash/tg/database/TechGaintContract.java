@@ -12,7 +12,7 @@ public class TechGaintContract extends DatabaseHelper {
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME + " ( " +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
-                    + TechGaintTableColumns.BALANCE +  " INTEGER," + TechGaintTableColumns.HEALTH +  " REAL," + TechGaintTableColumns.EXPERIENCE +  " REAL," + TechGaintTableColumns.COMPANY_EXPERIENCE +  " REAL" +" );";
+                    + TechGaintTableColumns.BANKACCOUNT +  " INTEGER," + TechGaintTableColumns.HEALTH +  " REAL," + TechGaintTableColumns.EXPERIENCE +  " REAL," + TechGaintTableColumns.COMPANY_EXPERIENCE +  " REAL" +" );";
     private static final String SQL_CREATE_ENTRIES_TWO =
             "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME_TWO+ " ( " +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
@@ -31,7 +31,7 @@ public class TechGaintContract extends DatabaseHelper {
         db.execSQL(SQL_CREATE_ENTRIES);
         db.execSQL(SQL_CREATE_ENTRIES_TWO);
         db.execSQL("insert into " + TechGaintTableColumns.TABLE_NAME + "(" + TechGaintTableColumns._ID   + ","
-                + TechGaintTableColumns.BALANCE + "," + TechGaintTableColumns.HEALTH + "," + TechGaintTableColumns.EXPERIENCE + "," + TechGaintTableColumns.COMPANY_EXPERIENCE + ") values(0,0,0,0,0)");
+                + TechGaintTableColumns.BANKACCOUNT + "," + TechGaintTableColumns.HEALTH + "," + TechGaintTableColumns.EXPERIENCE + "," + TechGaintTableColumns.COMPANY_EXPERIENCE + ") values(0,50,0,0,0)");
 
     }
 
@@ -52,7 +52,8 @@ public class TechGaintContract extends DatabaseHelper {
         public static final String TABLE_NAME = "TechGaintTableOne";
         public static final String TABLE_NAME_TWO = "TechGaintTableTwo";
         public static final String _ID = "Id";
-        public static final String BALANCE = "balance";
+        public static final String BANKACCOUNT = "BankAccount";
+        public static final String COMPANYACCOUNT = "CompanyAccount";
         public static final String HEALTH = "health";
         public static final String EXPERIENCE = "experience";
         public static final String COMPANY_EXPERIENCE = "companyexperience";

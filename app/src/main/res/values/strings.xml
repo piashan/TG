@@ -146,21 +146,21 @@
     </string-array>
 
     <string-array name="thirdPartTimeJobValue">
-    <item>$1</item>
-    <item>$25</item>
-    <item>$50</item>
-    <item>$100</item>
-    <item>$150</item>
-    <item>$350</item>
-    <item>$500</item>
-    <item>$000</item>
-    <item>$1500</item>
-    <item>$1500</item>
-    <item>$1800</item>
-    <item>$2000</item>
-    <item>$2500</item>
-    <item>$5000</item>
-    <item>$10</item>
+        <item>$1</item>
+        <item>$25</item>
+        <item>$50</item>
+        <item>$100</item>
+        <item>$150</item>
+        <item>$350</item>
+        <item>$500</item>
+        <item>$000</item>
+        <item>$1500</item>
+        <item>$1500</item>
+        <item>$1800</item>
+        <item>$2000</item>
+        <item>$2500</item>
+        <item>$5000</item>
+        <item>$10</item>
     </string-array>
     <string-array name="thirdInternshipJobString">
         <item>Internship in PR Advertising</item>
@@ -315,18 +315,18 @@
 
     </string-array>
     <string-array name="fouthHireTalentString">
-    <item>15 Talents</item>
-    <item>50 Talents</item>
-    <item>100 Talents</item>
-    <item>1000 Talents</item>
-    <item>5000 Talents</item>
+        <item>15 Talents</item>
+        <item>50 Talents</item>
+        <item>100 Talents</item>
+        <item>1000 Talents</item>
+        <item>5000 Talents</item>
     </string-array>
     <string-array name="fouthHireTalentValue">
-    <item>$640,0000/year</item>
-    <item>$2,5000,000/year</item>
-    <item>$5,0000,000/year</item>
-    <item>$50,000,000/year</item>
-    <item>$200,000,000/year</item>
+        <item>$640,0000/year</item>
+        <item>$2,5000,000/year</item>
+        <item>$5,0000,000/year</item>
+        <item>$50,000,000/year</item>
+        <item>$200,000,000/year</item>
 
     </string-array>
     <string-array name="fouthCustomerBaseString">

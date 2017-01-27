@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,11 +44,16 @@ public class AchievementFragment extends DialogFragment {
         mTechGaintHandler = new TechGaintHandler(getActivity());
 
 
-        Log.e(TAG, "onCreateView: "+ mTechGaintHandler.getAllAchievement().get(0));
-        mLayoutManager = new GridLayoutManager(getActivity(), 1);
-        mRecyclerViewPlay.setLayoutManager(mLayoutManager);
-        mAdapterAchievement = new AdapterAchievement(getActivity(), mTechGaintHandler.getAllAchievement());
-        mRecyclerViewPlay.setAdapter(mAdapterAchievement);
+
+        if (!mTechGaintHandler.getAllAchievement().isEmpty()){
+            mLayoutManager = new GridLayoutManager(getActivity(), 1);
+            mRecyclerViewPlay.setLayoutManager(mLayoutManager);
+            mAdapterAchievement = new AdapterAchievement(getActivity(), mTechGaintHandler.getAllAchievement());
+            mRecyclerViewPlay.setAdapter(mAdapterAchievement);
+        }else {
+            Toast.makeText(getActivity(), "There is no Achievement", Toast.LENGTH_SHORT).show();
+        }
+
         return view;
     }
 
