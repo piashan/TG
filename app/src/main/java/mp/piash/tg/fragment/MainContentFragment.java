@@ -186,7 +186,6 @@ public class MainContentFragment extends Fragment implements GoogleApiClient.Con
                     @Override
                     public void onClick(View view) {
 
-                        Toast.makeText(getActivity(), "PlayButton ok?", Toast.LENGTH_SHORT).show();
                         TabbedFragment tabbedFragment = new TabbedFragment();
                         tabbedFragment.setArguments(bundle);
                         android.app.FragmentManager fm = getActivity().getFragmentManager();

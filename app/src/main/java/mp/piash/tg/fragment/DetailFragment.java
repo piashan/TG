@@ -1824,7 +1824,7 @@ public class DetailFragment extends Fragment {
                     mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
                     Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
                 }else {
-                    Toast.makeText(getActivity(), "Game is over", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Game is over cause Health Can't be negative", Toast.LENGTH_SHORT).show();
                     mTechGaintHandler.updateBalance(0);
                     mTechGaintHandler.updateHealth(0);
                     mTechGaintHandler.updateExperience(0);

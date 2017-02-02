@@ -199,6 +199,7 @@
 
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -207,7 +208,66 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/companyexperice"
+            android:src="@drawable/equityicon"
+            android:layout_marginRight="8dp"/>
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="center_vertical"
+            android:text="Eauity" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <ProgressBar
+                android:id="@+id/progressBarEauity"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="25dip"
+                android:max="1000"
+                android:progressDrawable="@drawable/progessbaryellow" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtCompanyEquityValue"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="100"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="/"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:text="100"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/companyexperienceicon"
             android:layout_marginRight="8dp"/>
         <TextView
             android:layout_width="70dp"
@@ -257,121 +317,6 @@
 
         </RelativeLayout>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/companyexperice"
-            android:layout_marginRight="8dp"/>
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:layout_gravity="center_vertical"
-            android:text="Eauity" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right">
-            <ProgressBar
-                android:id="@+id/progressBarEauity"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="250dp"
-                android:layout_height="25dip"
-                android:max="1000"
-                android:progressDrawable="@drawable/progessbaryellow" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtCompanyEquityValue"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_centerInParent="true"
-                    android:text="0"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_centerInParent="true"
-                    android:text="/"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_centerInParent="true"
-                    android:text="1000"/>
-            </LinearLayout>
 
-        </RelativeLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/companyexperice"
-            android:layout_marginRight="8dp"/>
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:layout_gravity="center_vertical"
-            android:text="Compnany Value" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right">
-            <ProgressBar
-                android:id="@+id/progressBarComapnyValue"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="250dp"
-                android:layout_height="25dip"
-                android:max="1000"
-                android:progressDrawable="@drawable/progessbaryellow" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtCompanyValue"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_centerInParent="true"
-                    android:text="0"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_centerInParent="true"
-                    android:text="/"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_centerInParent="true"
-                    android:text="1000"/>
-            </LinearLayout>
-
-        </RelativeLayout>
-    </LinearLayout>
 
 </LinearLayout>
