@@ -42,7 +42,7 @@ public class DetailFragment extends Fragment {
     private TextView mTextViewHealth;
     private TextView mTextViewExperience;
     private TextView mTextViewCompanyExperience;
-    private TextView mTextViewAccount;
+    private TextView mTextViewCash;
 
 
 
@@ -64,7 +64,7 @@ public class DetailFragment extends Fragment {
         mTextViewHealth = (TextView)view.findViewById(R.id.txtHealthValue);
         mTextViewExperience = (TextView)view.findViewById(R.id.txtExperienceValue);
         mTextViewCompanyExperience = (TextView)view.findViewById(R.id.txtCompanyExperienceValue);
-        mTextViewAccount = (TextView)view.findViewById(R.id.tvBankAccount);
+        mTextViewCash = (TextView)view.findViewById(R.id.tvCash);
         mString = new ArrayList<>();
         mStringValues = new ArrayList<>();
         mTechGaintHandler = new TechGaintHandler(getActivity());
@@ -85,7 +85,7 @@ public class DetailFragment extends Fragment {
                     }
                 }
         );
-        mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+        mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
         updateProgressBar();
         return view;
     }
@@ -1799,7 +1799,7 @@ public class DetailFragment extends Fragment {
     public void showDialogBeforUpdate(final String mStringTitle, final String mStringValue, final int balance, final double health, final double experience, final double companyExperience, final int trace){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Confirm");
-        builder.setMessage("Are you sure "+  mStringValue);
+        builder.setMessage("Are you sure about "+  mStringTitle+" ?");
 
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
 
@@ -1821,7 +1821,7 @@ public class DetailFragment extends Fragment {
                         Log.e("Detail", "onClick: "+ mStringValue );
                     }
                     updateProgressBar();
-                    mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+                    mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
                     Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getActivity(), "Game is over cause Health Can't be negative", Toast.LENGTH_SHORT).show();

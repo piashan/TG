@@ -5,7 +5,6 @@ import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +21,9 @@ import mp.piash.tg.database.TechGaintHandler;
 public class BankAccountFragment extends Fragment {
 
     public static final String TAG ="Account";
-    private TextView mTextViewAccount;
+    private TextView mTextViewCash;
+    private TextView mTextViewPersonalBankAccount;
+    private TextView mTextViewCompanyBankAccount;
     private TextView mTextViewWithdraw;
     private TextView mTextViewDeposit;
     private TechGaintHandler mTechGaintHandler;
@@ -38,13 +39,14 @@ public class BankAccountFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_bank_account, container, false);
-        mTextViewAccount = (TextView)view.findViewById(R.id.tvBankAccount);
+        mTextViewCash = (TextView)view.findViewById(R.id.tvCash);
+        mTextViewCompanyBankAccount = (TextView)view.findViewById(R.id.tvPersonalBankAccount);
         mTextViewWithdraw = (TextView)view.findViewById(R.id.tvWithdrawAmount);
         mTextViewDeposit = (TextView)view.findViewById(R.id.tvDepositAmount);
         mEditTextWithdrawAmount = (EditText)view.findViewById(R.id.etWithdrawAmount);
 
         mTechGaintHandler = new TechGaintHandler(getActivity());
-        mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+        mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
         clickEvent();
         return view;
     }
@@ -93,7 +95,7 @@ public class BankAccountFragment extends Fragment {
                 int total =  mTechGaintHandler.getAllBalanceData().get(0) + balance ;
                 mTechGaintHandler.updateBalance(total);
                 Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
-                mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+                mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
                 dialog.dismiss();
             }
         });
@@ -125,7 +127,7 @@ public class BankAccountFragment extends Fragment {
                 int total = mTechGaintHandler.getAllBalanceData().get(0) - balance;
                 mTechGaintHandler.updateBalance(total);
                 Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
-                mTextViewAccount.setText("Bank Account - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+                mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
 
                 dialog.dismiss();
             }

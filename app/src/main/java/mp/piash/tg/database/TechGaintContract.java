@@ -12,7 +12,7 @@ public class TechGaintContract extends DatabaseHelper {
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME + " ( " +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
-                    + TechGaintTableColumns.BANKACCOUNT +  " INTEGER," + TechGaintTableColumns.HEALTH +  " REAL," + TechGaintTableColumns.EXPERIENCE +  " REAL," + TechGaintTableColumns.COMPANY_EXPERIENCE +  " REAL" +" );";
+                    + TechGaintTableColumns.CASH +  " INTEGER," + TechGaintTableColumns.PERSONAL_BANK_ACCOUNT +  " INTEGER," + TechGaintTableColumns.COMPANY_BANK_ACCOUNT +  " INTEGER," + TechGaintTableColumns.HEALTH +  " REAL," + TechGaintTableColumns.EXPERIENCE +  " REAL," + TechGaintTableColumns.COMPANY_EXPERIENCE +  " REAL" +" );";
     private static final String SQL_CREATE_ENTRIES_TWO =
             "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME_TWO+ " ( " +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
@@ -31,7 +31,12 @@ public class TechGaintContract extends DatabaseHelper {
         db.execSQL(SQL_CREATE_ENTRIES);
         db.execSQL(SQL_CREATE_ENTRIES_TWO);
         db.execSQL("insert into " + TechGaintTableColumns.TABLE_NAME + "(" + TechGaintTableColumns._ID   + ","
-                + TechGaintTableColumns.BANKACCOUNT + "," + TechGaintTableColumns.HEALTH + "," + TechGaintTableColumns.EXPERIENCE + "," + TechGaintTableColumns.COMPANY_EXPERIENCE + ") values(0,50,0,0,0)");
+                + TechGaintTableColumns.CASH + ","
+                + TechGaintTableColumns.PERSONAL_BANK_ACCOUNT + ","
+                + TechGaintTableColumns.COMPANY_BANK_ACCOUNT + ","
+                + TechGaintTableColumns.HEALTH + ","
+                + TechGaintTableColumns.EXPERIENCE + ","
+                + TechGaintTableColumns.COMPANY_EXPERIENCE + ") values(0,50,0,0,0,0,0)");
 
     }
 
@@ -52,12 +57,13 @@ public class TechGaintContract extends DatabaseHelper {
         public static final String TABLE_NAME = "TechGaintTableOne";
         public static final String TABLE_NAME_TWO = "TechGaintTableTwo";
         public static final String _ID = "Id";
-        public static final String BANKACCOUNT = "BankAccount";
-        public static final String COMPANYACCOUNT = "CompanyAccount";
-        public static final String HEALTH = "health";
-        public static final String EXPERIENCE = "experience";
-        public static final String COMPANY_EXPERIENCE = "companyexperience";
-        public static final String TRACE = "trace";
-        public static final String TITLE = "title";
+        public static final String CASH = "Cash";
+        public static final String PERSONAL_BANK_ACCOUNT = "PersonalBankAccount";
+        public static final String COMPANY_BANK_ACCOUNT = "CompanyBankAccount";
+        public static final String HEALTH = "Health";
+        public static final String EXPERIENCE = "Experience";
+        public static final String COMPANY_EXPERIENCE = "Companyexperience";
+        public static final String TRACE = "Trace";
+        public static final String TITLE = "Title";
     }
 }

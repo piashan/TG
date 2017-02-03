@@ -63,7 +63,7 @@ public class TechGaintHandler {
         ArrayList<Integer> contactList = new ArrayList<>();
 
         String[] projection = {
-                TechGaintContract.TechGaintTableColumns.BANKACCOUNT
+                TechGaintContract.TechGaintTableColumns.CASH
         };
         Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, projection, null, null, null, null, null);
 
@@ -143,7 +143,7 @@ public class TechGaintHandler {
 
         this.open();
         ContentValues cv=new ContentValues();
-        cv.put(TechGaintContract.TechGaintTableColumns.BANKACCOUNT,balance);
+        cv.put(TechGaintContract.TechGaintTableColumns.CASH,balance);
 
 
         long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
@@ -199,7 +199,7 @@ public class TechGaintHandler {
         this.open();
 
         Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME,
-                new String[]{TechGaintContract.TechGaintTableColumns._ID, TechGaintContract.TechGaintTableColumns.BANKACCOUNT},
+                new String[]{TechGaintContract.TechGaintTableColumns._ID, TechGaintContract.TechGaintTableColumns.CASH},
                 TechGaintContract.TechGaintTableColumns._ID + "=" + 0, null, null, null, null);
 
         cursor.moveToFirst();

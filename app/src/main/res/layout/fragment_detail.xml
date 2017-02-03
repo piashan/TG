@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvBankAccount"
+            android:id="@+id/tvPersonalBankAccount"
             android:layout_marginLeft="8dp"
             android:text="Bank Account - $0"
             android:layout_gravity="center_vertical" />
@@ -187,7 +187,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:layout_gravity="center_vertical"
-            android:text="Eauity" />
+            android:text="Equity" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -246,7 +246,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:layout_gravity="center_vertical"
-            android:text="Compnany Experience" />
+            android:text="Company Experience" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

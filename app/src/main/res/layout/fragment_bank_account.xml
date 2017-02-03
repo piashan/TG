@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvBankAccount"
+            android:id="@+id/tvPersonalBankAccount"
             android:text="Personal Bank Account - $0"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
@@ -89,7 +89,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvBankAccountCompany"
+            android:id="@+id/tvCompanyBankAccount"
             android:text="Company BankAccount - $0"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
@@ -134,7 +134,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/BackButton"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="120dp"
         android:textColor="@android:color/white"
         android:backgroundTint="@color/coloryellow"
         android:text="Back"/>
