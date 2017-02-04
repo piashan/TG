@@ -85,7 +85,7 @@ public class DetailFragment extends Fragment {
                     }
                 }
         );
-        mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
+        mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
         updateProgressBar();
         return view;
     }
@@ -1809,10 +1809,10 @@ public class DetailFragment extends Fragment {
                 double totalHealthTrace = health + mTechGaintHandler.getAllHealthData().get(0);
 
                 if (totalHealthTrace >= 0){
-                    int totalBalance = balance + mTechGaintHandler.getAllBalanceData().get(0);
+                    int totalBalance = balance + mTechGaintHandler.getAllCash().get(0);
                     double totalExperience = experience +mTechGaintHandler.getAllExperienceData().get(0);
                     double totalCompanyExperience = companyExperience + mTechGaintHandler.getAllCompanyExperienceData().get(0);
-                    mTechGaintHandler.updateBalance(totalBalance);
+                    mTechGaintHandler.updateCash(totalBalance);
                     mTechGaintHandler.updateHealth(totalHealthTrace);
                     mTechGaintHandler.updateExperience(totalExperience);
                     mTechGaintHandler.updateCompanyExperience(totalCompanyExperience);
@@ -1821,11 +1821,11 @@ public class DetailFragment extends Fragment {
                         Log.e("Detail", "onClick: "+ mStringValue );
                     }
                     updateProgressBar();
-                    mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllBalanceData().get(0)));
-                    Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllBalanceData().get(0), Toast.LENGTH_SHORT).show();
+                    mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
+                    Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCash().get(0), Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getActivity(), "Game is over cause Health Can't be negative", Toast.LENGTH_SHORT).show();
-                    mTechGaintHandler.updateBalance(0);
+                    mTechGaintHandler.updateCash(0);
                     mTechGaintHandler.updateHealth(0);
                     mTechGaintHandler.updateExperience(0);
                     mTechGaintHandler.updateCompanyExperience(0);

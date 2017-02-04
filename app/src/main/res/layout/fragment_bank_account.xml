@@ -116,7 +116,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvWithdrawAmountCompany"
+            android:id="@+id/tvWithdrawCompanyBankAccount"
             android:textColor="@android:color/white"
             android:backgroundTint="@color/coloryellow"
             android:textAllCaps="false"
@@ -124,7 +124,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvDepositAmountCompany"
+            android:id="@+id/tvDepositCompanyBankAccount"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:backgroundTint="@color/coloryellow"

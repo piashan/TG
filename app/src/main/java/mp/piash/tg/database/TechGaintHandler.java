@@ -57,13 +57,30 @@ public class TechGaintHandler {
     }
 
 
-    public ArrayList<Integer> getAllBalanceData(){
+    public ArrayList<Integer> getAllCash(){
 
         this.open();
         ArrayList<Integer> contactList = new ArrayList<>();
 
         String[] projection = {
                 TechGaintContract.TechGaintTableColumns.CASH
+        };
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, projection, null, null, null, null, null);
+
+        while (cursor.moveToNext()){
+
+            contactList.add(cursor.getInt(0));
+        }
+        return contactList;
+    }
+
+    public ArrayList<Integer> getAllCompanyPersonalBankAccount(){
+
+        this.open();
+        ArrayList<Integer> contactList = new ArrayList<>();
+
+        String[] projection = {
+                TechGaintContract.TechGaintTableColumns.PERSONAL_BANK_ACCOUNT
         };
         Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, projection, null, null, null, null, null);
 
@@ -121,6 +138,7 @@ public class TechGaintHandler {
         }
         return contactList;
     }
+
     public ArrayList<String> getAllAchievement(){
 
         this.open();
@@ -139,11 +157,39 @@ public class TechGaintHandler {
     }
 
 
-    public  boolean updateBalance(int balance){
+    public  boolean updateCash(int balance){
 
         this.open();
         ContentValues cv=new ContentValues();
         cv.put(TechGaintContract.TechGaintTableColumns.CASH,balance);
+
+
+        long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
+        if (check>0){
+            return  true;
+        }
+        else
+            return  false;
+    }
+    public  boolean updatePersonalBankAccount(int balance){
+
+        this.open();
+        ContentValues cv=new ContentValues();
+        cv.put(TechGaintContract.TechGaintTableColumns.PERSONAL_BANK_ACCOUNT,balance);
+
+
+        long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
+        if (check>0){
+            return  true;
+        }
+        else
+            return  false;
+    }
+    public  boolean updatePersonalCompanyBankAccount(int balance){
+
+        this.open();
+        ContentValues cv=new ContentValues();
+        cv.put(TechGaintContract.TechGaintTableColumns.COMPANY_BANK_ACCOUNT,balance);
 
 
         long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
