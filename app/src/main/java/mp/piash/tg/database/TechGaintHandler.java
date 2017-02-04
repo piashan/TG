@@ -73,6 +73,22 @@ public class TechGaintHandler {
         }
         return contactList;
     }
+    public ArrayList<Integer> getAllEquity(){
+
+        this.open();
+        ArrayList<Integer> contactList = new ArrayList<>();
+
+        String[] projection = {
+                TechGaintContract.TechGaintTableColumns.EQUITY
+        };
+        Cursor cursor = mDatabase.query(TechGaintContract.TechGaintTableColumns.TABLE_NAME, projection, null, null, null, null, null);
+
+        while (cursor.moveToNext()){
+
+            contactList.add(cursor.getInt(0));
+        }
+        return contactList;
+    }
 
     public ArrayList<Integer> getAllCompanyPersonalBankAccount(){
 
@@ -171,6 +187,22 @@ public class TechGaintHandler {
         else
             return  false;
     }
+
+    public  boolean updateEquity(int balance){
+
+        this.open();
+        ContentValues cv=new ContentValues();
+        cv.put(TechGaintContract.TechGaintTableColumns.EQUITY,balance);
+
+
+        long check =mDatabase.update(TechGaintContract.TechGaintTableColumns.TABLE_NAME, cv, TechGaintContract.TechGaintTableColumns._ID + " = " + 0, null);
+        if (check>0){
+            return  true;
+        }
+        else
+            return  false;
+    }
+
     public  boolean updatePersonalBankAccount(int balance){
 
         this.open();

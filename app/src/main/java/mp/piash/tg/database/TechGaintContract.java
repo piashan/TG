@@ -12,11 +12,20 @@ public class TechGaintContract extends DatabaseHelper {
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME + " ( " +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
-                    + TechGaintTableColumns.CASH +  " INTEGER," + TechGaintTableColumns.PERSONAL_BANK_ACCOUNT +  " INTEGER," + TechGaintTableColumns.COMPANY_BANK_ACCOUNT +  " INTEGER," + TechGaintTableColumns.HEALTH +  " REAL," + TechGaintTableColumns.EXPERIENCE +  " REAL," + TechGaintTableColumns.COMPANY_EXPERIENCE +  " REAL" +" );";
+                    + TechGaintTableColumns.CASH +  " INTEGER,"
+                    + TechGaintTableColumns.PERSONAL_BANK_ACCOUNT +  " INTEGER,"
+                    + TechGaintTableColumns.COMPANY_BANK_ACCOUNT +  " INTEGER,"
+                    + TechGaintTableColumns.EQUITY +  " INTEGER,"
+                    + TechGaintTableColumns.HEALTH +  " REAL,"
+                    + TechGaintTableColumns.EXPERIENCE +  " REAL,"
+                    + TechGaintTableColumns.COMPANY_EXPERIENCE +  " REAL" +" );";
+
     private static final String SQL_CREATE_ENTRIES_TWO =
             "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME_TWO+ " ( " +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
-                    + TechGaintTableColumns.TRACE +  " INTEGER," + TechGaintTableColumns.TITLE +  " TEXT" +" );";
+                    + TechGaintTableColumns.TRACE +  " INTEGER,"
+                    + TechGaintTableColumns.TITLE +  " TEXT" +" );";
+
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + TechGaintTableColumns.TABLE_NAME;
     private static final String SQL_DELETE_ENTRIES_TWO =
@@ -60,6 +69,7 @@ public class TechGaintContract extends DatabaseHelper {
         public static final String CASH = "Cash";
         public static final String PERSONAL_BANK_ACCOUNT = "PersonalBankAccount";
         public static final String COMPANY_BANK_ACCOUNT = "CompanyBankAccount";
+        public static final String EQUITY = "Equity";
         public static final String HEALTH = "Health";
         public static final String EXPERIENCE = "Experience";
         public static final String COMPANY_EXPERIENCE = "Companyexperience";
