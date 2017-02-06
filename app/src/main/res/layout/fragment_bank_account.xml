@@ -51,7 +51,7 @@
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:id="@+id/etWithdrawAmount"
+        android:id="@+id/etTransferCashAmount"
         android:inputType="number"
         android:hint="Enter the amount"
         android:layout_gravity="center_horizontal"/>
@@ -63,7 +63,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvWithdrawAmount"
+        android:id="@+id/tvWithdrawAccount"
         android:textColor="@android:color/white"
         android:backgroundTint="@color/coloryellow"
         android:textAllCaps="false"
@@ -104,7 +104,7 @@
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:id="@+id/etWithdrawAmountCompany"
+        android:id="@+id/etTransferCompanyAccount"
         android:inputType="number"
         android:hint="Enter the amount"
         android:layout_gravity="center_horizontal"/>
