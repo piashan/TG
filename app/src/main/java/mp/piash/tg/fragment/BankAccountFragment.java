@@ -277,12 +277,7 @@ public class BankAccountFragment extends Fragment {
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
-                // Do nothing but close the dialog
-              /*  int total = mTechGaintHandler.getAllCash().get(0) - balance;
-                mTechGaintHandler.updateCash(total);
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCash().get(0), Toast.LENGTH_SHORT).show();
-                mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
-*/
+
                 int totalSumision =  mTechGaintHandler.getAllPersonalBankAccount().get(0) + balance ;
                 int totalSubstract =  mTechGaintHandler.getAllCash().get(0) - balance ;
                 mTechGaintHandler.updatePersonalBankAccount(totalSumision);
