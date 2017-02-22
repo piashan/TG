@@ -64,7 +64,10 @@ public class BankAccountFragment extends Fragment {
         mButtonCashTransfer = (Button) mDialogForBank.findViewById(R.id.tvDepositCashTransfer);
 
         mTechGaintHandler = new TechGaintHandler(getActivity());
-        mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
+        mTextViewCash.setText("Cash  $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
+        mTextViewCompanyBankAccount.setText("Company BankAccount  $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
+        mTextViewPersonalBankAccount.setText("Personal BankAccount  $" +String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
+
         backButton();
         clickEvent();
         dialogPopUp();
@@ -146,9 +149,13 @@ public class BankAccountFragment extends Fragment {
 
                             showDialogWithDraw( "withdraw",Integer.valueOf(mEditTextTransferCashAccount.getText().toString()));
                         }else {
-                            if (Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) < 100){
+                            if (!mEditTextTransferCashAccount.getText().toString().isEmpty()){
+                                 if (Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) < 100){
                                 Toast.makeText(getActivity(), " Minimum Amount to open an Account is $100", Toast.LENGTH_SHORT).show();
+                                 }else {
+                                     Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
 
+                                 }
                             }else {
                                 Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
 
@@ -165,9 +172,12 @@ public class BankAccountFragment extends Fragment {
                         if (!mEditTextTransferCashAccount.getText().toString().isEmpty() && Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) >= 100 && mTechGaintHandler.getAllCash().get(0) >= Integer.parseInt(mEditTextTransferCashAccount.getText().toString())){
                             showDialogDeposit("Deposit" ,Integer.valueOf(mEditTextTransferCashAccount.getText().toString()));
                         }else {
-                            if (Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) < 100){
-                                Toast.makeText(getActivity(), " Minimum Amount to open an Account is $100", Toast.LENGTH_SHORT).show();
-
+                            if (!mEditTextTransferCashAccount.getText().toString().isEmpty()){
+                                if (Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) < 100) {
+                                    Toast.makeText(getActivity(), " Minimum Amount to open an Account is $100", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                }
                             }else {
                                 Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
 
@@ -323,8 +333,8 @@ public class BankAccountFragment extends Fragment {
                 mTechGaintHandler.updatePersonalBankAccount(totalSumision);
                 mTechGaintHandler.updateCompanyBankAccount(totalSubstract);
                 Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCompanyBankAccount().get(0), Toast.LENGTH_SHORT).show();
-                mTextViewCompanyBankAccount.setText("Company BankAccount - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
-                mTextViewPersonalBankAccount.setText("Personal BankAccount - $" +String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
+                mTextViewCompanyBankAccount.setText("Company BankAccount  $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
+                mTextViewPersonalBankAccount.setText("Personal BankAccount  $" +String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
                 dialog.dismiss();
             }
         });

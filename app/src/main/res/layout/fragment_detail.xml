@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvPersonalBankAccount"
             android:layout_marginLeft="8dp"
-            android:text="Bank Account - $0"
+            android:text="Personal BankAccount  $0"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
     <LinearLayout
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:id="@+id/tvCash"
-            android:text="Cash - $0"
+            android:text="Cash  $0"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
     <LinearLayout
@@ -46,13 +46,13 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/dollarb"/>
+            android:src="@drawable/bank"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:id="@+id/tvCompanyValue"
-            android:text="Cash - $0"
+            android:text="Company BankAccount  $0"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
     <LinearLayout
@@ -207,7 +207,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtCompanyEquityValue"
+                    android:id="@+id/txtEquityValue"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:layout_centerInParent="true"

@@ -45,8 +45,7 @@ public class TechGaintContract extends DatabaseHelper {
                 + TechGaintTableColumns.COMPANY_BANK_ACCOUNT + ","
                 + TechGaintTableColumns.HEALTH + ","
                 + TechGaintTableColumns.EXPERIENCE + ","
-                + TechGaintTableColumns.COMPANY_EXPERIENCE + ") values(0,50,0,600,0,0,0)");
-
+                + TechGaintTableColumns.COMPANY_EXPERIENCE + ") values(0,50,0,0,20,10,0)");
     }
 
     @Override

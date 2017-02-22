@@ -27,12 +27,12 @@
         <item>Driving skills + license</item>
         <item>Computer sills</item>
         <item>Communication Skills</item>
-        <item>Risk Management sikls</item>
-        <item>Networkingi skills</item>
+        <item>Risk Management skills</item>
+        <item>Networking skills</item>
         <item>Business skills</item>
         <item>Product development skills</item>
         <item>Law skills</item>
-        <item>ManageMent skills</item>
+        <item>Management skills</item>
         <item>Programming skills</item>
     </string-array>
     <string-array name="SecondSkillsValue">
@@ -49,7 +49,6 @@
     </string-array>
     <string-array name="SecondLodgingString">
         <item>Stay at parent basement</item>
-        <item>Computer sills</item>
         <item>Ask your parent a bicycle</item>
         <item>Ask your paren for a car</item>
         <item>Buy a bicycle</item>
@@ -57,6 +56,7 @@
         <item>Buy second hand car</item>
         <item>Rent a room</item>
         <item>Buy a bike</item>
+        <item>Rent House</item>
         <item>Rent an apartment</item>
         <item>Buy a condo</item>
         <item>Rent a car A</item>
@@ -125,12 +125,12 @@
         <item>Part Time Jobs</item>
         <item>Internship Jobs</item>
         <item>Full Time Jobs</item>
-        <item>Excutive Jobs</item>
+        <item>Executive Jobs</item>
     </string-array>
     <string-array name="thirdPartTimeJobString">
         <item>Clean your room</item>
         <item>Deliver newspapers</item>
-        <item>Work at abarbershop</item>
+        <item>Work at a barbershop</item>
         <item>Cleaner</item>
         <item>Waiter</item>
         <item>PetCare</item>
@@ -153,18 +153,18 @@
         <item>$150</item>
         <item>$350</item>
         <item>$500</item>
-        <item>$000</item>
+        <item>$1000</item>
         <item>$1500</item>
         <item>$1500</item>
         <item>$1800</item>
         <item>$2000</item>
         <item>$2500</item>
         <item>$5000</item>
-        <item>$10</item>
+        <item>$10000</item>
     </string-array>
     <string-array name="thirdInternshipJobString">
         <item>Internship in PR Advertising</item>
-        <item>Intership in Sales</item>
+        <item>Internship in Sales</item>
         <item>internship in Accounting</item>
         <item>Internship in Biochemistry</item>
         <item>InternShip in Banking</item>
@@ -269,7 +269,7 @@
         <item>$10,000</item>
     </string-array>
     <string-array name="fouthDevelopYourCompanyString">
-        <item>Understant Trend and Market</item>
+        <item>Understand Trend and Market</item>
         <item>Develop your 1st Prototype</item>
         <item>Join Company Accelerator</item>
         <item>Build a Beta version of yoru product</item>
