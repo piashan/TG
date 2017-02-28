@@ -197,8 +197,8 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="250dp"
                 android:layout_height="25dip"
-                android:max="1000"
-                android:progressDrawable="@drawable/progessbaryellow" />
+                android:max="100"
+                android:progressDrawable="@drawable/customprogessbar" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

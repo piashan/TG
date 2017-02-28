@@ -32,9 +32,11 @@ public class FirstFragment extends Fragment {
     private ProgressBar mProgesBarHealth;
     private ProgressBar mProgressBarExperience;
     private ProgressBar mProgressBarComapnyExperience;
+    private ProgressBar mProgesBarEquity;
     private TextView mTextViewHealth;
     private TextView mTextViewExperience;
     private TextView mTextViewCompanyExperience;
+    private TextView mTextViewEquity;
 
     public FirstFragment(){
 
@@ -57,8 +59,10 @@ public class FirstFragment extends Fragment {
         mProgesBarHealth = (ProgressBar)view.findViewById(R.id.progressBarHealth);
         mProgressBarExperience = (ProgressBar)view.findViewById(R.id.progressBarExperience);
         mProgressBarComapnyExperience = (ProgressBar)view.findViewById(R.id.progressBarComapnyExperience);
+        mProgesBarEquity = (ProgressBar)view.findViewById(R.id.progressBarEauity);
         mTextViewHealth = (TextView)view.findViewById(R.id.txtHealthValue);
         mTextViewExperience = (TextView)view.findViewById(R.id.txtExperienceValue);
+        mTextViewEquity = (TextView)view.findViewById(R.id.txtCompanyEquityValue);
         mTextViewCompanyExperience = (TextView)view.findViewById(R.id.txtCompanyExperienceValue);
         mTechGaintHandler = new TechGaintHandler(getActivity());
         updateProgressBar();
@@ -77,9 +81,12 @@ public class FirstFragment extends Fragment {
     private void updateProgressBar(){
         mProgesBarHealth.setProgress(mTechGaintHandler.getAllHealthData().get(0).intValue());
         mProgressBarExperience.setProgress(mTechGaintHandler.getAllExperienceData().get(0).intValue());
+        mProgesBarEquity.setProgress(100);
         mProgressBarComapnyExperience.setProgress(mTechGaintHandler.getAllCompanyExperienceData().get(0).intValue());
         mTextViewHealth.setText(mTechGaintHandler.getAllHealthData().get(0).toString());
         mTextViewExperience.setText(mTechGaintHandler.getAllExperienceData().get(0).toString());
+        mTextViewEquity.setText(String.valueOf(100));
         mTextViewCompanyExperience.setText(mTechGaintHandler.getAllCompanyExperienceData().get(0).toString());
+
     }
 }

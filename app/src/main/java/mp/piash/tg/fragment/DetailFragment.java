@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -2130,11 +2131,25 @@ public class DetailFragment extends Fragment {
     private void updateProgressBar(){
         mProgesBarHealth.setProgress(mTechGaintHandler.getAllHealthData().get(0).intValue());
         mProgressBarExperience.setProgress(mTechGaintHandler.getAllExperienceData().get(0).intValue());
-        mProgressBarEquity.setProgress(mTechGaintHandler.getAllEquity().get(0).intValue());
+        mProgressBarEquity.setProgress(100);
         mProgressBarComapnyExperience.setProgress(mTechGaintHandler.getAllCompanyExperienceData().get(0).intValue());
         mTextViewHealth.setText(mTechGaintHandler.getAllHealthData().get(0).toString());
         mTextViewExperience.setText(mTechGaintHandler.getAllExperienceData().get(0).toString());
-        mTextViewEquity.setText(mTechGaintHandler.getAllEquity().get(0).toString());
+        mTextViewEquity.setText(String.valueOf(100));
         mTextViewCompanyExperience.setText(mTechGaintHandler.getAllCompanyExperienceData().get(0).toString());
+    }
+
+    private void Toast(String string){
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_layout_root,
+                (ViewGroup)getView().findViewById(R.id.toast_layout_root));
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(string);
+
+        Toast toast = new Toast(getActivity());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
     }
 }

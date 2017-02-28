@@ -65,7 +65,7 @@ public class BankAccountFragment extends Fragment {
 
         mTechGaintHandler = new TechGaintHandler(getActivity());
         mTextViewCash.setText("Cash  $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
-        mTextViewCompanyBankAccount.setText("Company BankAccount  $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
+        mTextViewCompanyBankAccount.setText("Company BankAccount  $" +String.valueOf(mTechGaintHandler.getAllCompanyBankAccount().get(0)));
         mTextViewPersonalBankAccount.setText("Personal BankAccount  $" +String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
 
         backButton();
