@@ -85,7 +85,7 @@ public class DetailFragment extends Fragment {
                 new RVClickListener() {
                     @Override
                     public void onItemClicked(View view, int position) {
-                        //Toast.makeText(getActivity(), ""+getArguments().getInt("viewpager")+getArguments().getInt("position")+position, Toast.LENGTH_SHORT).show();
+                        //Toast(""+getArguments().getInt("viewpager")+getArguments().getInt("position")+position);
                         UpdateDatabaseByLogic(position);
 
 
@@ -157,14 +157,14 @@ public class DetailFragment extends Fragment {
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)),0, 5 ,0, 0, 110);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 1){
 
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 10, 0, 0, 111);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }
         else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 2){
@@ -172,22 +172,22 @@ public class DetailFragment extends Fragment {
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 10, 0, 0, 112);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }
         else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 1 && position == 3){
 
             if (mTechGaintHandler.isExists(110) <= 0 || mTechGaintHandler.isExists(112) <= 0){
               if (mTechGaintHandler.isExists(110) <= 0){
-                  Toast.makeText(getActivity(), "please complete High School", Toast.LENGTH_SHORT).show();
+                  Toast("please complete High School");
               }else if (mTechGaintHandler.isExists(112) <= 0){
-                  Toast.makeText(getActivity(), "Please Complete University", Toast.LENGTH_SHORT).show();
+                  Toast("Please Complete University");
               }
             }else {
                 if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                     showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 15, 0, 0, 113);
                 }else {
-                    Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                    Toast("Insufficient Balance");
                 }
 
             }
@@ -197,7 +197,7 @@ public class DetailFragment extends Fragment {
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 1, 0, 0, 120);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }
         else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 1){
@@ -205,55 +205,55 @@ public class DetailFragment extends Fragment {
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 1, 0, 0, 121);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 2){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 1, 0, 0, 122);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 3){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 2, 0, 0, 123);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 4){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 3, 0, 0, 124);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 5){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 4, 0, 0, 125);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 6){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 4, 0, 0, 126);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 7){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 5, 0, 0, 127);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 8){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 6, 0, 0, 128);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 2 && position == 9){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 7, 0, 0, 129);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }
         // Lodging Fragment
@@ -267,116 +267,116 @@ public class DetailFragment extends Fragment {
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, -1, 0, 0, 133);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 4){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 0, 0, 0, 134);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 5){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 1, 0, 0, 135);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 6){
 
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 2, 0, 0, 136);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 7){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 0, 0, 0, 137);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 8){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 5, 0, 0, 138);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 9){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 2, 0, 0, 139);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 10){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 2, 0, 0, 1310);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 11){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 2, 0, 0, 1311);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 12){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position), mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 2, 0, 0, 1312);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 13){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 3, 0, 0, 1313);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 14){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 3, 0, 0, 1314);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 15){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 5, 0, 0, 1315);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 16){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 7, 0, 0, 1316);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 17){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 8, 0, 0, 1317);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 18){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 8, 0, 0, 1318);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 19){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 10, 0, 0, 1319);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 20){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 20, 0, 0, 1320);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 3 && position == 21){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 0, 25, 0, 0, 1321);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }
         // Health and Leisure
@@ -384,67 +384,67 @@ public class DetailFragment extends Fragment {
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 1, -0.5, 0, 0, 140);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 1){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 1, -0.5, 0, 0, 141);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 2){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 5, 0.5, 0, 0, 142);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 3){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 1, 0.5, 0, 0, 143);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 4){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 3, 0.5, 0, 0, 144);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 5){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 5, 5, 0, 0, 145);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 6){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 2, 0, 0, 0, 146);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 7){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 5, 0, 0, 0, 147);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 8){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 5, -1, 0, 0, 148);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 9){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 10, -2.5, 0, 0, 149);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }else   if (getArguments().getInt("viewpager") == 1 &&  getArguments().getInt("position") == 4 && position == 10){
             if (mTechGaintHandler.getAllCash().get(0) > getInterger(mStringValues.get(position))){
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), -getInterger(mStringValues.get(position)) , 5, -5, 0, 0, 1410);
             }else {
-                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                Toast("Insufficient Balance");
             }
         }
         // Part Time jobs
@@ -463,7 +463,7 @@ public class DetailFragment extends Fragment {
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 6){
             if (mTechGaintHandler.isExists(134) <= 0 ){
                 if (mTechGaintHandler.isExists(134) <= 0){
-                    Toast.makeText(getActivity(), "please Buy a Bicycle", Toast.LENGTH_SHORT).show();
+                    Toast("please Buy a Bicycle");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 0, 0, 0, 206);
@@ -472,7 +472,7 @@ public class DetailFragment extends Fragment {
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 7){
             if (mTechGaintHandler.isExists(110) <= 0 ){
                 if (mTechGaintHandler.isExists(110) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Highschool");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 0, 0, 0, 207);
@@ -480,9 +480,9 @@ public class DetailFragment extends Fragment {
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 8){
             if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(122) <= 0){
                 if (mTechGaintHandler.isExists(110) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Highschool");
                 }else if (mTechGaintHandler.isExists(122) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Communication Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Communication Skills");
 
                 }
             }else {
@@ -491,9 +491,9 @@ public class DetailFragment extends Fragment {
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 9){
             if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(125) <= 0){
                 if (mTechGaintHandler.isExists(110) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Highschool");
                 }else if (mTechGaintHandler.isExists(125) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Business Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Business Skills");
 
                 }
             }else {
@@ -502,13 +502,13 @@ public class DetailFragment extends Fragment {
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 10){
             if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(124) <= 0 ||mTechGaintHandler.isExists(125) <= 0){
                 if (mTechGaintHandler.isExists(110) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Highschool");
                 }else if (mTechGaintHandler.isExists(122) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Communication Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Communication Skills");
                 }else if (mTechGaintHandler.isExists(124) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Newtworking Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Newtworking Skills");
                 }else if (mTechGaintHandler.isExists(125) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Busines Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Busines Skills");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 0, 2010);
@@ -516,15 +516,15 @@ public class DetailFragment extends Fragment {
         } else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 11){
             if (mTechGaintHandler.isExists(110) <= 0 ||mTechGaintHandler.isExists(120) <= 0 ||mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(1311) <= 0 ||mTechGaintHandler.isExists(128) <= 0){
                 if (mTechGaintHandler.isExists(110) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Highschool", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Highschool");
                 }else if (mTechGaintHandler.isExists(120) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Driving Skills and license", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Driving Skills and license");
                 }else if (mTechGaintHandler.isExists(122) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Communication Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Communication Skills");
                 }else if (mTechGaintHandler.isExists(131) <= 0){
-                    Toast.makeText(getActivity(), "please Buy Car", Toast.LENGTH_SHORT).show();
+                    Toast("please Buy Car");
                 }else if (mTechGaintHandler.isExists(128) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Management Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Management Skills");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 4, 0, 0, 2011);
@@ -532,11 +532,11 @@ public class DetailFragment extends Fragment {
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 12){
             if (mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(144) <= 0 ||mTechGaintHandler.isExists(146) <= 0 ){
                 if (mTechGaintHandler.isExists(122) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Communication Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Communication Skills");
                 }else if (mTechGaintHandler.isExists(144) <= 0){
-                    Toast.makeText(getActivity(), "please Buy Colths B", Toast.LENGTH_SHORT).show();
+                    Toast("please Buy Colths B");
                 }else if (mTechGaintHandler.isExists(146) <= 0){
-                    Toast.makeText(getActivity(), "please go to Gym", Toast.LENGTH_SHORT).show();
+                    Toast("please go to Gym");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 3, 0, 0, 2012);
@@ -544,15 +544,15 @@ public class DetailFragment extends Fragment {
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 13){
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(124) <= 0 ||mTechGaintHandler.isExists(125) <= 0 || mTechGaintHandler.getAllExperienceData().get(0).intValue() <= 4){
                 if (mTechGaintHandler.isExists(111) <= 0){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if (mTechGaintHandler.isExists(122) <= 0){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if (mTechGaintHandler.isExists(124) <= 0){
-                    Toast.makeText(getActivity(), "please finish Networking skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Networking skill");
                 }else if (mTechGaintHandler.isExists(125) <= 0){
-                    Toast.makeText(getActivity(), "please finish Business skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Business skill");
                 }else if (mTechGaintHandler.getAllExperienceData().get(0).intValue() <= 4){
-                    Toast.makeText(getActivity(), "you need +4 experience", Toast.LENGTH_SHORT).show();
+                    Toast("you need +4 experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 4, 0, 0, 2013);
@@ -560,11 +560,11 @@ public class DetailFragment extends Fragment {
         }else   if (getArguments().getInt("viewpager") == 2 &&  getArguments().getInt("position") == 0 && position == 14){
             if (mTechGaintHandler.isExists(122) <= 0 ||mTechGaintHandler.isExists(125) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ){
                 if (mTechGaintHandler.isExists(122) <= 0){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else  if (mTechGaintHandler.isExists(125) <= 0){
-                    Toast.makeText(getActivity(), "please finish Business skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Business skill");
                 }else if (mTechGaintHandler.isExists(129) <= 0){
-                    Toast.makeText(getActivity(), "Please finish programming skill", Toast.LENGTH_SHORT).show();
+                    Toast("Please finish programming skill");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 6, 0, 0, 2014);
@@ -575,17 +575,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(122) <= 0){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if (mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(124) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Networking skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Networking skill");
                 }else if(mTechGaintHandler.isExists(125) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Business skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Business skill");
                 }else if(mTechGaintHandler.isExists(144) <= 0 ){
-                    Toast.makeText(getActivity(), "please Buy Coths B", Toast.LENGTH_SHORT).show();
+                    Toast("please Buy Coths B");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 7, 0, 0, 210);
@@ -595,17 +595,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(122) <= 0){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if (mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(124) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Networking skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Networking skill");
                 }else if(mTechGaintHandler.isExists(125) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Business skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Business skill");
                 }else if(mTechGaintHandler.isExists(144) <= 0 ){
-                    Toast.makeText(getActivity(), "please Buy Coths B", Toast.LENGTH_SHORT).show();
+                    Toast("please Buy Coths B");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 8, 0, 0, 211);
@@ -615,13 +615,13 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(120) <= 0){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(125) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Business skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Business skill");
                 }else if(mTechGaintHandler.isExists(120) <= 0 ){
-                    Toast.makeText(getActivity(), "you need driving skills", Toast.LENGTH_SHORT).show();
+                    Toast("you need driving skills");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 9, 0, 0, 212);
@@ -631,17 +631,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(134) <= 0 ||mTechGaintHandler.isExists(135) <= 0){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }else if(mTechGaintHandler.isExists(134) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy bicycle", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy bicycle");
                 }else if(mTechGaintHandler.isExists(135) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a basement", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a basement");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 10, 0, 0, 213);
@@ -651,17 +651,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(134) <= 0 ||mTechGaintHandler.isExists(135) <= 0){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }else if(mTechGaintHandler.isExists(134) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy bicycle", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy bicycle");
                 }else if(mTechGaintHandler.isExists(135) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a basement", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a basement");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 11, 0, 0, 214);
@@ -672,17 +672,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(136) <= 0 ||mTechGaintHandler.isExists(135) <= 0){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }else if(mTechGaintHandler.isExists(136) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy Secondhand Car", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy Secondhand Car");
                 }else if(mTechGaintHandler.isExists(135) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a basement", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a basement");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 12, 0, 0, 215);
@@ -692,17 +692,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(136) <= 0 ||mTechGaintHandler.isExists(137) <= 0 ||mTechGaintHandler.isExists(146) <= 0){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if(mTechGaintHandler.isExists(124) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Networking skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Networking skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(137) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a room", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a room");
                 }else if(mTechGaintHandler.isExists(136) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy Secondhand Car", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy Secondhand Car");
                 }else if(mTechGaintHandler.isExists(146) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to go gym", Toast.LENGTH_SHORT).show();
+                    Toast("you need to go gym");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 13, 0, 0, 216);
@@ -712,15 +712,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(136) <= 0 ||mTechGaintHandler.isExists(137) <= 0 ){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(137) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a room", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a room");
                 }else if(mTechGaintHandler.isExists(136) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy Secondhand Car", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy Secondhand Car");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -6, 14, 0, 0, 217);
@@ -730,17 +730,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(111) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(136) <= 0 ||mTechGaintHandler.isExists(137) <= 0 ||mTechGaintHandler.isExists(126) <= 0){
                 if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at college", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at college");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(137) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a room", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a room");
                 }else if(mTechGaintHandler.isExists(136) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy Secondhand Car", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy Secondhand Car");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -7, 15, 0, 0, 218);
@@ -750,17 +750,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(136) <= 0 ||mTechGaintHandler.isExists(137) <= 0 ||mTechGaintHandler.isExists(126) <= 0){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(137) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a room", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a room");
                 }else if(mTechGaintHandler.isExists(136) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy Secondhand Car", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy Secondhand Car");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 18, 0, 0, 219);
@@ -770,23 +770,23 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(136) <= 0 ||mTechGaintHandler.isExists(137) <= 0 ||mTechGaintHandler.isExists(126) <= 0){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(123) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Risk management skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Risk management skill");
                 }else if(mTechGaintHandler.isExists(124) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish networking skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish networking skill");
                 }else if(mTechGaintHandler.isExists(125) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Business skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Business skill");
                 }else if(mTechGaintHandler.isExists(137) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a room", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a room");
                 }else if(mTechGaintHandler.isExists(136) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy Secondhand Car", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy Secondhand Car");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -15, 20, 0, 0, 2110);
@@ -796,21 +796,21 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(136) <= 0 ||mTechGaintHandler.isExists(137) <= 0 ||mTechGaintHandler.isExists(126) <= 0 ||mTechGaintHandler.isExists(129) <= 0){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(123) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Risk management skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Risk management skill");
                 }else if(mTechGaintHandler.isExists(137) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent a room", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent a room");
                 }else if(mTechGaintHandler.isExists(136) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy Secondhand Car", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy Secondhand Car");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }else if(mTechGaintHandler.isExists(129) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Programming skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Programming skill");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -20, 20, 0, 0, 2111);
@@ -820,21 +820,21 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(138) <= 0 ||mTechGaintHandler.isExists(139) <= 0 ||mTechGaintHandler.isExists(126) <= 0){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(123) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Risk management skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Risk management skill");
                 }else if(mTechGaintHandler.isExists(138) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy a bike", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy a bike");
                 }else if(mTechGaintHandler.isExists(139) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent an apartment", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent an apartment");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }else if(mTechGaintHandler.isExists(129) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Programming skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Programming skill");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 20, 0, 0, 2112);
@@ -844,21 +844,21 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(121) <= 0||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(138) <= 0 ||mTechGaintHandler.isExists(139) <= 0 ||mTechGaintHandler.isExists(126) <= 0){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if(mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Computer skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Computer skill");
                 }else if(mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Communication skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Communication skill");
                 }else if(mTechGaintHandler.isExists(123) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Risk management skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Risk management skill");
                 }else if(mTechGaintHandler.isExists(138) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to buy a bike", Toast.LENGTH_SHORT).show();
+                    Toast("you need to buy a bike");
                 }else if(mTechGaintHandler.isExists(139) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent an apartment", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent an apartment");
                 }else if(mTechGaintHandler.isExists(126) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish product development skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish product development skill");
                 }else if(mTechGaintHandler.isExists(129) <= 0 ){
-                    Toast.makeText(getActivity(), "please finish Programming skill", Toast.LENGTH_SHORT).show();
+                    Toast("please finish Programming skill");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 22, 0, 0, 2113);
@@ -872,13 +872,13 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 70 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 70){
-                    Toast.makeText(getActivity(), "You need 70 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 70 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -30, 30, 0, 0, 220);
@@ -889,15 +889,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1311) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 75 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1311) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Car");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 75){
-                    Toast.makeText(getActivity(), "You need 75 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 75 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -35, 35, 0, 0, 221);
@@ -908,15 +908,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1311) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 80 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1311) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Car");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 80){
-                    Toast.makeText(getActivity(), "You need 80 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 80 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -40, 40, 0, 0, 222);
@@ -927,15 +927,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1311) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 85 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1311) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Car");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 85){
-                    Toast.makeText(getActivity(), "You need 85 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 85 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -45, 45, 0, 0, 223);
@@ -946,15 +946,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1312) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 90 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1312) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Track", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Track");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 90){
-                    Toast.makeText(getActivity(), "You need 90 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 90 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -45, 50, 0, 0, 224);
@@ -965,15 +965,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1312) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 95 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1312) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Track", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Track");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 95){
-                    Toast.makeText(getActivity(), "You need 95 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 95 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -50, 55, 0, 0, 225);
@@ -984,15 +984,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1312) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 100 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1312) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Track", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Track");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 100){
-                    Toast.makeText(getActivity(), "You need 100 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 100 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -55, 60, 0, 0, 226);
@@ -1003,15 +1003,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1312) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 105 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1312) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Track", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Track");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 105){
-                    Toast.makeText(getActivity(), "You need 105 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 105 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -60, 65, 0, 0, 227);
@@ -1022,15 +1022,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1312) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 110 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1312) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Track", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Track");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a house", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a house");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 110){
-                    Toast.makeText(getActivity(), "You need 110 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 110 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -65, 70, 0, 0, 228);
@@ -1040,15 +1040,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1312) <= 0||mTechGaintHandler.isExists(1310) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 115 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1312) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Track", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Track");
                 }else if(mTechGaintHandler.isExists(1310) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a Condo", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a Condo");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 115){
-                    Toast.makeText(getActivity(), "You need 115 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 115 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -70, 75, 0, 0, 229);
@@ -1059,15 +1059,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1313) <= 0||mTechGaintHandler.isExists(1310) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 120 ){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1313) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Electric Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Electric Car");
                 }else if(mTechGaintHandler.isExists(1310) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a Condo", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a Condo");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 120){
-                    Toast.makeText(getActivity(), "You need 120 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 120 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -70, 75, 0, 0, 2210);
@@ -1078,15 +1078,15 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1313) <= 0||mTechGaintHandler.isExists(1310) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 125){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1313) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Electric Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Electric Car");
                 }else if(mTechGaintHandler.isExists(1310) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to rent a Condo", Toast.LENGTH_SHORT).show();
+                    Toast("You need to rent a Condo");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 125){
-                    Toast.makeText(getActivity(), "You need 125 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 125 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -75, 80, 0, 0, 2211);
@@ -1100,17 +1100,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(113) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1315) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 200){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1315) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a SUV", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a SUV");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a House", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a House");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 200){
-                    Toast.makeText(getActivity(), "You need 200 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 200 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -100, 90, 0, 0, 230);
@@ -1120,17 +1120,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(113) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1316) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 250){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1316) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Sports Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Sports Car");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a House", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a House");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 250){
-                    Toast.makeText(getActivity(), "You need 250 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 250 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -115, 95, 0, 0, 231);
@@ -1141,17 +1141,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(113) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1316) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 300){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1316) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Sports Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Sports Car");
                 }else if(mTechGaintHandler.isExists(1317) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a House", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a House");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 300){
-                    Toast.makeText(getActivity(), "You need 300 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 300 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -120, 100, 0, 0, 232);
@@ -1162,17 +1162,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(113) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1316) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 350){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1316) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Sports Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Sports Car");
                 }else if(mTechGaintHandler.isExists(1318) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Condo", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Condo");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 350){
-                    Toast.makeText(getActivity(), "You need 350 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 350 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -115, 105, 0, 0, 233);
@@ -1183,17 +1183,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(113) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1316) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 400){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1316) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Sports Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Sports Car");
                 }else if(mTechGaintHandler.isExists(1318) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Condo", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Condo");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 400){
-                    Toast.makeText(getActivity(), "You need 400 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 400 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -120, 115, 0, 0, 234);
@@ -1204,17 +1204,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(113) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1316) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 450){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1316) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Sports Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Sports Car");
                 }else if(mTechGaintHandler.isExists(1318) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Condo", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Condo");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 450){
-                    Toast.makeText(getActivity(), "You need 450 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 450 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -125, 120, 0, 0, 235);
@@ -1225,17 +1225,17 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(113) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1316) <= 0||mTechGaintHandler.isExists(1317) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 500){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1316) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Sports Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Sports Car");
                 }else if(mTechGaintHandler.isExists(1318) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Condo", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Condo");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 500){
-                    Toast.makeText(getActivity(), "You need 500 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 500 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -125, 120, 0, 0, 236);
@@ -1246,19 +1246,19 @@ public class DetailFragment extends Fragment {
 
             if (mTechGaintHandler.isExists(112) <= 0 ||mTechGaintHandler.isExists(113) <= 0 || mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0 ||mTechGaintHandler.isExists(1319) <= 0||mTechGaintHandler.isExists(1320) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 600){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(1316) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Sports Car", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Sports Car");
                 }else if(mTechGaintHandler.isExists(1319) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Helicopter", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Helicopter");
                 }else if(mTechGaintHandler.isExists(1320) <= 0 ){
-                    Toast.makeText(getActivity(), "You need to buy a Villa", Toast.LENGTH_SHORT).show();
+                    Toast("You need to buy a Villa");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 600){
-                    Toast.makeText(getActivity(), "You need 600 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 600 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -130, 125, 0, 0, 237);
@@ -1274,20 +1274,20 @@ public class DetailFragment extends Fragment {
                     ||mTechGaintHandler.isExists(1317) <= 0||mTechGaintHandler.isExists(1318) <= 0||mTechGaintHandler.isExists(1319) <= 0||mTechGaintHandler.isExists(1320) <= 0
                     ||mTechGaintHandler.isExists(1321) <= 0||mTechGaintHandler.isExists(1322) <= 0|| mTechGaintHandler.getAllExperienceData().get(0) < 875){
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Study at University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Study at University");
                 }else if (mTechGaintHandler.isExists(113) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish MBA", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish MBA");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ||mTechGaintHandler.isExists(122) <= 0||mTechGaintHandler.isExists(123) <= 0||mTechGaintHandler.isExists(124) <= 0||mTechGaintHandler.isExists(125) <= 0||mTechGaintHandler.isExists(126) <= 0||mTechGaintHandler.isExists(127) <= 0 ||mTechGaintHandler.isExists(128) <= 0 ||mTechGaintHandler.isExists(129) <= 0) {
-                    Toast.makeText(getActivity(), "please Complete All skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Complete All skills");
                 }else if(mTechGaintHandler.isExists(131) <= 0||mTechGaintHandler.isExists(132) <= 0||mTechGaintHandler.isExists(134) <= 0||mTechGaintHandler.isExists(135) <= 0||mTechGaintHandler.isExists(136) <= 0||mTechGaintHandler.isExists(137) <= 0
                         ||mTechGaintHandler.isExists(138) <= 0||mTechGaintHandler.isExists(139) <= 0||mTechGaintHandler.isExists(1310) <= 0||mTechGaintHandler.isExists(1311) <= 0||mTechGaintHandler.isExists(1312) <= 0
                         ||mTechGaintHandler.isExists(1313) <= 0||mTechGaintHandler.isExists(1314) <= 0||mTechGaintHandler.isExists(1315) <= 0||mTechGaintHandler.isExists(1316) <= 0
                         ||mTechGaintHandler.isExists(1317) <= 0||mTechGaintHandler.isExists(1318) <= 0||mTechGaintHandler.isExists(1319) <= 0||mTechGaintHandler.isExists(1320) <= 0
                         ||mTechGaintHandler.isExists(1321) <= 0||mTechGaintHandler.isExists(1322) <= 0 ){
 
-                    Toast.makeText(getActivity(), "You need have all lodging", Toast.LENGTH_SHORT).show();
+                    Toast("You need have all lodging");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 875){
-                    Toast.makeText(getActivity(), "You need 875 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 875 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -200, 125, 0, 0, 238);
@@ -1302,11 +1302,11 @@ public class DetailFragment extends Fragment {
                     ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  25){
 
                  if (mTechGaintHandler.isExists(111) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish High School", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish High School");
                 }else if (mTechGaintHandler.isExists(125) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Business Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Business Skill");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 25){
-                     Toast.makeText(getActivity(), "You need 25 Experience", Toast.LENGTH_SHORT).show();
+                     Toast("You need 25 Experience");
                  }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -5, 5, 5, 0, 300);
@@ -1319,17 +1319,17 @@ public class DetailFragment extends Fragment {
                     ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  30){
 
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish College", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish College");
                 }else if (mTechGaintHandler.isExists(125) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Business Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Business Skill");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Computer Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Computer Skill");
                 }else if (mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Comunication Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Comunication Skill");
                 }else if (mTechGaintHandler.isExists(124) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Networking Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Networking Skill");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 30){
-                    Toast.makeText(getActivity(), "You need 30 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 30 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 10, 10, 0, 301);
@@ -1342,19 +1342,19 @@ public class DetailFragment extends Fragment {
                     ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  35){
 
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish College", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish College");
                 }else if (mTechGaintHandler.isExists(125) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Business Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Business Skill");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Computer Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Computer Skill");
                 }else if (mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Comunication Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Comunication Skill");
                 }else if (mTechGaintHandler.isExists(124) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish networking Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish networking Skill");
                 }else if (mTechGaintHandler.isExists(139) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent an apartment", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent an apartment");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 35){
-                    Toast.makeText(getActivity(), "You need 35 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 35 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -10, 10, 15, 0, 302);
@@ -1367,21 +1367,21 @@ public class DetailFragment extends Fragment {
                     ||mTechGaintHandler.getAllCompanyExperienceData().get(0) <  40){
 
                 if (mTechGaintHandler.isExists(112) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish University", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish University");
                 }else if (mTechGaintHandler.isExists(125) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Business Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Business Skill");
                 }else if (mTechGaintHandler.isExists(121) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Computer Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Computer Skill");
                 }else if (mTechGaintHandler.isExists(122) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish Comunication Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish Comunication Skill");
                 }else if (mTechGaintHandler.isExists(124) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish networking Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish networking Skill");
                 }else if (mTechGaintHandler.isExists(129) <= 0 ){
-                    Toast.makeText(getActivity(), "please Finish programming Skill", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish programming Skill");
                 }else if (mTechGaintHandler.isExists(139) <= 0 ){
-                    Toast.makeText(getActivity(), "you need to rent an apartment", Toast.LENGTH_SHORT).show();
+                    Toast("you need to rent an apartment");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 40){
-                    Toast.makeText(getActivity(), "You need 40 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 40 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -20, 20, 20, 0, 303);
@@ -1398,9 +1398,9 @@ public class DetailFragment extends Fragment {
                 if (mTechGaintHandler.isExists(120) <= 0 ||mTechGaintHandler.isExists(121) <= 0 || mTechGaintHandler.isExists(122) <= 0
                         || mTechGaintHandler.isExists(123) <= 0|| mTechGaintHandler.isExists(124) <= 0|| mTechGaintHandler.isExists(125) <= 0
                         || mTechGaintHandler.isExists(126) <= 0|| mTechGaintHandler.isExists(127) <= 0|| mTechGaintHandler.isExists(128) <= 0|| mTechGaintHandler.isExists(129) <= 0){
-                    Toast.makeText(getActivity(), "please Finish All Skills", Toast.LENGTH_SHORT).show();
+                    Toast("please Finish All Skills");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 45){
-                    Toast.makeText(getActivity(), "You need 45 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 45 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 25, 20, 0, 304);
@@ -1412,13 +1412,13 @@ public class DetailFragment extends Fragment {
             if (mTechGaintHandler.isExists(301) <= 0 || mTechGaintHandler.isExists(302) <= 0 || mTechGaintHandler.isExists(303) <= 0 || mTechGaintHandler.isExists(304) <= 0){
 
                 if (mTechGaintHandler.isExists(301) <= 0){
-                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write down your idea");
                 }else if (mTechGaintHandler.isExists(302) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop your idea");
                 }else if (mTechGaintHandler.isExists(303) <= 0){
-                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Find co-founders");
                 }else if (mTechGaintHandler.isExists(304) <= 0){
-                    Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write Business plan");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -25, 25, 25, 0, 305);
@@ -1431,17 +1431,17 @@ public class DetailFragment extends Fragment {
                     ||mTechGaintHandler.getAllCompanyExperienceData().get(0) < 25 ||mTechGaintHandler.getAllExperienceData().get(0) < 15){
 
                 if (mTechGaintHandler.isExists(301) <= 0){
-                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write down your idea");
                 }else if (mTechGaintHandler.isExists(302) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop your idea");
                 }else if (mTechGaintHandler.isExists(303) <= 0){
-                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Find co-founders");
                 }else if (mTechGaintHandler.isExists(304) <= 0){
-                    Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write Business plan");
                 }else if(mTechGaintHandler.getAllCompanyExperienceData().get(0) < 25){
-                    Toast.makeText(getActivity(), "You need 55 Company Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 55 Company Experience");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 15){
-                    Toast.makeText(getActivity(), "You need 15 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 15 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 15, 25, 0, 306);
@@ -1454,17 +1454,17 @@ public class DetailFragment extends Fragment {
                     ||mTechGaintHandler.getAllCompanyExperienceData().get(0) < 30 ||mTechGaintHandler.getAllExperienceData().get(0) < 20){
 
                 if (mTechGaintHandler.isExists(301) <= 0){
-                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write down your idea");
                 }else if (mTechGaintHandler.isExists(302) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop your idea");
                 }else if (mTechGaintHandler.isExists(303) <= 0){
-                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Find co-founders");
                 }else if (mTechGaintHandler.isExists(304) <= 0){
-                    Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write Business plan");
                 }else if(mTechGaintHandler.getAllCompanyExperienceData().get(0) < 30){
-                    Toast.makeText(getActivity(), "You need 30 Company Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 30 Company Experience");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 20){
-                    Toast.makeText(getActivity(), "You need 20 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 20 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 20, 35, 0, 307);
@@ -1477,17 +1477,17 @@ public class DetailFragment extends Fragment {
                     ||mTechGaintHandler.getAllCompanyExperienceData().get(0) < 35 ||mTechGaintHandler.getAllExperienceData().get(0) < 25){
 
                 if (mTechGaintHandler.isExists(301) <= 0){
-                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write down your idea");
                 }else if (mTechGaintHandler.isExists(302) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop your idea");
                 }else if (mTechGaintHandler.isExists(303) <= 0){
-                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Find co-founders");
                 }else if (mTechGaintHandler.isExists(304) <= 0){
-                    Toast.makeText(getActivity(), "Complete write Business plan", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write Business plan");
                 }else if(mTechGaintHandler.getAllCompanyExperienceData().get(0) < 35){
-                    Toast.makeText(getActivity(), "You need 30 Company Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 30 Company Experience");
                 }else if(mTechGaintHandler.getAllExperienceData().get(0) < 25){
-                    Toast.makeText(getActivity(), "You need 20 Experience", Toast.LENGTH_SHORT).show();
+                    Toast("You need 20 Experience");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , 0, 25, 35, 0, 308);
@@ -1503,23 +1503,23 @@ public class DetailFragment extends Fragment {
                     || mTechGaintHandler.isExists(308) <= 0 ){
 
                 if (mTechGaintHandler.isExists(300) <= 0){
-                    Toast.makeText(getActivity(), "Complete write down your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write down your idea");
                 }else if (mTechGaintHandler.isExists(301) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop your idea", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop your idea");
                 }else if (mTechGaintHandler.isExists(302) <= 0){
-                    Toast.makeText(getActivity(), "Complete Find co-founders", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Find co-founders");
                 }else if (mTechGaintHandler.isExists(303) <= 0){
-                    Toast.makeText(getActivity(), "Complete write codes", Toast.LENGTH_SHORT).show();
+                    Toast("Complete write codes");
                 }else if (mTechGaintHandler.isExists(304) <= 0){
-                    Toast.makeText(getActivity(), "Write a Business Plan", Toast.LENGTH_SHORT).show();
+                    Toast("Write a Business Plan");
                 }else if (mTechGaintHandler.isExists(305) <= 0){
-                    Toast.makeText(getActivity(), "Complete Find seed investors", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Find seed investors");
                 }else if (mTechGaintHandler.isExists(306) <= 0){
-                    Toast.makeText(getActivity(), "Complete get License and Permit", Toast.LENGTH_SHORT).show();
+                    Toast("Complete get License and Permit");
                 }else if (mTechGaintHandler.isExists(307) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop a corporate Identity", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop a corporate Identity");
                 }else if (mTechGaintHandler.isExists(308) <= 0){
-                    Toast.makeText(getActivity(), "Complete Get a Trademark and a Patent", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Get a Trademark and a Patent");
                 }
             }else {
                 showDialogBeforSummision(mString.get(position),mStringValues.get(position), getInterger(mStringValues.get(position)) , -30, 35, 35, 0, 310);
@@ -1532,7 +1532,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(310) <= 0 ){
 
                 if (mTechGaintHandler.isExists(310) <= 0){
-                    Toast.makeText(getActivity(), "Complete understand Trend and market", Toast.LENGTH_SHORT).show();
+                    Toast("Complete understand Trend and market");
                 }
 
             }else {
@@ -1545,9 +1545,9 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(310) <= 0 || mTechGaintHandler.isExists(311) <= 0 ){
 
                 if (mTechGaintHandler.isExists(310) <= 0){
-                    Toast.makeText(getActivity(), "Complete understand Trend and market", Toast.LENGTH_SHORT).show();
+                    Toast("Complete understand Trend and market");
                 }else if (mTechGaintHandler.isExists(301) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop your 1st Prototype", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop your 1st Prototype");
                 }
 
             }else {
@@ -1561,11 +1561,11 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(310) <= 0 || mTechGaintHandler.isExists(311) <= 0 || mTechGaintHandler.isExists(312) <= 0 ){
 
                 if (mTechGaintHandler.isExists(310) <= 0){
-                    Toast.makeText(getActivity(), "Complete understand Trend and market", Toast.LENGTH_SHORT).show();
+                    Toast("Complete understand Trend and market");
                 }else if (mTechGaintHandler.isExists(301) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop your 1st Prototype", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop your 1st Prototype");
                 }else if (mTechGaintHandler.isExists(302) <= 0){
-                    Toast.makeText(getActivity(), "Complete Join Company Accelerator", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Join Company Accelerator");
                 }
 
             }else {
@@ -1579,14 +1579,14 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(310) <= 0 || mTechGaintHandler.isExists(311) <= 0 || mTechGaintHandler.isExists(312) <= 0 || mTechGaintHandler.isExists(313) <= 0 ){
 
                 if (mTechGaintHandler.isExists(310) <= 0){
-                    Toast.makeText(getActivity(), "Complete understand Trend and market", Toast.LENGTH_SHORT).show();
+                    Toast("Complete understand Trend and market");
                 }else if (mTechGaintHandler.isExists(301) <= 0){
-                    Toast.makeText(getActivity(), "Complete Develop your 1st Prototype", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Develop your 1st Prototype");
                 }else if (mTechGaintHandler.isExists(302) <= 0){
-                    Toast.makeText(getActivity(), "Complete Join Company Accelerator", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Join Company Accelerator");
                 }
                 else if (mTechGaintHandler.isExists(303) <= 0){
-                    Toast.makeText(getActivity(), "Complete Build a Beta version of your product", Toast.LENGTH_SHORT).show();
+                    Toast("Complete Build a Beta version of your product");
                 }
 
             }else {
@@ -1601,7 +1601,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(314) <= 0 ){
 
                 if (mTechGaintHandler.isExists(314) <= 0){
-                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                    Toast("Finish All previous stages");
                 }
 
             }else {
@@ -1614,7 +1614,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(320) <= 0 ){
 
                 if (mTechGaintHandler.isExists(320) <= 0){
-                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                    Toast("Finish All previous stages");
                 }
 
             }else {
@@ -1627,7 +1627,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(321) <= 0 ){
 
                 if (mTechGaintHandler.isExists(321) <= 0){
-                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                    Toast("Finish All previous stages");
                 }
 
             }else {
@@ -1640,7 +1640,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(322) <= 0 ){
 
                 if (mTechGaintHandler.isExists(322) <= 0){
-                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                    Toast("Finish All previous stages");
                 }
 
             }else {
@@ -1653,7 +1653,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(323) <= 0 ){
 
                 if (mTechGaintHandler.isExists(323) <= 0){
-                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                    Toast("Finish All previous stages");
                 }
 
             }else {
@@ -1666,7 +1666,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(323) <= 0 ){
 
                 if (mTechGaintHandler.isExists(323) <= 0){
-                    Toast.makeText(getActivity(), "Finish All previous stages", Toast.LENGTH_SHORT).show();
+                    Toast("Finish All previous stages");
                 }
 
             }else {
@@ -1681,7 +1681,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(320) <= 0 ){
 
                 if (mTechGaintHandler.isExists(320) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 1", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 1");
                 }
 
             }else {
@@ -1694,7 +1694,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(321) <= 0 ){
 
                 if (mTechGaintHandler.isExists(321) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 2", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 2");
                 }
 
             }else {
@@ -1707,7 +1707,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(322) <= 0 ){
 
                 if (mTechGaintHandler.isExists(322) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 3", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 3");
                 }
 
             }else {
@@ -1720,7 +1720,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(323) <= 0 ){
 
                 if (mTechGaintHandler.isExists(323) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 4", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 4");
                 }
 
             }else {
@@ -1733,7 +1733,7 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(324) <= 0 ){
 
                 if (mTechGaintHandler.isExists(324) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 5", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 5");
                 }
 
             }else {
@@ -1748,9 +1748,9 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(320) <= 0|| mTechGaintHandler.isExists(330) <= 0){
 
                 if (mTechGaintHandler.isExists(320) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 1", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 1");
                 }else if (mTechGaintHandler.isExists(330) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 1", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 1");
                 }
 
             }else {
@@ -1763,9 +1763,9 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(321) <= 0|| mTechGaintHandler.isExists(331) <= 0){
 
                 if (mTechGaintHandler.isExists(321) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 2", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 2");
                 }else if (mTechGaintHandler.isExists(331) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 2", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 2");
                 }
 
             }else {
@@ -1778,9 +1778,9 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(322) <= 0|| mTechGaintHandler.isExists(332) <= 0){
 
                 if (mTechGaintHandler.isExists(322) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 3", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 3");
                 }else if (mTechGaintHandler.isExists(332) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 3", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 3");
                 }
 
             }else {
@@ -1793,9 +1793,9 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(323) <= 0|| mTechGaintHandler.isExists(333) <= 0){
 
                 if (mTechGaintHandler.isExists(323) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 4", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 4");
                 }else if (mTechGaintHandler.isExists(333) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 4", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 4");
                 }
 
             }else {
@@ -1808,9 +1808,9 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(324) <= 0|| mTechGaintHandler.isExists(334) <= 0){
 
                 if (mTechGaintHandler.isExists(324) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 5", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 5");
                 }else if (mTechGaintHandler.isExists(334) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 5", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 5");
                 }
 
             }else {
@@ -1825,11 +1825,11 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(320) <= 0|| mTechGaintHandler.isExists(330) <= 0 || mTechGaintHandler.isExists(340) <= 0){
 
                 if (mTechGaintHandler.isExists(320) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 1", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 1");
                 }else if (mTechGaintHandler.isExists(330) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 1", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 1");
                 }else if (mTechGaintHandler.isExists(340) <= 0){
-                    Toast.makeText(getActivity(), "Finish Hire 15 talents", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Hire 15 talents");
                 }
 
 
@@ -1843,11 +1843,11 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(321) <= 0|| mTechGaintHandler.isExists(331) <= 0 || mTechGaintHandler.isExists(341) <= 0){
 
                 if (mTechGaintHandler.isExists(321) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 2", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 2");
                 }else if (mTechGaintHandler.isExists(331) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 2", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 2");
                 }else if (mTechGaintHandler.isExists(331) <= 0){
-                    Toast.makeText(getActivity(), "Finish Hire 50 talents", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Hire 50 talents");
                 }
 
 
@@ -1861,11 +1861,11 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(322) <= 0|| mTechGaintHandler.isExists(332) <= 0 || mTechGaintHandler.isExists(342) <= 0){
 
                 if (mTechGaintHandler.isExists(322) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 3", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 3");
                 }else if (mTechGaintHandler.isExists(332) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 3", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 3");
                 }else if (mTechGaintHandler.isExists(332) <= 0){
-                    Toast.makeText(getActivity(), "Finish Hire 100 talents", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Hire 100 talents");
                 }
 
 
@@ -1879,11 +1879,11 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(323) <= 0|| mTechGaintHandler.isExists(333) <= 0 || mTechGaintHandler.isExists(343) <= 0){
 
                 if (mTechGaintHandler.isExists(323) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 4", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 4");
                 }else if (mTechGaintHandler.isExists(333) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 4", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 4");
                 }else if (mTechGaintHandler.isExists(333) <= 0){
-                    Toast.makeText(getActivity(), "Finish Hire 1000 talents", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Hire 1000 talents");
                 }
 
 
@@ -1897,11 +1897,11 @@ public class DetailFragment extends Fragment {
             if ( mTechGaintHandler.isExists(324) <= 0|| mTechGaintHandler.isExists(334) <= 0 || mTechGaintHandler.isExists(344) <= 0){
 
                 if (mTechGaintHandler.isExists(324) <= 0){
-                    Toast.makeText(getActivity(), "Finish Lease office 5", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Lease office 5");
                 }else if (mTechGaintHandler.isExists(334) <= 0){
-                    Toast.makeText(getActivity(), "Finish Get Equipment 5", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Get Equipment 5");
                 }else if (mTechGaintHandler.isExists(334) <= 0){
-                    Toast.makeText(getActivity(), "Finish Hire 5000 talents", Toast.LENGTH_SHORT).show();
+                    Toast("Finish Hire 5000 talents");
                 }
 
 
@@ -1916,7 +1916,7 @@ public class DetailFragment extends Fragment {
 
             if ( mTechGaintHandler.getAllExperienceData().get(0) < 200){
 
-                Toast.makeText(getActivity(), "Company Must Have 200+ Experience", Toast.LENGTH_SHORT).show();
+                Toast("Company Must Have 200+ Experience");
 
 
             }else {
@@ -1928,7 +1928,7 @@ public class DetailFragment extends Fragment {
 
             if ( mTechGaintHandler.getAllExperienceData().get(0) < 300){
 
-                Toast.makeText(getActivity(), "Company Must Have 300+ Experience", Toast.LENGTH_SHORT).show();
+                Toast("Company Must Have 300+ Experience");
 
 
             }else {
@@ -1940,7 +1940,7 @@ public class DetailFragment extends Fragment {
 
             if ( mTechGaintHandler.getAllExperienceData().get(0) < 400){
 
-                Toast.makeText(getActivity(), "Company Must Have 400+ Experience", Toast.LENGTH_SHORT).show();
+                Toast("Company Must Have 400+ Experience");
 
 
             }else {
@@ -1952,7 +1952,7 @@ public class DetailFragment extends Fragment {
 
             if ( mTechGaintHandler.getAllExperienceData().get(0) < 500){
 
-                Toast.makeText(getActivity(), "Company Must Have 500+ Experience", Toast.LENGTH_SHORT).show();
+                Toast("Company Must Have 500+ Experience");
 
 
             }else {
@@ -1964,7 +1964,7 @@ public class DetailFragment extends Fragment {
 
             if ( mTechGaintHandler.getAllExperienceData().get(0) < 600){
 
-                Toast.makeText(getActivity(), "Company Must Have 500+ Experience", Toast.LENGTH_SHORT).show();
+                Toast("Company Must Have 500+ Experience");
 
 
             }else {
@@ -1976,7 +1976,7 @@ public class DetailFragment extends Fragment {
 
             if ( mTechGaintHandler.getAllExperienceData().get(0) < 1000){
 
-                Toast.makeText(getActivity(), "Company Must Have 1000+ Experience", Toast.LENGTH_SHORT).show();
+                Toast("Company Must Have 1000+ Experience");
 
 
             }else {
@@ -2019,18 +2019,18 @@ public class DetailFragment extends Fragment {
                     updateProgressBar();
                     mTextViewCash.setText("Cash  $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
                     mTextViewPersonalBankAccount.setText("Personal BankAccount $"+String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
-                    Toast.makeText(getActivity(), "your current Cash is "+mTechGaintHandler.getAllCash().get(0), Toast.LENGTH_SHORT).show();
+                    Toast("your current Cash is "+mTechGaintHandler.getAllCash().get(0));
                 }else {
                     if (totalHealthTrace < 0){
-                        Toast.makeText(getActivity(), "Game is over cause Health Can't be negative", Toast.LENGTH_SHORT).show();
+                        Toast("Game is over cause Health Can't be negative");
                     }else if (totalBalance < 0){
-                        Toast.makeText(getActivity(), "Game is over cause Balance Can't be negative", Toast.LENGTH_SHORT).show();
+                        Toast("Game is over cause Balance Can't be negative");
                     }else if (totalExperience < 0){
-                        Toast.makeText(getActivity(), "Game is over cause Experience Can't be negative", Toast.LENGTH_SHORT).show();
+                        Toast("Game is over cause Experience Can't be negative");
                     }else if (totalCompanyExperience < 0){
-                        Toast.makeText(getActivity(), "Game is over cause CompanyExperience Can't be negative", Toast.LENGTH_SHORT).show();
+                        Toast("Game is over cause CompanyExperience Can't be negative");
                     }else if (totalEquity < 0){
-                        Toast.makeText(getActivity(), "Game is over cause Equity Can't be negative", Toast.LENGTH_SHORT).show();
+                        Toast("Game is over cause Equity Can't be negative");
                     }
                     mTechGaintHandler.updateCash(50);
                     mTechGaintHandler.updateHealth(0);
@@ -2082,9 +2082,10 @@ public class DetailFragment extends Fragment {
                     }
                     updateProgressBar();
                     mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
-                    Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCash().get(0), Toast.LENGTH_SHORT).show();
+                    Toast("your current Balance is "+mTechGaintHandler.getAllCash().get(0));
                 }else {
-                    Toast.makeText(getActivity(), "Game is over cause Health Can't be negative", Toast.LENGTH_SHORT).show();
+                    Toast("Game is over cause Health Can't be negative");
+                    
                     mTechGaintHandler.updateCash(50);
                     mTechGaintHandler.updateHealth(20);
                     mTechGaintHandler.updateExperience(10);
@@ -2138,7 +2139,6 @@ public class DetailFragment extends Fragment {
         mTextViewEquity.setText(String.valueOf(100));
         mTextViewCompanyExperience.setText(mTechGaintHandler.getAllCompanyExperienceData().get(0).toString());
     }
-
     private void Toast(String string){
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View layout = inflater.inflate(R.layout.toast_layout_root,

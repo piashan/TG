@@ -23,6 +23,7 @@ public class SettingFragment extends Fragment {
 
     private ImageView mImageViewRateApp;
     private ImageView mImageViewShareApp;
+    private ImageView mImageViewUnlock;
 
     public SettingFragment() {
         // Required empty public constructor
@@ -36,6 +37,13 @@ public class SettingFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_setting, container, false);
         mImageViewRateApp = (ImageView)view.findViewById(R.id.imageViewRateApp);
         mImageViewShareApp = (ImageView)view.findViewById(R.id.imageViewShateApp);
+        mImageViewUnlock = (ImageView)view.findViewById(R.id.imageViewUnlock);
+
+        clickEvent();
+
+        return view;
+    }
+    private void clickEvent(){
 
         mImageViewRateApp.setOnClickListener(
                 new View.OnClickListener() {
@@ -77,7 +85,18 @@ public class SettingFragment extends Fragment {
                 }
         );
 
-        return view;
+        mImageViewUnlock.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        android.app.FragmentManager fm = getActivity().getFragmentManager();
+                        android.app.FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.activity_main,new UnlockableFragment());
+                        ft.addToBackStack(null);
+                        ft.commit();
+                    }
+                }
+        );
     }
 
 }

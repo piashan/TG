@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,13 +88,13 @@ public class BankAccountFragment extends Fragment {
                         }else {
                             if (!mEditTextTransferCashAccount.getText().toString().isEmpty()){
                                 if (Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) < 100){
-                                    Toast.makeText(getActivity(), " Minimum Amount to open an Account is $100", Toast.LENGTH_SHORT).show();
+                                    Toast(" Minimum Amount to open an Account is $100");
                                 }else {
-                                    Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                    Toast("Insufficient Balance");
 
                                 }
                             }else {
-                                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                Toast("Insufficient Balance");
 
                             }
                         }
@@ -112,14 +113,14 @@ public class BankAccountFragment extends Fragment {
                         }else {
                             if (!mEditTextTransferCashAccount.getText().toString().isEmpty()){
                                 if (Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) < 100){
-                                    Toast.makeText(getActivity(), " Minimum Amount to open an Account is $100", Toast.LENGTH_SHORT).show();
+                                    Toast(" Minimum Amount to open an Account is $100");
 
                                 }else {
-                                    Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                    Toast("Insufficient Balance");
 
                                 }
                             }else {
-                                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                Toast("Insufficient Balance");
 
                             }
 
@@ -151,13 +152,13 @@ public class BankAccountFragment extends Fragment {
                         }else {
                             if (!mEditTextTransferCashAccount.getText().toString().isEmpty()){
                                  if (Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) < 100){
-                                Toast.makeText(getActivity(), " Minimum Amount to open an Account is $100", Toast.LENGTH_SHORT).show();
+                                Toast(" Minimum Amount to open an Account is $100");
                                  }else {
-                                     Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                     Toast("Insufficient Balance");
 
                                  }
                             }else {
-                                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                Toast("Insufficient Balance");
 
                             }
                         }
@@ -174,12 +175,12 @@ public class BankAccountFragment extends Fragment {
                         }else {
                             if (!mEditTextTransferCashAccount.getText().toString().isEmpty()){
                                 if (Integer.parseInt(mEditTextTransferCashAccount.getText().toString()) < 100) {
-                                    Toast.makeText(getActivity(), " Minimum Amount to open an Account is $100", Toast.LENGTH_SHORT).show();
+                                    Toast(" Minimum Amount to open an Account is $100");
                                 }else {
-                                    Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                    Toast("Insufficient Balance");
                                 }
                             }else {
-                                Toast.makeText(getActivity(), "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                                Toast("Insufficient Balance");
 
                             }
                         }
@@ -221,7 +222,7 @@ public class BankAccountFragment extends Fragment {
                 int totalSubstract =  mTechGaintHandler.getAllCash().get(0) - balance ;
                 mTechGaintHandler.updatePersonalBankAccount(totalSumision);
                 mTechGaintHandler.updateCash(totalSubstract);
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCash().get(0), Toast.LENGTH_SHORT).show();
+                Toast("your current Balance is "+mTechGaintHandler.getAllCash().get(0));
                 mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
                 mTextViewPersonalBankAccount.setText("Personal BankAccount - $" +String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
 
@@ -256,7 +257,7 @@ public class BankAccountFragment extends Fragment {
                 int totalSubstract =  mTechGaintHandler.getAllCompanyBankAccount().get(0) - balance ;
                 mTechGaintHandler.updateCash(totalSumision);
                 mTechGaintHandler.updateCompanyBankAccount(totalSubstract);
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCompanyBankAccount().get(0), Toast.LENGTH_SHORT).show();
+                Toast("your current Balance is "+mTechGaintHandler.getAllCompanyBankAccount().get(0));
                 mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
                 mTextViewCompanyBankAccount.setText("Company BankAccount - $" +String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
 
@@ -292,7 +293,7 @@ public class BankAccountFragment extends Fragment {
                 int totalSubstract =  mTechGaintHandler.getAllCash().get(0) - balance ;
                 mTechGaintHandler.updatePersonalBankAccount(totalSumision);
                 mTechGaintHandler.updateCash(totalSubstract);
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCash().get(0), Toast.LENGTH_SHORT).show();
+                Toast("your current Balance is "+mTechGaintHandler.getAllCash().get(0));
                 mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
                 mTextViewPersonalBankAccount.setText("Personal BankAccount - $" +String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
                 dialog.dismiss();
@@ -325,14 +326,14 @@ public class BankAccountFragment extends Fragment {
                 // Do nothing but close the dialog
               /*  int total = mTechGaintHandler.getAllCash().get(0) - balance;
                 mTechGaintHandler.updateCash(total);
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCash().get(0), Toast.LENGTH_SHORT).show();
+                Toast("your current Balance is "+mTechGaintHandler.getAllCash().get(0));
                 mTextViewCash.setText("Cash - $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
 */
                 int totalSumision =  mTechGaintHandler.getAllPersonalBankAccount().get(0) + balance ;
                 int totalSubstract =  mTechGaintHandler.getAllCompanyBankAccount().get(0) - balance ;
                 mTechGaintHandler.updatePersonalBankAccount(totalSumision);
                 mTechGaintHandler.updateCompanyBankAccount(totalSubstract);
-                Toast.makeText(getActivity(), "your current Balance is "+mTechGaintHandler.getAllCompanyBankAccount().get(0), Toast.LENGTH_SHORT).show();
+                Toast("your current Balance is "+mTechGaintHandler.getAllCompanyBankAccount().get(0));
                 mTextViewCompanyBankAccount.setText("Company BankAccount  $" +String.valueOf(mTechGaintHandler.getAllCash().get(0)));
                 mTextViewPersonalBankAccount.setText("Personal BankAccount  $" +String.valueOf(mTechGaintHandler.getAllPersonalBankAccount().get(0)));
                 dialog.dismiss();
@@ -351,5 +352,19 @@ public class BankAccountFragment extends Fragment {
 
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    private void Toast(String string){
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_layout_root,
+                (ViewGroup)getView().findViewById(R.id.toast_layout_root));
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(string);
+
+        Toast toast = new Toast(getActivity());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
     }
 }

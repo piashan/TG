@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -51,10 +53,22 @@ public class AchievementFragment extends DialogFragment {
             mAdapterAchievement = new AdapterAchievement(getActivity(), mTechGaintHandler.getAllAchievement());
             mRecyclerViewPlay.setAdapter(mAdapterAchievement);
         }else {
-            Toast.makeText(getActivity(), "There is no Achievement", Toast.LENGTH_SHORT).show();
+            Toast("There is no Achievement");
         }
 
         return view;
     }
+    private void Toast(String string){
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_layout_root,
+                (ViewGroup)getView().findViewById(R.id.toast_layout_root));
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(string);
 
+        Toast toast = new Toast(getActivity());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
+    }
 }
