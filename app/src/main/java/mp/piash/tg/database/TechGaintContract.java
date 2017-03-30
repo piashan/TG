@@ -10,7 +10,7 @@ import android.provider.BaseColumns;
 public class TechGaintContract extends DatabaseHelper {
 
     private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME + " ( " +
+            "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME + "(" +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
                     + TechGaintTableColumns.CASH +  " INTEGER,"
                     + TechGaintTableColumns.PERSONAL_BANK_ACCOUNT +  " INTEGER,"
@@ -18,13 +18,13 @@ public class TechGaintContract extends DatabaseHelper {
                     + TechGaintTableColumns.EQUITY +  " INTEGER,"
                     + TechGaintTableColumns.HEALTH +  " REAL,"
                     + TechGaintTableColumns.EXPERIENCE +  " REAL,"
-                    + TechGaintTableColumns.COMPANY_EXPERIENCE +  " REAL" +" );";
+                    + TechGaintTableColumns.COMPANY_EXPERIENCE +  " REAL" +")";
 
     private static final String SQL_CREATE_ENTRIES_TWO =
-            "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME_TWO+ " ( " +
+            "CREATE TABLE " + TechGaintTableColumns.TABLE_NAME_TWO+ "(" +
                     TechGaintTableColumns._ID +  " INTEGER"+ " PRIMERY KEY, "
                     + TechGaintTableColumns.TRACE +  " INTEGER,"
-                    + TechGaintTableColumns.TITLE +  " TEXT" +" );";
+                    + TechGaintTableColumns.TITLE +  " TEXT" +")";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + TechGaintTableColumns.TABLE_NAME;
